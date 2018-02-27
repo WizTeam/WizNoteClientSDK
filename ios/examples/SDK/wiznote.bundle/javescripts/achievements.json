@@ -1,0 +1,168 @@
+{
+    "help_link":"http://www.wiz.cn/help/achievement/id={achievement_id}&lang={lang}&client_type={client_type}",
+    "image_link":"http://www.wiz.cn/id={}",
+    "groups":[
+              {
+              "title":"Basic function",
+              "title_zh_cn":"基础功能",
+              "type":"all",
+              "head_style":"head1",
+              "align":"normal",
+              "achievements":[
+                              {
+                              "title":"Create new note",
+                              "id":"new_note",
+                              "description":"xxx",
+                              "description_zh_cn":"xxx",
+                              "description_zh_tw":"xxx",
+                              "title_zh_cn":"新建笔记",
+                              "title_zh_tw":"xxx"
+                              },
+                              {
+                              "title":"Create new note",
+                              "id":"new_note",
+                              "description":"xxx",
+                              "title_zh_cn":"新建笔记",
+                              "title_zh_tw":"xxx"
+                              },
+                              {
+                              "title":"Create new note",
+                              "id":"new_note",
+                              "description":"xxx",
+                              "title_zh_cn":"新建笔记",
+                              "title_zh_tw":"xxx"
+                              },
+                              {
+                              "title":"Create new note",
+                              "id":"new_note",
+                              "description":"xxx",
+                              "title_zh_cn":"新建笔记",
+                              "title_zh_tw":"xxx"
+                              },
+                              {
+                              "title":"Create new note",
+                              "id":"new_note",
+                              "description":"xxx",
+                              "title_zh_cn":"新建笔记",
+                              "title_zh_tw":"xxx"
+                              },
+                              {
+                              "title":"Create new note",
+                              "id":"new_note",
+                              "description":"xxx",
+                              "title_zh_cn":"新建笔记",
+                              "title_zh_tw":"xxx"
+                              },
+                              {
+                              "title":"Change avatar",
+                              "id":"change_avatar",
+                              "description":"xxx",
+                              "title_zh_cn":"更改头像",
+                              "title_zh_tw":"xxx"
+                              }
+                              ]
+              },
+              {
+              "title":"Advanced function",
+              "type":"all",
+              "head_style":"head1",
+              "align":"normal",
+              "achievements":[
+                              {
+                              "title":"Save weixin",
+                              "id":"save_weixin",
+                              "description":"xxx",
+                              "title_zh_cn":"微信收藏",
+                              "title_zh_tw":"xxx"
+                              },
+                              {
+                              "title":"Save weibo",
+                              "id":"save_weibo",
+                              "description":"xxx",
+                              "title_zh_cn":"微博收藏",
+                              "title_zh_tw":"xxx"
+                              }
+                              ]
+              }
+              ,
+              {
+              "title":"iOS only",
+              "type":"ios",
+              "head_style":"head1",
+              "align":"normal",
+              "achievements":[
+                              {
+                              "title":"Share",
+                              "id":"ios_share",
+                              "description":"xxx",
+                              "title_zh_cn":"分享",
+                              "title_zh_tw":"xxx"
+                              },
+                              {
+                              "title":"Widget",
+                              "id":"ios_widget",
+                              "description":"xxx",
+                              "title_zh_cn":"快速创建",
+                              "title_zh_tw":"xxx"
+                              }
+                              ]
+              }
+              ,
+              {
+              "title":"Stat",
+              "type":"all",
+              "head_style":"head1",
+              "align":"single_center",
+              "achievements":[
+                              {
+                              "title":"Share",
+                              "id":"signin_21_days",
+                              "description":"xxx"
+                              }
+                              ]
+              }
+              ,
+              {
+              "title":"Create Note",
+              "type":"all",
+              "head_style":"head2",
+              "align":"five_ring",
+              "achievements":[
+                              {
+                              "title":"Share",
+                              "id":"create_60_notes",
+                              "description":"xxx"
+                              },
+                              {
+                              "title":"Share",
+                              "id":"create_60_notes",
+                              "description":"xxx",
+                              "title_zh_cn":"创建300篇笔记",
+                              "title_zh_tw":"xxx"
+                              },
+                              {
+                              "title":"Share",
+                              "id":"create_60_notes",
+                              "description":"xxx",
+                              "title_zh_cn":"创建600篇笔记",
+                              "title_zh_tw":"xxx"
+                              },
+                              {
+                              "title":"Share",
+                              "id":"create_60_notes",
+                              "description":"xxx",
+                              "title_zh_cn":"创建1000篇笔记",
+                              "title_zh_tw":"xxx"
+                              },
+                              {
+                              "title":"Share",
+                              "id":"create_60_notes",
+                              "description":"xxx",
+                              "title_zh_cn":"创建3000篇笔记",
+                              "title_zh_tw":"xxx"
+                              }
+                              ]
+              }
+              
+              ]
+}

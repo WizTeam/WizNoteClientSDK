@@ -1,0 +1,87 @@
+/* ---------------------------------- */
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  -webkit-transition: opacity 300ms ease;
+  -moz-transition: opacity 300ms ease;
+  -ms-transition: opacity 300ms ease;
+  -o-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+  font-family: 'STHeiti', 'SimHei', 'SimSun';
+  background-color: #e4e4e4;
+}
+div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#title {
+  margin: 17.5px 12px 16px 12px;
+  padding: 0;
+  font-size: 15px;
+  line-height: 1.125;
+  color: #34495e;
+}
+.feature {
+  margin: 0 12px 22px 12px;
+  min-height: 78px;
+}
+.feature .img {
+  float: left;
+  height: 78px;
+  width: 109px;
+  background-repeat: no-repeat;
+}
+.feature#share .img {
+  background-image: url(img/picture_1@2x.png);
+  background-image: -webkit-image-set(url(img/picture_1.png) 1x, url(img/picture_1@2x.png) 2x);
+  background-image: -moz-image-set(url(img/picture_1.png) 1x, url(img/picture_1@2x.png) 2x);
+  background-image: -o-image-set(url(img/picture_1.png) 1x, url(img/picture_1@2x.png) 2x);
+  background-image: -ms-image-set(url(img/picture_1.png) 1x, url(img/picture_1@2x.png) 2x);
+}
+.feature#watch .img {
+  background-image: url(img/picture_2@2x.png);
+  background-image: -webkit-image-set(url(img/picture_2.png) 1x, url(img/picture_2@2x.png) 2x);
+  background-image: -moz-image-set(url(img/picture_2.png) 1x, url(img/picture_2@2x.png) 2x);
+  background-image: -o-image-set(url(img/picture_2.png) 1x, url(img/picture_2@2x.png) 2x);
+  background-image: -ms-image-set(url(img/picture_2.png) 1x, url(img/picture_2@2x.png) 2x);
+}
+.feature#comu .img {
+  background-image: url(img/picture_3@2x.png);
+  background-image: -webkit-image-set(url(img/picture_3.png) 1x, url(img/picture_3@2x.png) 2x);
+  background-image: -moz-image-set(url(img/picture_3.png) 1x, url(img/picture_3@2x.png) 2x);
+  background-image: -o-image-set(url(img/picture_3.png) 1x, url(img/picture_3@2x.png) 2x);
+  background-image: -ms-image-set(url(img/picture_3.png) 1x, url(img/picture_3@2x.png) 2x);
+}
+.feature .intro {
+  margin-left: 124px;
+}
+.feature .intro .sub-title {
+  margin: 0 0 10px 0;
+  font-size: 15px;
+  color: #34495e;
+}
+.feature .intro ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.feature .intro ul li {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #7e8995;
+}
+#addon {
+  margin: 6px 12px 22px 12px;
+  font-size: 15px;
+  color: #34495e;
+}
+#formore {
+  display: block;
+  margin: 0 auto 20px 12px;
+  font-size: 15px;
+  color: #3497da;
+  text-decoration: none;
+}

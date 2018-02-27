@@ -1,0 +1,19 @@
+{
+    document: window.document,
+    clientType: "{clientType}",
+    userInfo: "{userInfo}",
+    usersData: "{usersData}",
+    lang: "{lang}",
+    dependencyUrl: "{dependency_path}",
+    autoFocus: false,
+    callback: {
+    redo: function(info) {
+            var url = "wiznotecmd://redoCallback?undoCount=" + info.undoCount + "&undoIndex=" + info.undoIndex;
+            var iframe = document.createElement("iframe");
+            iframe.setAttribute("src", url);
+            document.documentElement.appendChild(iframe);
+            iframe.parentNode.removeChild(iframe);
+            iframe = null;
+        }
+    }
+}

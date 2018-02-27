@@ -1,0 +1,1278 @@
+"%@ upload modifications succeed"="上传%@更改成功";
+"/Collection/Learning/"="/收集/学习/";
+"/Collection/Work/"="/收集/工作/";
+"/Favorit Weibo/"="/我的微博/";
+"/My Journals/"="/我的日记/";
+"/My Notes/"="/我的笔记/";
+"/My Tasks/"="/我的任务/";
+"My Sticky Notes"="我的桌面便签";
+"About {p}"="关于{p}";
+"Add"="新建";
+"Add to Contacts"="添加到通讯录";
+"Admin"="管理员";
+"Album"="相册";
+"All"="全部";
+"All Folders"="所有文件夹";
+"All Messages"="全部消息";
+"All Tags"="所有标签";
+"Are you sure you want to discard the changes?"="是否放弃保存，直接退出？";
+"Attribute"="属性";
+"Audio Note"="录音笔记";
+"Author"="作者";
+"BBS"="论坛";
+"Back"="返回";
+"Before a month"="一个月之前";
+"Before a week"="一周之前";
+"Before today"="今天之前";
+"Camera"="相机";
+"Can not find the index.html afer unziped!"="Can not find the index.html afer unziped!";
+"Unable to Purchase. Please open In App Purchases in [Settings] > [General] > [Restrictions]"="无法在商店购物。请在手机 [设置] > [通用] > [访问限制] 中开启 [App 内购买项目] ";
+"Cancel"="取消";
+"To:"="收件人:";
+"Subject:"="主题:";
+"Content"="邮件正文";
+"Sent successfully!"="发送成功！";
+"Cc to me:"="抄送我:";
+"From:"="发件人:";
+"No mail information of this contact!"="该联系人没有邮箱信息!";
+"Contacts"="联系人";
+"Send"="发送";
+"Share by email"="通过邮件分享";
+"Cancel Edit"="取消编辑";
+"Cellular"="Cellular";
+"Choose how to download notes"="选择笔记下载方式";
+"Choose one scene that suits you"="选择一个适合您的场景";
+"Choose the group you need to download"="选择您要下载的群组";
+"Clear"="清空";
+"Clear Offline Notes Data"="清除离线笔记数据";
+"Clearing Offline Notes Data..."="正在清除离线笔记数据...";
+"Close"="关闭";
+"Closes the menu"="Closes the menu";
+"Confirm"="确认";
+"Congratulations, you are vip now."="恭喜，您现在是{p}的VIP用户。";
+"Copied"="已复制";
+"Copy"="复制";
+"Copy to Clipboard"="复制到剪贴板";
+"Copying"="正在复制";
+"Created Date"="创建时间";
+"Current Folder"="当前文件夹";
+"Current Tag"="当前标签";
+"Date Created"="创建日期";
+"Date Modified"="修改日期";
+"Decrypt Error!"="Decrypt Error!";
+"Default Folder"="默认文件夹";
+"Delete"="删除";
+"Delete Forever"="永久删除";
+"Detail"="详细信息";
+"Display sub-folder notes"="显示子文件夹的笔记";
+"Display sub-tag notes"="显示子标签的笔记";
+"Sync note title only"="仅下载笔记标题";
+"Note does not exist!"="笔记不存在！";
+"Done"="完成";
+"Saving note, please wait..."="正在保存中，请稍等...";
+"Sync all note content"="下载全部笔记数据";
+"Sync note content within three days"="下载最近三天笔记数据";
+"Sync note content within a month"="下载最近一月笔记数据";
+"Sync note content within a week"="下载最近一周笔记数据";
+"Downloaded notes are available when you have no internel connection, but will use storage space"="下载笔记，是在没有网络时方便您阅读笔记，但是会占据一定的存储空间。";
+"Edit"="编辑";
+"Editor"="编辑";
+"Email"="邮箱";
+"Error"="错误提示";
+"Failed"="保存失败";
+"Feedback"="反馈";
+"Folder title"="文件夹标题";
+"Folders"="文件夹";
+"Group"="群组";
+"Group Creator"="创建者";
+"Manage Group"="管理群组";
+"Group Introduction"="群组介绍";
+"Group Member Management"="群组成员管理";
+"Group Name"="群组名称";
+"Group Offline Notes"="群组数据离线阅读";
+"Permission"="群组权限";
+"Help"="帮助";
+"High (Origin size)"="高质量 (原始大小)";
+"I know"="我知道了";
+"Input Invalid charater"="输入了非法字符";
+"Journal"="日志";
+"Last synchronized: "="最后同步时间：";
+"Loading..."="加载中...";
+"Loading...."="载入中...";
+"Syncing..."="正在同步中...";
+"Loading note..."="正在打开笔记...";
+"Low (1024)"="低质量 (1024)";
+"Refer to me"="提到我的";
+"Medium (1920)"="中等 (1920)";
+"Meeting"="会议";
+"Message"="提示";
+"Messages"="消息中心";
+"Modified Date"="修改时间";
+"Month"="月";
+"More Features"="更多功能";
+"My Drafts"="我的草稿";
+"My Emails"="我的邮件";
+"My Events"="我的事件";
+"My Journals"="我的日记";
+"My Notes"="我的笔记";
+"Personal MyWiz"="个人 MyWiz 邮箱";
+"MyWiz of Group"="群组 MyWiz 邮箱";
+"Network is error!"="Network is error!";
+"Add Folder"="新建文件夹";
+"Add Tag"="新建标签";
+"Next page"="Next page";
+"No Connection"="无连接";
+"No Title"="笔记";
+"The internet is unavailable, please check it!"="当前网络异常，请检查你的网络设置!";
+"Recipients can not be empty!"="收件人不能为空！";
+"The format of email is illegal!"="有不合法的邮件地址！";
+"No title"="No title";
+"None"="尚未分配角色";
+"You have not sign in to {p}, please sign in first!"="您还没有登录{p}，请先登录";
+"Not registered (Click to register)"="未注册(点击注册)";
+"Title"="标题";
+"Notes"="笔记";
+"Failed to load note, please try again!"="笔记加载失败，请退出阅读界面再试一下吧！";
+"Open"="打开";
+"Open as"="打开方式";
+"Other"="其他";
+"Page %d of %d"="Page %1$d of %2$d";
+"Parent Folder"="父文件夹";
+"Parent Tag"="父标签";
+"Password Lock"="密码保护";
+"Invalid password. Please sign in again."="密码错误，请重新登录";
+"Invalid account. Please sign in again."="用户名错误，请重新登录";
+"Login Again?"="重新登录？";
+"Password"="密码";
+"Peoples"="人脉";
+"Personal Groups"="个人群组";
+"Personal Notes"="个人笔记";
+"Personal Notes and Groups"="个人笔记及群组";
+"Personal Offline Notes"="个人笔记离线阅读";
+"Photo Note"="图片笔记";
+"Photo Quality"="照片质量";
+"Photos"="相册";
+"Please choose how to download notes frist"="Please choose how to download notes frist";
+"Please enter password"="请输入密码";
+"Please re-enter password"="请再次输入密码";
+"Passwords didn't match, Try again."="密码不匹配，请再试一次。";
+"Please enter user id!"="请输入您的帐号名！";
+"Print"="打印";
+"Pull to synchronize"="下拉可以同步";
+"Rate {p}"="评价{p}";
+"Reader"="读者";
+"Record"="录音";
+"Start recording..."="开始录音...";
+"Reduction"="还原";
+"Release to synchronize"="松开即同步";
+"Root Folder"="根文件夹";
+"Saved"="已保存";
+"Saving"="正在保存";
+"Search"="搜索";
+"Searching..."="正在搜索...";
+"Settings"="设置";
+"Setting"="设置";
+"Share By {p}"="通过{p}分享";
+"Sign in"="登录";
+"Skip"="跳过";
+"Some attachments have not been downloaded, Can't share current note to group."="还有附件没有下载下来，无法分享到群组中。";
+"Sorry! There is an error while reading the note, please try again."="非常抱歉，读取笔记失败，请退出重试！";
+"Sort"="排序";
+"Super User"="超级用户";
+"Support"="客服";
+"Switches to next page of buttons"="Switches to next page of buttons";
+"Sync"="同步";
+"Sync completed"="同步完成";
+"Tag title"="标签标题";
+"Tags"="标签";
+"Text"="文字";
+"The Folder \"%@\" already exists."="文件夹 \"%@\" 已存在。";
+"The Tag \"%@\" already exists."="标签 \"%@\" 已存在。";
+"The passwords do not match."="你输入的两次密码不匹配";
+"Today"="今天";
+"UnZip file error!"="UnZip file error!";
+"Used"="已使用";
+"User ID"="帐号";
+"Version"="版本信息";
+"View"="查看";
+"Warning"="注意";
+"You do not have permission to create a new note"="您没有新建笔记的权限";
+"You do not have permission to delete this note"="您没有删除他人笔记的权限";
+"You do not have permission to edit this note"="您没有编辑他人笔记的权限";
+"You do not have permission to create a new folder"="您没有新建文件夹的权限";
+"Create team"="创建团队";
+"Only {p} account can create team"="只有{p}帐号才可以创建团队哦";
+"Website"="官方网站";
+"WiFi"="WiFi";
+"WizNote"="为知笔记";
+"Year"="年";
+"Today"="今天";
+"Yesterday"="昨天";
+"You can pull down to sync notes or tap the plus (+) icon to create a new a note"="请下拉以同步您在服务器的笔记，或者单击新建按钮（＋）来新建笔记。";
+"Your advice"="您的建议";
+"Your are VIP"="您是VIP用户";
+"Your are free user"="您是免费用户，升级VIP享受更多功能";
+"Your vip will expire in %@"="您的VIP将会在%@过期";
+"of"="of";
+"page"="page";
+"source file not found!"="source file not found!";
+"Sync Transfer Protocol"="同步传输协议";
+"We create a number of folders and tags for you to use {p} conveniently."="我们帮您创建了一批文件夹和标签，方便您使用{p}。";
+"{p} is based on the http/https protocol for the Internet network synchronization. Https protocol is built by the ssl+http protocol for encrypted transmission of network protocols, authentication. Https make the transfer between your mobile phone and the server to send and receive information more secure."="{p}是基于http/https的网络协议进行的互联网同步。https协议是由ssl+http协议构建的可进行加密传输、身份认证的网络协议，用https，你的手机与服务器之间收发的信息传输将更加安全。";
+"Comments"="评论我的";
+"Sync %lld messages from server"="已从服务器同步 %lld 条消息";
+"all groups"="所有群组";
+"Loading comments..."="正在加载评论...";
+"Loading remarks..."="正在加载备注...";
+"Can't sync data without an account!"="只有{p}的帐号才能执行同步！";
+
+"Invalid password"="密码错误";
+
+
+
+
+"Todo"="待办";
+"Important"="重要";
+"Inspiration"="灵感";
+
+"/Work Notes/"="/工作笔记/";
+"/Work Notes/Work Log/"="/工作笔记/工作日志/";
+"/Work Notes/Learning Materials/"="/工作笔记/学习资料/";
+"/Life Notes/"="/生活笔记/";
+
+"Create root folder and sub-folder according to your habits, using multiple folder to manage your notes efficiently."="按照自己的使用习惯创建根文件夹和子文件夹，利用多级文件夹方便、高效管理笔记。";
+"Create Note"="新建笔记";
+"You can create text, photo, and record note. Click + button to create one note."="文字、照片、录音，想记就记，赶快试试吧！点击右上角的 + 按钮，创建一条新笔记。";
+"Unsync"="未同步";
+"Experience Account"="体验帐户";
+"There is no attachment!"="该笔记下还没有附件！";
+"Saving check list..."="正在保存待办清单...";
+"Does not support %@ extension attachment, please click the icon of right corner, choose other ways to open"="暂不支持 %@ 附件格式，请点击右上角的图标，选择其他应用打开";
+"Emptying the deleted notes..."="正在清空已删除笔记...";
+"Messages Settings"="消息提醒设置";
+"Notifications"="新消息通知";
+"Not Disturb Time"="免打扰时间设置";
+"Begin time can't greater or equal  to End time"="开始时间不能大于结束时间";
+
+/*
+ 2014-7-20
+ */
+"My Tasks"="我的任务";
+"Inbox"="收集箱";
+"Completed"="已完成";
+
+/*
+ 2017-7-29 6.0.10
+*/
+"Push Notifications"="推送消息";
+"Notifications"="接收新消息通知";
+"Enabled"="已开启";
+"Disabled"="未开启";
+"Enable {p} via \"Settings\" > \"Notifications\" on your iPad"="请在iPad的\"设置\" > \"通知中心\" 中进行设置";
+"Enable {p} via \"Settings\" > \"Notifications\" on your iPhone"="请在iPhone的\"设置\" > \"通知中心\" 中进行设置";
+"Show Preview Text"="通知显示消息详情";
+"Not Disturb Time"="免打扰时间";
+"%d hours"="%d 小时";
+"%d hour"="%d 小时";
+"Full day"="全天";
+"@Refer to me"="@我的消息";
+"Edited my notes"="编辑我的笔记消息";
+"Comment"="评论消息";
+"Unclassed"="未分类";
+
+/*
+ 2014-8-18 6.2.0
+ */
+"Monthly Usage"="本月流量使用";
+"Account Type"="帐户类型";
+"You can email web contents, notes, photos, and files from your computer or phone right into your group."="发送邮件到你的群组mywiz邮箱，就会自动保存到对应的群组中。网页内容、笔记、照片或其他文件都可以的哦。";
+"You can email web contents, notes, photos, and files from your computer or phone right into your {p}."="发送邮件到你的mywiz邮箱，就会自动保存到{p}。网页内容、笔记、照片或其他文件都可以的哦。";
+"User Info"="用户信息";
+"Used"="已使用";
+"Current Usage"="当前使用量";
+"Current Month Limit"="本月限制";
+"You can recover recent 20 historical versions. (1 historical version for free user)"="可恢复最近 20 个历史版本 (免费用户可恢复1个历史版本)";
+"Your monthly usage limit is 10G per month. (500M for free user)"="月上传流量是 10G (免费用户500M)";
+"Your single note / attachment size limit is 100M. (30M for free users)"="单篇笔记/附件的最大上传大小是 100M (免费用户是30M)";
+"Messages is exclusive features for team users."="消息中心是团队用户独享功能";
+"Refer to team members"="@ta";
+"If you share a note to group and want someone to view it in time, you can @him/her in title of note. He/she will receive the notification."="你共享了一篇笔记，想让某个同事及时查看？可以在标题里@ta哦。你发的通知就会显示在他的消息中心。";
+"You can make a comment for colleague's work log or experience summary of your boss, they will receive the notification."="同事写的工作日志、老大的经验总结、PM 的计划，你都可以通过评论他们的笔记表达你的感受。你的评论会显示在他们的消息中心l啦～～";
+"Colleagues complemented the more comprehensive content of your note, you will receive the notification here."="你写的设计规范，同事看后把内容补充的更全面了，消息就会显示在这里哦~~";
+"Click and learn more about teamwork."="团队协作其他功能，点击了解详情";
+"Collaborative Editing"="协同编辑";
+
+"Actions"="操作";
+"Mark Messages as Read"="全部标记为已读";
+"Unread Messages"="未读消息";
+"Note Edited"="编辑我的笔记";
+"Auto Rotate"="自动横屏";
+"Unknown"="未知";
+
+
+"Sort By"="排序方式";
+"View Option"="查看选项";
+"Show Abstract"="显示摘要";
+"Show Image"="显示图片";
+
+"Discard changes"="放弃修改";
+"Each user of {p} has a mywiz email, you can email web contents, notes, photos, and files from your computer or phone right into your {p}. You can sign up a account of {p}~~"="每个{p}的用户都有对应的 mywiz 邮箱，您可以发送邮件、网页、照片等内容到你的 mywiz 邮箱，内容会自动保存到{p}哦。赶快注册一个{p}帐号吧~~~";
+"The users of {p} can record valuable information anytime, and you can see it on any terminal when upload it to service. {p} provide enough traffic for each user."="成为{p}用户，您可以随时随机记录有价值的信息，上传笔记后可以在其他任何一个终端查看哦！{p}会给每一个用户提供足够的上传流量哦~~";
+"Note Count"="笔记数量";
+
+"Auto download note title"="自动下载笔记标题";
+"Download offline notes data"="下载离线笔记数据";
+"Auto upload changes"="自动上传更改";
+"Auto download messages"="自动下载消息";
+"Size limit for uploading"="上传大小限制";
+"Sync over WiFi"="通过WiFi同步";
+"Sync over Cellular"="通过移动网络同步";
+"Note size limit for uploading over cellular"="通过移动网络上传笔记大小限制";
+"The note that smaller than %@ will be uploaded to sever over cellular network."="只有当笔记大小小于%@的笔记才会通过移动网络上传到服务器，其他笔记需要通过WiFi上传。";
+"Offline Notes"="离线缓存笔记";
+"Download"="下载";
+"Upload"="上传";
+"Size"="大小";
+"Unlimited"="无限";
+"Undownloaded"="未下载";
+"Depend on your team needs, you can upgrade to basic (Each group can create 5000 notes), Standard or professional (Each group can create an unlimited amount of notes) on {p} for Windows or Web."="根据团队的需求，可以到 Windows, Web 端随时选择升级为基础版（每个群组可创建 5000 条笔记）、标准版或专业版（每个群组可创建无限量笔记哦）。";
+"The monthly usage limit of Personal Notes has been exceeded. The changes of notes can't be uploaded to server. Please upgrade to VIP."="个人笔记每月流量限制已经超出，无法继续上传笔记。请升级为VIP。";
+"The limit of notes count in %@ has been exceeded, please upgrade your team service."="%@中的笔记数量限制已经达到，请升级您的团队服务。";
+"The storage space of %@ is full. The notes can be uploaded to server."="%@空间已满，无法继续上传笔记。";
+"The %@ [%@] is too large (%@) to upload to server."="%@ [%@] 太大(%@)，不能上传到服务器。";
+"The network has changed to cellular, uploading progress stopped."="已经切换为移动网络，上传停止。";
+"The network has changed to cellular, downloading offline notes progress stopped."="已经切换为移动网络，下载离线笔记任务停止。";
+"Start download %@"="开始下载 %@";
+
+"Offline data has been downloaded successfully!"="所有离线数据已经被下载。";
+"Downloading %@..."="正在下载 %@...";
+"%@ notes is waiting for offline."="%@条笔记正在等待被下载。";
+"Offline task has been stopped depend on your settings that can't download note data when over cellular."="您设置了移动网络下不同步数据，离线下载已中断!";
+"Downloading notes data over cellular will cost your traffic, please close it over cellular usually."="移动网络下下载笔记数据，会耗费您的手机流量哦，建议平时关闭此选项。";
+
+
+"Customize offline notes depend on time"="按时间自定义离线笔记";
+"Customize offline notes depend on folder"="按文件夹自定义离线笔记";
+"Add folder"="添加文件夹";
+
+"To prevent data storage space being occupied when re-downloading notes, the offline settings have been adjusted to default."="为防止笔记数据重新下载后占用存储空间，离线笔记设置已更改为默认的仅下载笔记标题。";
+
+"note"="笔记";
+"attachment"="附件";
+
+
+/*
+ 2014.8.29 ipad 没有消息的提示
+ */
+"Syncing notes..."="正在同步笔记...";
+
+/*
+ 2014.9.16
+ */
+"Images to PC"="传图到电脑";
+"Camera to PC"="拍照到电脑";
+"Downloading note..."="正在下载笔记....";
+"+ More"="了解更多";
+"Please check whether existing the problems:"="请检查是否存在以下问题：";
+"1. Computer and phone don't under the same WiFi"="1. 手机和电脑不在同一个WiFi下";
+"2. No note for computer in editing"="2. 电脑客户端没有笔记处于编辑状态";
+"3. The option of [Image to PC] isn't turned on (Note editor toolbar)"="3. 电脑客户端[手机传图]选项没有开启(编辑笔记工具栏)";
+"Connected"="已连接";
+"Images have been sent to {p} for computer successfully."="图片已成功发送到电脑客户端啦！";
+"Unable to send image to computer"="无法发送图片到电脑";
+"Sending image..."="正在发送图片...";
+"Can't send images to compter, error message:%@"="无法发送图片到电脑，错误信息：%@";
+"Unknown error"="未知错误";
+"Write data timeout"="写入数据超时";
+"Retry"="重试";
+"Finding computer..."="正在查找电脑...";
+"All images have been sent"="所有图片已经发送";
+"Sending image, do you want to stop?"="正在发送图片，是否要停止？";
+"Stop"="停止";
+"Continue sending"="继续发送";
+
+"Select an Album"="照片";
+
+/*
+ 2014-10-15 6.2.2
+ */
+"Adding note..."="正在添加笔记...";
+"Auto Scale"="自动缩放";
+"The group has been dismissed or you have quit from this group, the message can't be read."="笔记所在的群组已经被删除或您已退出此群组，您无法查看此消息！";
+
+/*
+2014-11-06 6.2.3
+*/
+"From"="来源";
+
+
+/*
+ 2014-11-12 6.2.4
+*/
+"Inserting images..."="正在插入图片...";
+"You can only select %d photos at a time."="每次最多只能选择 %d 张哦";
+"Only %d photos please!"="只能选择%d图片!";
+"Invalid user id or password."="用户名或者密码错误。";
+"Invalid user id."="用户名错误。";
+"Invalid captcha."="验证码错误。";
+"Account has already exists, please sign in."="帐号已经存在，请直接登录。";
+"Invalid user id, plese enter an email."="无效的用户id，请输入一个email或者手机号码。";
+"Please enter the captcha"="请输入验证码";
+"Tap captcha to refresh"="点击验证码可以刷新";
+"Can't sign up now. please wait and retry."="当前无法注册，请稍后重试。";
+
+"Sign In"="登录";
+"Sign Up"="注册";
+"Forgot password>"="忘记密码>";
+"Forgot Password"="忘记密码";
+"A cloud service note software to help you remember everything."="帮你记录生活、工作点滴的云服务笔记软件。";
+"Multi-Platform Sync"="多终端同步";
+"Supporting phone, pad, web and pc, you can use it at anytime."="支持手机，平板，电脑，随时随地使用。";
+"Skip Sign-Up >"="跳过注册 >";
+"Email/Phone Number"="Email/手机号";
+
+/*
+ 2014-12-12 6.2.5
+*/
+"Can't view attachment"="无法显示附件";
+"Can't save check list: %@"="无法保存清单: %@";
+
+/*
+2014-12-16 6.2.6
+*/
+"Note Locked"="笔记被锁定";
+"Current note is being edited by %@. Please wait."="%@正在编辑当前笔记，请等待";
+"Untitled"="未命名";
+"Locking note..."="正在锁定笔记...";
+"%@ is editing note"="%@正在编辑笔记";
+
+"Require Password"="需要密码";
+"Immediately"="立即";
+"After 1 minute"="1分钟后";
+"After 5 minutes"="5分钟后";
+"After 15 minutes"="15分钟后";
+"After 30 minutes"="30分钟后";
+"After 1 hour"="1 小时后";
+"Unlock with Touch ID"="使用指纹解锁";
+"Unlock {p}"="解锁{p}";
+
+"Security"="安全";
+"Decrypt note"="解密笔记";
+"Security Settings"="安全选项";
+"Decrypt note with Touch ID"="使用指纹解密笔记";
+"Clip web, photoes, files"="剪藏网页、照片、文件";
+"Weibo Collection"="微博收藏";
+"Wechat Collection"="微信收藏";
+"/Weibo Collection/"="/微博收藏/";
+"/Wechat Collection/"="/微信收藏/";
+"Save email content to {p}"="保存邮件内容到{p}";
+"Invalid password."="密码错误。";
+"Downloading cert..."="正在下载证书...";
+"The note can not be locked because you are working offline."="当前处于离线编辑状态，不能锁定笔记。";
+"Downloading attachment..."="正在下载附件...";
+"Enjoy more VIP service"="享受更多 VIP 服务";
+
+/*
+ 2015-2-4 6.2.7 share
+*/
+"The link has been copied to clipboard."="已经复制链接到剪贴板。";
+"The link and password has been copied to clipboard."="已经复制链接和密码到剪贴板。";
+"The inner link has been copied to clipboard."="已经复制笔记内链到剪贴板。";
+"Password: %@"="密码: %@";
+"Can't share note (Unknown error)"="不能分享笔记（未知错误）";
+"Preparing share note..."="正在准备分享笔记...";
+"Different notes can be associated by inner link, jump to another note from one."="内链接可以将笔记和笔记关联起来,从一篇笔记直接跳转到另一篇。";
+"You can copy inner link and paste it to the related notes."="只要将复制的内链接粘贴到笔记就可以啦！";
+"Weibo"="微博";
+"Wechat"="微信";
+"QQ"="QQ";
+"SNS"="SNS";
+"Wechat Moments"="微信朋友圈";
+"Copy link"="复制链接";
+"SMS"="短信";
+"Copy inner link"="复制笔记内链";
+"More options"="更多选项";
+"Public link：Anyone can view note.\nPrivate link：Only people with password can view note."="公开链接：所有人都可以查看。\n私有链接：只有输入密码后才可以查看";
+"Public link"="公开链接";
+"Private link"="私有链接";
+"1 day"="1天";
+"3 days"="3天";
+"7 days"="7天";
+"Unlimited"="不限";
+"<div style='color:#606060;font-size:14px;font-family:Helvetica'>You can set sharing time or views count. It will be stopped when exceed the limit.</div>"="<div style='color:#606060;font-size:14px;font-family:Helvetica'>您可以设置分享时长或笔记被阅读的次数。超过限制，会自动停止分享。</div>";
+
+"<div style='font-size:6px;'>&nbsp;</div><div style='color:#606060;font-size:12px;font-family:Helvetica'>Share options can be used for VIP users only.</div>"="<div style='font-size:6px;'>&nbsp;</div><div style='color:#606060;font-size:12px;font-family:Helvetica'>只有VIP用户可以使用分享选项。</div>";
+
+"<div style='font-size:6px;'>&nbsp;</div><div style='color:#606060;font-size:12px;font-family:Helvetica'>Share options can be used for VIP users only. <a href='wiznote://upgadevip'>Upgrade to VIP now</a></div>"="<div style='font-size:6px;'>&nbsp;</div><div style='color:#606060;font-size:12px;font-family:Helvetica'>只有VIP用户可以使用分享选项。<a href='wiznote://upgadevip'>升级到VIP</a></div>";
+
+"Time limit"="阅读时间限制";
+"Views count limit"="阅读次数限制";
+"Post"="发送";
+"Link:"="链接:";
+"Upgrade to VIP"="升级VIP";
+"Can't share note by link, please verify your email."="无法通过链接分享笔记，请首先验证您的邮箱。";
+/*
+2015－2－9 年终统计
+*/
+"You've created <b>%d</b> notes in the past year."="过去的一年，你创建了 <b>%d</b> 条笔记";
+"<b>%d</b> original notes, <b>%d</b>web notes."="原创了 <b>%d</b> 条笔记，剪藏了 <b>%d</b> 个网页";
+"Noting is simple,\n<b>Reviewing</b> is not easy."="收藏记录简单\n<b>回顾</b>整理不易";
+"<b>New</b> year, <b>New</b> start\nA new good habit to develop!"="<b>新</b>的一年，<b>新</b>的开始，一起养成新的好习惯！";
+"Enter {p}"="进入 {p}";
+
+/*
+2015-3-19 反馈信息
+*/
+"Help & Feedback"="帮助和反馈";
+"User guide"="使用手册";
+"Send feedback"="发送反馈";
+"Activity log"="活动日志";
+"Enable debug mode"="启用调试模式";
+"Welcome to submit your problem and suggestions, our progress is inseparable from your feedback."="欢迎提问题和建议，我们的进步离不开您的反馈";
+"Please leave your contact information to help us respond to you."="请留下您的联系方式，方便我们给您回复";
+"Include activity log"="包含活动日志";
+
+"Problem or advice"="问题或建议";
+"Your contact info"="联系方式";
+"Sending..."="正在发送...";
+"Can't submit your feedback, please try again later."="无法提交您的反馈，请稍后重试。";
+"Copied"="已复制";
+/*阅读位置信息*/
+"Remember the last reading position"="记住上一次阅读位置";
+
+/*rename*/
+"This destination already contains a folder named \"%@\", do you still want to merge this folder?"="已经存在一个同名文件夹 \"%@\"，是否要合并文件夹？";
+"Rename"="重命名";
+"Folder Name"="文件夹名称";
+"Tag Name"="标签名称";
+"Note Name"="笔记标题";
+"Are you sure to delete the folder \"%@\"? Any notes in this folder will be moved to the trash."="你确定要删除文件夹\"%@\"吗？此文件夹中的任何笔记都会被删除。";
+"Are you sure to delete the tag \"%@\"?"="你确定要删除标签\"%@\"吗？";
+"Restore"="还原";
+"Can't rename the system folder: \"%@\""="不能重命名系统文件夹: \"%@\"";
+
+/*搜索结果*/
+"No results found"="寻而未果";
+"%@, maximum upload note size is %@"="%@, 最大上传大小是%@";
+
+/**/
+"An encrypted note can't be shared as link."="加密笔记不支持外链分享。";
+
+/*wizbox*/
+"Can't sign in to %@, the user (%@) has sigined in to the server %@."="不能登录到 %@，用户 %@ 已经登录到服务器 %@。";
+"Can't get server information."="不能获取服务器信息。";
+"Can't find WizBox, you should enter the server address manually"="无法找到为知盒子，您需要手工输入服务器地址。";
+"Finding WizBox..."="正在查找为知盒子...";
+"Can't switch to {p}. %@ was signed in to enterprise server (%@)."="不能登录到{p}，%@ 已经登录到企业服务器 %@。";
+"Can't switch to enterprise server, %@ was signed in to {p}."="不能登录到企业服务器，%@ 已经登录到{p}。";
+"Sign in to {p}"="登录到{p}官方服务";
+"Sign in to enterprise server"="登录到企业私有服务器";
+
+/*in app purchase*/
+"Can't send receipt to our server, please contact us.\n%@"="无法发送收据到我们的服务器，请联系我们。\n%@";
+"Can't send receipt to our server (Unknown error), please contact us."="无法发送收据到我们的服务器(未知错误)，请联系我们。";
+
+/*2015.5.8 new line*/
+
+"Attachments without downloading, open it in a network environment."="附件还没有被下载，请在联网的情况下打开。";
+"Tap + or the New Note button lower left, add text, photo, video, chesklist."="点击 ＋ 或者新建笔记按钮，添加文字，图片，清单等。";
+"WizBox/Server IP Address"="为知盒子/服务器 IP地址";
+"Unzip file error!"="解压缩文件失败！";
+"All members"="所有成员";
+"Resume..."="恢复...";
+"View details"="了解更多";
+"Share to Group"="分享到群组";
+"Can't download your cert."="不能下载您的证书。";
+"Clipboard text"="剪贴板文字";
+"You don't have permission to rename this note!"="您没有权限重命名当前笔记！";
+"You don't have permission to delete this note!"="您没有权限删除当前笔记！";
+"About WizNote"="关于为知笔记";
+"{p}"="{p}";
+"Start track changes"="开始修订";
+"Unknown error!"="未知错误";
+"Accept all changes"="接受全部修改";
+"Server"="服务器";
+"Stop track changes"="停止修订";
+"Track changes"="修订";
+"Reject all changes"="拒绝全部修订";
+"The note has not been shared."="笔记无法被分享。";
+"Skip >>"="跳过 >>";
+"File Note"="文件笔记";
+
+"The account email is not verified, you can't send mail to friends."="帐号邮箱没有验证，不能发送邮件。";
+"You have not created or joined any group. Click OK to view details, or click cancel to continue."="您没有创建或加入任何群组。点击确定了解更多内容，或者点击取消继续。";
+
+
+/*
+ email error message
+ */
+"Can't send email, unknown error."="无法发送邮件，未知错误。";
+"Can't get email server address, please check your network."="不能获取邮件服务器地址，请检查您的网络。";
+"Can't get token from server, please check your network."="不能从服务器获取token，请检查您的网络。";
+"Can't send email, please check your network."="不能发送邮件，请检查您的网络。";
+
+/*
+ share note to group
+ */
+"The note has been copied to group."="笔记已经被复制到群组。";
+"Can't copy note to group."="不能复制笔记到群组。";
+
+/*
+pick Photos
+*/
+"Pick Photo"="选取照片";
+"Pick Photos"="选取照片";
+
+
+/*
+ attachments
+*/
+
+
+/*
+ options & track changes
+ */
+"Can't use Track-Changes feature to edit markdown notes."="Markdown 类型笔记暂不支持修订编辑哦。";
+"Can't use Track-Changes feature to edit office notes."="Office 类型笔记暂不支持修订编辑哦。";
+"Can't use Track-Changes feature to edit PDF notes."="PDF 类型笔记暂不支持修订编辑哦。";
+"Auto Track-Changes"="自动修订";
+
+"Choose Images"="选择相册照片";
+"Add Tags"="添加标签";
+"View Attachments"="查看附件";
+"View Attachments (%@)"="查看附件 (%@)";
+"Auto start track changes while editing others notes?"="当您编辑其他人笔记时，自动开启修订功能吗？";
+
+"Social Login"="社交帐号登录";
+"Can't sign in, Unknown error!"="无法登录，未知错误!";
+"NO"="不了";
+"Can't send email. please sign in first."="无法发送邮件，请首先登录。";
+"Yes"="好的";
+"Can't login from Wechat, Unknown error!"="无法通过微信登录，未知错误。";
+"Sign In Directly with WeChat"="使用此帐号直接登录";
+"The account already exists, please bind directly!"="该帐户已经存在，请直接绑定！";
+"The account has been bound to other WeChat account, a WizNote account can't be bound to multiple WeChat accounts."="该帐户已经绑定了其他微信帐号，一个为知帐号不能同时绑定多个微信帐号哦。";
+"The account doesn't exist."="该帐户不存在";
+
+"Create an Account"="创建为知帐号";
+"Bind the Existing Account"="绑定已有为知帐号";
+"Sign in and Bind"="登录并绑定";
+"Sign up and Bind"="注册并绑定";
+
+"- duplicate"="- 副本";
+"New markdown note"="Markdown笔记";
+
+"Can't create new note in this group."="不能在当前群组创建笔记。";
+"The note is encrypted, can be copied."="笔记被加密，不能复制。";
+
+"Copy Note"="复制笔记";
+"View Note Information"="查看笔记信息";
+
+"Append \".md\" to any note title."="任意笔记标题添加.md后缀，就可以按照markdown语法渲染。";
+"Learn markdown in 3 minutes."="三分钟学会markdown语法。";
+
+"New note"="新建笔记";
+
+"Experience account can't change profile photo."="体验帐户不能更改头像。";
+"Choose from Photos"="从相册中选择";
+"Nick name"="昵称";
+"Changing nick name..."="正在更改昵称...";
+"Uploading..."="正在上传...";
+"Take Photo"="拍照";
+"Can't upload profile photo, %@"="不能上传头像, %@";
+"Experience account can't change nick name."="体验帐户不能更改昵称。";
+"Can't change nick name, %@"="不能更改昵称, %@";
+
+/*
+ stat
+ */
+"__new_user_stat_detail_3"="/m在过去的%2天里，\n我创建了 /b%1/m 条笔记！";
+"__new_user_stat_detail_7"="/m在过去的%2天里，\n我创建了 /b%1/m 条笔记！";
+"__new_user_stat_detail_15"="/m在过去的%2天里，\n我创建了 /b%1/m 条笔记！";
+"__new_user_stat_detail_others"="/m在过去的%2天里，\n我创建了 /b%1/m 条笔记！";
+
+"__new_user_stat_detail_tip_1"="我无限热爱着新的一日，阳光充足，胜过一切过去的诗。";
+"__new_user_stat_detail_tip_2"="坚持记录，看到更好的自己。";
+"__new_user_stat_detail_tip_3"="记录，收集，整理，回顾，好的习惯坚持一定会带来某些变化。";
+
+"__note_stat_monthly"="/m在过去的一个月里，\n我创建了 /b%1/m 条笔记！";
+
+"This Month"="本月";
+"Created Notes"="创建笔记";
+"WeChat Notes"="微信收藏";
+"Weibo Notes"="微博收藏";
+"Webpage Notes"="网页收藏";
+"Group Notes"="群组笔记";
+
+"Save image"="保存图片";
+
+/*
+Rate
+*/
+"__rate_app_description"="表现不错，继续加油！\n我们也需要你的鼓励，给个好评支持下！";
+"__rate_app_cancel"="默默走开";
+"__rate_app_now"="给为知好评";
+"__rate_app_feedback"="吐槽为知";
+
+/*
+Offline
+*/
+"Sync on WiFi only"="仅在 WiFi 连接时下载";
+"The notes will be downloaded when connected via WiFi, then you can view them without network."="默认在WiFi 连接时将笔记下载到本地，方便无网络时查看";
+
+/*需要翻译的  需要翻译的*/
+
+"Root folder or sub-folder name"="根文件夹或子文件夹名称";
+"Root tag or sub-tag name"="根标签或子标签名称";
+"To create sub-folder by select parent folder"="通过选择父文件来创建相应的子级文件夹";
+"To create sub-tag by select parent tag"="通过选择父标签来创建相应的子级标签";
+"More Actions"="更多操作";
+"Message Filter"="消息过滤";
+"Log Out"="退出登录";
+"My Points"="我的积分";
+"Click to Sign Up/Sign In"="点击注册/登录";
+"Search notes"="输入关键字搜索";
+"Here, you can select different notes sort by Set whether to show abstract"="在这里选择笔记排序方式\n设置是否显示摘要";
+"The %@ \"%@(%@)\" exceeds the maximum limit set in cellular(%@)."="%@ “%@(%@)” 超过了移动网络下设置的最大上传限制(%@)。";
+"如何一键永久收藏微信文章？.md"="如何一键永久收藏微信文章？.md";
+"快速收集有价值的网页，微博，邮件！.md"="快速收集有价值的网页，微博，邮件！.md";
+"离线同步 — 没网也可以随时查看笔记.md"="离线同步 — 没网也可以随时查看笔记.md";
+"3 分钟创建格式美美的笔记.md"="3 分钟创建格式美美的笔记.md";
+"Encryption note can't be shared to group."="加密笔记不能分享到群组！";
+"Encryption note can't be shared by email."="加密笔记无法使用邮件分享！";
+"Click the edit button of upper right corner to create multi-level folder, manage notes efficiently."="点击右上角的编辑，创建多级文件夹，方便高效管理笔记";
+"Click the edit button of upper right corner to create root or sub-tag, tags help you find notes quickly."="点击右上角的编辑，创建根标签或子标签。标签帮你快速找到笔记";
+"Delete Note"="删除笔记";
+"The folder is empty, click the xxx to create note."="文件夹空空如也，不妨点击 xxx 创建几篇笔记，写写人生，记记理想";
+"The tag is empty, click the xxx to create note."="标签空空如也，不妨点击 xxx 创建几篇笔记，写写人生，记记理想";
+"The folder is empty"="文件夹空空如也";
+"The tag is empty"="标签空空如也";
+
+"Sun."="周日";
+"Mon."="周一";
+"Tue."="周二";
+"Wed."="周三";
+"Thu."="周四";
+"Fri."="周五";
+"Sat."="周六";
+"Last Sun."="上周日";
+"Last Mon."="上周一";
+"Last Tue."="上周二";
+"Last Wed."="上周三";
+"Last Thu."="上周四";
+"Last Fri."="上周五";
+"Last Sat."="上周六";
+
+"__time_interval_part_sep"="";
+"%lld days"="%lld天";
+"%lld hours"="%lld小时";
+"%lld minutes"="%lld分钟";
+"%lld seconds"="%lld秒";
+"1 day"="1天";
+"1 hour"="1小时";
+"1 minute"="1分";
+"1 second"="1秒";
+
+"__obtain_new_achievement_message"="/#a1c4ff /font3 /center 恭喜 \n/font5 获得 /blue %@ /#a1c4ff 勋章\n\n\/gray 奖励 /blue /font3 %d /#a1c4ff /font5 /gray 积分";
+
+"List"="列表";
+"Bold"="加粗";
+"Quote"="引用";
+
+"Nobody send message to you."="这里空空如也，木有人给你发消息哦";
+"Nobody modified your notes."="这里空空如也，木有人改你的笔记哦";
+"There is no comment message."="这里空空如也，没有评论相关的消息哦";
+"There is no @ message about you."="这里空空如也，没有提及到你的相关消息哦";
+"Great, all messages are read."="赞  消息都读完啦";
+
+
+"Slip the added folder from right edge to left, cancel offline."="从右边缘向左滑“已添加的文件夹”，取消离线功能。";
+"Are you sure to delete the selected folders and the notes of them?"="确定要删除所选的文件夹吗？";
+"Are you sure to delete the selected tags?"="确定要删除所选的标签吗？";
+"You do not have permission to edit folders."="您没有编辑文件夹的权限";
+"\"%@\" is default folder, you can't delete it."="\"%@\"是默认文件夹，不能删除此文件夹";
+
+"Too many login actions,try again later."="登录次数过多，请稍后重试";
+"Please enter the password of decrypt notes, the password will be encryption saved to the device."="请先输入加密笔记的密码，密码会被加密保存在设备中。";
+"Can't load achievements data."="加载不出成就页面，请稍后重试";
+"Achievements"="我的成就";
+"Save"="保存";
+"Can't connect to {p} server. Please try again later."="无法连接服务器，请稍后重试";
+"Processing order"="订单处理中";
+"The account is already in use"="用户名已被使用。";
+"Account taken"="用户名已占用";
+
+"User denied access"="你已拒绝访问";
+"You have denied WizNote access to your media. This setting can be changed in your device's privacy settings."="你已经拒绝为知笔记访问你的照片，如果允许访问，可以到设备的隐私设置中修改。";
+
+"/blue Commented your note /gray \"%@\""="/blue 评论了您的笔记/gray \"%@\"";
+"/blue Edited your note /gray \"%@\""="/blue 编辑了您的笔记/gray \"%@\"";
+"/blue Replied your comment /gray in note \"%@\""="/blue 回复了/gray 您在笔记\"%@\"的评论";
+"/blue Referred you in note comment /gray \"%@\""="/gray 在笔记\"%@\"的/blue 评论中@了您";
+"/blue Referred you in note /gray \"%@\""="/gray 在笔记\"%@\"中/blue @了您";
+"/gray %@ /blue accepted your join-group apply /gray \"%@\""="/gray %@ /blue 同意您加入群组/gray \"%@\"";
+"/gray %@ /blue applied to join the group /gray \"%@\""="/gray %@ /blue 申请加入群组/gray \"%@\"";
+
+"User has already exists, please sign in."="用户名已经存在，请直接登录";
+"User Id"="帐号";
+"Can't save note!"="保存笔记失败";
+"Can't save web page."="保存网页失败";
+"The web page is too large."="网页过大";
+"Note title:"="标题：";
+"Error code: %d"="错误码：%d";
+
+"Are you sure you want to sign out?"="确定退出登录吗？";
+"Can't start recording, please retry again."="启动录音失败，请再试一次";
+"Purchasing..."="正在提交订单...";
+"Please sign in {p} before purchasing."="请在购买前登录{p}";
+"Saving the web content by server to WizNote..."="正在保存网页到为知笔记...";
+
+"/blue liked your note /gray \"%@\""="/blue 赞了您的笔记 /gray \"%@\"";
+"Can't connecto to {p} server"="无法连接到 {p} 服务器";
+"Experience account can't get achievements."="只有为知笔记帐号才能获得成就哦。";
+
+/*分享*/
+"Your permission is insufficient, super member or group administrators can share notes."="您的权限不足，超级成员或群组管理员才可分享笔记.";
+
+
+
+
+"Add commen notes, folders, tags to be here \nEasy to be found and viewed quickly"="添加常用的笔记，文件夹，标签到这里\n方便快速查找浏览";
+
+"__purchase_share_note_by_link_description__"="您是否要支付 %@ 来购买通过链接分享笔记功能？当您购买后，您可以使用链接分享笔记。\n您只需要购买一次，就可以永久使用外链分享功能。";
+"__cant_request_product_info__"="无法通过AppStore获取产品信息。";
+"__purchase_encrypt_note_description__"="您是否要支付 %@ 来购买加密笔记功能？当您购买后，您可以加密笔记，也可以编辑加密笔记。";
+"__purchase_template_description__"="您是否要支付 %@ 来购买 [%@] 模板？";
+"__purchase_night_mode_description__"="您是否要支付 %@ 来购买夜间模式功能？";
+"__purchase_add_remind_description__"="您是否要支付 %@ 来购买提醒功能？";
+
+"__upgrade_to_vip_or_purchase_feature_only__"="您可以选择下面的方法来使用[%@]功能";
+"__upgrade_to_vip_or_purchase_template_only__"="您可以选择下面的方法来使用[%@]模板";
+"__upgrade_to_vip_to_use_feature__"="您可以升级VIP来使用[%@]功能";
+
+"Upgrade"="马上升级";
+
+"__inapp_share_link_description__"="/font5 /bold 外链分享\n/font5 /unbold /lightblue 将笔记以链接的形式分享他人";
+"__inapp_encrypt_note_description__"="/font5 /bold 加密笔记\n/font5 /unbold /lightblue 给笔记加密";
+"__inapp_night_mode_description__"="/font5 /bold 夜间模式\n/font5 /unbold /lightblue 夜间模式";
+"__inapp_add_remind_description__"="/font5 /bold 提醒\n/font5 /unbold /lightblue 给笔记设置单次或重复提醒";
+
+"Cannot access %@"="无法访问%@";
+"Please make sure %@ are turned on in Settings > {p}"="请到系统隐私设置中，允许{p}访问%@";
+"Microphone"="麦克风";
+
+/*快捷方式*/
+"Shortcuts" = "快捷方式";
+"Add To Shortcuts"="添加到快捷方式";
+"Remove From Shortcuts"="从快捷方式删除";
+"Shortcuts removed!"="快捷方式已删除";
+"Shortcuts added!"="快捷方式已添加";
+
+"Team Moments"="团队动态";
+"Last time you read here"="上次读到这里了";
+"You haven't concerned any team moments~~\nClick the xxx of the top right corner, add the group notes you want to view."="您还没有关注任何团队动态哦~~\n点击右上角的 xxx，添加你想查看的群组笔记";
+"You are not in any group~~\nCreate a team, share information with friends."="您目前不在任何群组里哦~~\n创建一个团队，和同事或朋友共享资料吧~~";
+
+"My Templates"="我的模板";
+"Default Template"="默认笔记模板";
+"Normal Note"="普通笔记";
+"Set as Default"="设为默认";
+"Can't download template"="不能下载模板";
+
+"Share Link"="外链分享";
+"Purchase Now"="立即购买";
+"Restore Purchased Items"="恢复购买";
+
+
+"Advanced Operation"="高级操作";
+"Encrypt Note"="加密笔记";
+"Don't Encrypt Note"="取消加密笔记";
+"Purchase the feature (%@)"="%@购买此功能";
+"Purchase the feature"="购买此功能";
+"Purchase the template (%@)"="%@购买此模板";
+"Purchase the template"="购买此模板";
+"Enter Password"="输入密码";
+"Confirm Password"="确认密码";
+"Password Hint"="密码提示";
+"Notes: Don't forget the password, otherwise the encrypted notes won't be decrypted."="注意：请不要丢失密码。如果丢失密码，您的笔记将无法解密。";
+"Note Encryption"="加密笔记";
+"Initialized"="已初始化";
+"Not initialized"="未初始化";
+"Upgrade VIP, these features can be used in any client."="升级 VIP，以上功能可以在任何一个客户端使用。";
+
+"Please set a password to encrypt your note"="请设置一个密码来加密你的笔记";
+"You can change it in setting - safety later"="可在设置 - 安全里修改加密密码";
+"Notes: These features can be purchased separately for permanent use, but can only be used on the %@ client, the other client is invalid."="注：单独购买以上功能可永久使用，但只能在%@端使用，其他端无效。";
+"Notes: These features can be purchased separately for permanent use, also can be used on all clients of WizNote."="注：单独购买以上模板可永久使用，也可以在任何一个客户端使用。";
+"Initialize Encrypt"="初始化密码";
+"Change Password"="修改密码";
+"Enter the old password"="输入旧的密码";
+"Enter the new password"="输入新密码";
+"Confirm Password"="确认密码";
+"__change_encryption_password_personal__"="修改加密密码";
+"Forgot Password"="忘记密码";
+"Only {p} account can purchase \"Share Link\"feature,please sign up first."="只有{p}用户才可以购买使用外链分享功能，请先注册帐号。";
+"Only {p} account can purchase encryption note feature, please sign up first."="只有{p}用户才可以购买使用加密笔记功能，请先注册帐号。";
+/*系统消息*/
+"System message"="系统消息";
+"Verification message"="验证消息";
+"Verified message"="验证通过消息";
+
+"__public_link_description__"="/bold 复制群组笔记链接\n/unbold /lightblue 所有人都可以查看的公开链接或者输入密码后可查看的私有链接";
+"__web_link_description__"="/bold 复制网页版本地址\n/unbold /lightblue 只有群组成员才可以查看的链接";
+
+/*Image2PC*/
+"Camera to Computer"="拍照到电脑";
+"Transfer Image to Computer"="传图到电脑";
+"Library to Computer"="传照片到电脑";
+
+"Processing..."="正在处理...";
+"Common"="常用";
+"Update"="更新";
+"Can't backup cert to server."="不能备份证书到服务器。";
+"Purchased"="已购买";
+"Invalid user id or password!"="无效的用户名或者密码";
+"Can't encrypt note."="无法加密笔记";
+"Please enter password hint."="请输入密码提示";
+"Team service of [%@] has expired, temporarily unable to sync the new and edited notes and attachments, please renew on time."="团队服务 [%@] 已经到期，暂时无法上传新创建或修改的笔记以及附件，请及时付费哦~";
+"The cert of encrypting note has already initialized."="加密笔记证书已经初始化完成。";
+"Add image"="添加图片";
+"Cannot access camera"="无法访问相机";
+"Add to WizNote"="添加到为知笔记";
+"Please enter old password."="请输入旧的密码。";
+"Can't upload cert to server."="无法上传证书到服务器。";
+"Can't create cert."="无法创建证书。";
+"Can't change cert password."="无法更改证书密码。";
+"Invalid account password."="无效的帐户密码";
+"Please enter password."="请输入密码。";
+"Take a photo"="拍照";
+"Can't restore purchased items.\n%@"="无法恢复已购买项目。\n%@";
+"Choose from library"="通过图库选择";
+"Please make sure Camera are turned on in Settings > WizNote"="请确认已开启相机访问权限。设置 > 为知笔记";
+"Can't decrypt note."="无法解密笔记。";
+"Init cert..."="初始化证书...";
+"WizNote Web Clipper"="为知笔记网页剪辑器";
+"__upload_cert_to_server_from_pc__"="请在您的PC上面上传您的加密证书到服务器。";
+"Downloading template..."="正在下载模板...";
+"Can't create new note with template."="无法通过模板创建新的笔记。";
+"WizNote Web"="为知笔记网页版";
+"Can't load templates."="无法加载模板。";
+"Can't create web note link: %@"="无法获取网页版链接。";
+"Experience account can't use encrypt feature, please sign in or sign up."="体验帐户无法使用加密功能，请登录或注册。";
+"You have succeeded to purchased %@"="您已经成功购买 %@";
+"Can't init cert.\n%@"="无法初始化证书。";
+"Congratulations, %@ has been purchased."="恭喜，您已成功购买%@";
+"Change..."="更改...";
+
+
+"No new note in last 7 days, go call for members to create it."="近7天内没有新动态，快去发动小伙伴创建笔记吧~";
+"Add Group to Concern"="添加要关注的群组";
+
+"Preparing template..."="正在准备模板...";
+
+/**/
+"Night Mode"="夜间模式";
+"You are noble VIP, these features can be used in any client."="您是尊贵的VIP，以上功能可以在任何一个客户端使用。";
+"Usage and Statistics"="用量和统计";
+"Templates"="笔记模板";
+"Features"="高级功能";
+"Points"="积分";
+"Level"="等级";
+"How to use templates ?"="如何使用模板？";
+"__store_upgradeVIP_description__"="/font4 /bold 升级VIP /font5 /unbold \n免费享用所有模板和高级功能,\n还有更多特权！";
+"__store_VIP_description__"="/font4 /bold 您是尊贵的VIP /font5 /unbold \n可免费使用所有模板和高级功能。";
+
+
+"Nobody like this note yet."="还没有人赞过哦～";
+"Click here to like note\nExtened press to view who liked it."="点这里赞一下TA吧\n长按可以看看都谁赞过";
+"Local Import"="文件导入";
+"External Link"="外部链接";
+"Default Action"="点按羽毛笔";
+"Pop-up Template Center"="弹出模板中心";
+"Create Default Template Note"="使用默认模板创建笔记";
+"Click quill to perform the operation selected, extened press quill to perform the operation unselected."="被选中的选项，可通过点按羽毛笔实现，另一个选项，可通过长按羽毛笔实现。";
+"You can use all note templates and all advantage features (Free user need to purchase separately)"="可使用所有笔记模板和高级功能（免费用户需要单独购买）";
+
+/*帐号设置 &&  名片扫描*/
+"Account Setting"="帐号设置";
+"Social Account Binding"="社交帐号绑定";
+"New Email"="新邮箱";
+"New Password"="新密码";
+"Invite Members"="邀请成员";
+"Send to Wechat"="发送到微信";
+"Copy invitation link"="复制邀请链接";
+"Invite you join group「%@」."="邀请您加入群组「%@」。";
+"Invite you join group「%@」. \n%@"="邀请你加入群组「%@」。\n%@";
+"The invitation link has been copied to clipboard."="邀请链接已复制到剪贴板";
+"Add Content"="添加内容";
+"Modify Email"="修改邮箱";
+"Bind Email"="绑定邮箱";
+"Modify Password"="修改密码";
+"Email can't be empty!"="邮箱不能为空！";
+"Password can't be empty!"="密码不能为空！";
+"Not bound"="未绑定";
+"Bound"="已绑定";
+"Modify password successfully, you need to sign in again."="修改密码成功，需要重新登录。";
+"Sign up and bind"="注册并绑定";
+"Modify account successfully, you need to use new email to sign in again."="修改邮箱成功，请用新邮箱重新登录。";
+"Bind account successfully, you need to sign in again."="绑定成功，请重新登录。";
+"Your account is using social account login, if you want to change your password, please bind mailbox."="您是社交账号登录用户，如需修改密码，请先绑定邮箱。";
+"Confirm unbind?"="是否解除绑定？";
+"After binding WeChat, can collect articles and receive messages; After binding Weibo, comment or forward @保存到为知笔记, the weibo can be saved in WizNote."="绑定微信，可收藏公众号文章，以及使用微信接收消息提醒；绑定微博，评论或转发微博，@保存到为知笔记 即可收藏";
+"View snapshot"="查看名片快照";
+"Telephone"="电话";
+"Facsimile"="传真";
+"Address"="地址";
+"Confirm create and bind the email \"%@\"?"="确认创建并绑定帐号 %@ ？";
+"Confirm change the email account to \"%@\"?"="确认将帐号修改为：%@ ？";
+
+
+/*设置群组邀请链接&提醒任务*/
+"Set up invitation link"="设置邀请链接";
+"Administrator review"="管理员审核";
+"When turned on, require administrator approval."="开启后，需要管理员审核通过才可加入群组。";
+"Set up invitee's authority."="设置邀请加入的成员权限。";
+"Invitee authority:"="被邀请人权限：";
+"Invitee authority"="被邀请人权限";
+"Modify and delete others notes"="可修改和删除他人笔记";
+"Create notes"="可创建笔记";
+"Read-Only"="只读权限";
+"Manage Folders"="可管理文件夹";
+"Manage Groups"="可管理群组";
+
+
+"Never"="从不";
+"Weekly"="每周";
+"Monthly"="每月";
+"Yearly"="每年";
+"Every Day"="每天";
+"%@(me)"="%@(自己)";
+
+"Share"="分享";
+"Are you sure to delete attachment \"%@\"?"="确定删除附件“%@”吗？";
+
+"Your contact is invalid, please leave a valid email to reply you."="邮箱无效，为了方便工作人员联系，请修改邮箱";
+"Receiver"="接收者";
+"Myself"="自己";
+"Repeat"="重复";
+"error"="error";
+"Enter search keywords"="输入要搜索的关键字";
+"Reminder"="提醒";
+"Note Reminders"="笔记提醒";
+"This reminder has been expired."="该提醒已过期，不能修改。";
+"This reminder has been completed."="该提醒已完成，不能修改。";
+"Remind important thing\nClick here, add reminder."="重要的事不遗忘\n点击这里，添加提醒吧。";
+"My Reminders"="我的提醒";
+"Reminders I assign to others"="我设置给他人的提醒";
+"Today's Reminders"="今日提醒";
+"Feature"="以后";
+"Completed"="已完成";
+"Expired"="已过期";
+"There is no reminder...\nCreate note, click xxx to add reminder."="还没有提醒...\n创建笔记，点击 xxx，可添加提醒";
+"There is no reminder...\nClick xxx to add reminder."="还没有提醒...\n点击右上角 xxx，添加提醒";
+"Reminder Date"="提醒日期";
+"/blue You have a reminder:  /gray %@"="/blue 你有一个提醒事项：/gray %@";
+"If you do not select at a specific time, the receivers will receive the message immediately."="如果不选择在指定时间提醒，对方会马上收到消息。";
+"Remind at specific date"="在指定日期提醒";
+
+"Email account unverified, you can visit https://note.wiz.cn to send verification in the \"Account Settings\" ."="帐号邮箱未验证，可登录 https://note.wiz.cn，在「账号设置」中发送验证邮件。";
+"Please bind and verify email in \"Account Settings\" in order to use e-mail features."="请先到「帐号设置」中绑定邮箱，并验证后，才可使用发邮件功能。";
+
+"Trash"="回收站";
+"/blue Add a reminder /gray on note \"%@\""="/gray 在\"%@\" /blue 为你创建提醒";
+"/blue You have a reminder:  /gray %@"="/blue 你有一个提醒事项： /gray %@";
+"/blue Remind you view note /gray \"%@\""="/blue 提醒你查看 /gray \"%@\"";
+"success"="成功";
+"You must select a recevier at lest."="请选择至少一个接收者。";
+"This reminder is added by others, Are you sure to delete it?"="该提醒来自其它成员，确定要删除吗？";
+"Can not modify the state of expired reminder. Please add a new one."="不能修改已过期的提醒状态哦，重新创建吧！";
+
+/*ipad viewStyle*/
+"View Style"="视图";
+"Move Note"="移动笔记";
+"Card View"="卡片视图";
+"List View"="摘要视图";
+"Show Reminders Today"="显示今日提醒";
+
+"Charaters"="字";
+"This note was clipped from webpage, would you want turn in Pure Reading Mode automatically?"="这是一篇网页收藏笔记，是否自动进入纯净阅读模式？";
+"Pure Reading automatically"="自动进入纯净阅读";
+"Only the note clipped from webpage can be read on Pure Reading Mode."="纯净阅读模式仅支持网页收藏笔记。";
+"You need to sign up and upload the data in order to add a reminder."="注册账号并上传笔记，才可使用提醒功能哦";
+"You are experience account, sign up to get more features."="您现在是体验帐户，注册可体验更多功能！";
+
+
+/*绝密群组*/
+"Reset Password"="重置绝密群组密码";
+"Reset Successfully"="重置成功";
+"Invalid password. Please enter again."="密码错误，请重新输入";
+"Please ask for the initial password from team administrator."="请向团队管理员索取绝密群组初始密钥。";
+"Enter the password"="输入绝密群组初始密钥";
+"This note can't be shared, because it's in encrypted group."="绝密群组的笔记不能分享";
+"Failed to get the certificate"="获取证书失败";
+"Encrypted Group"="绝密群组";
+"Enter the encrypted group password"="请输入绝密群组密码";
+"__verify_group_cert_title__"="请先验证密钥";
+"__verify_group_cert_introduce__"="这是一个绝密群组，笔记已经被自动加密。如需阅读或创建笔记，请向团队管理员索取绝密群组初始密钥进行验证，并设置绝密群组密码。";
+"The password is incorrect, please re-enter."="输入的密钥不正确，请重新输入。";
+"Please initialize password before decrypt note with Touch ID"="请初始化密码后再使用指纹解密功能";
+"Verify the password"="验证群组密钥";
+"This note is in encrypted group, can't be moved to other groups."="绝密群组笔记不能移动到其他群组。";
+"Verify"="验证";
+"Please set a password to create or decrypt your note"="请设置一个你查看绝密群组笔记的密码";
+"Team service of [%@] has expired, temporarily unable to share by link, please renew on time."="团队服务 [%@] 已经到期，暂时无法使用外链分享，请及时付费哦~";
+"You are using a free team service, upgrade the team service, you can share the group note with link."="您使用的是免费版团队服务，升级团队服务，即可使用群组外链分享。";
+"Hint:%@"="提示:%@";
+
+
+/*7.2.0*/
+"Deselect All"="取消全选";
+"Select All"="全选";
+"Selected %d"="已选 %d";
+"Moving..."="正在移动...";
+"Auto open PDF file"="自动打开PDF文件";
+"Batch Edit"="批量操作";
+"Others"="其他操作";
+"Only {p} account can remark, Sign up First!"="只有{p}账号才能添加备注，请先登录。";
+"Move"="移动";
+"Move Notes"="移动笔记";
+"The selected notes contain encrypted notes that require a password to continue to do the operation."="所选笔记中包含加密笔记，需要先输入密码才能执行相应编辑操作。";
+"There is a note in the selected item that you do not have permission to edit. Please re-select it."="所选项目中存在您没有权限编辑的笔记，请重新选择。";
+"Are you sure to delete the selected notes?"="确定删除所选笔记吗？";
+"__change_encryption_password_group__"="修改绝密群组密码";
+
+
+/*7.3.0*/
+"Font Size"="字号大小";
+"Small"="小";
+"Middle(Default)"="中(默认)";
+"Large"="大";
+"Extra Large"="特大";
+"You can adjust the font size only for notes created in WizNote."="只有在为知笔记里创建的笔记才可以调整字体大小。";
+"Sorry, because of some restrictions, you can not use this function now. You can contact support@wiz.cn for help."="抱歉，由于相关限制，你暂时无法使用分享笔记链接功能。如有疑问，请联系support@wiz.cn。";
+"The free trial period has expired, please upgrade to VIP for uploading new personal notes and modification of personal notes, which make sure your data can be accessed on any device."="您的账户试用期已结束，新建或修改的个人笔记将无法上传到云端，为了保证数据随时随地正常使用，请升级 VIP。";
+"The free trial period has expired, please upgrade to VIP for uploading new personal notes and modification of personal notes, which make sure your data can be accessed on any device. ( This has no influence on the business service. )"="您的账户试用期已结束，新建或修改的个人笔记将无法上传到云端，为了保证数据随时随地正常使用，请升级 VIP。（团队服务不受影响）";
+"The period of VIP service has expired, please renew for uploading new personal notes and modification of personal notes, which make sure your data can be accessed on any device."="您的 VIP 服务已到期，新建或修改的个人笔记将无法上传到云端，为了保证数据随时随地正常使用，请续费 VIP。";
+"The period of VIP service has expired, please renew for uploading new personal notes and modification of personal notes, which make sure your data can be accessed on any device. ( This has no influence on the business service. )"="您的 VIP 服务已到期，新建或修改的个人笔记将无法上传到云端，为了保证数据随时随地正常使用，请续费 VIP。（团队服务不受影响）";
+"Upgrade to paymented group to use Reminder."="升级付费团队来使用提醒功能。";
+"Please upload this note before use Share-Link"="笔记上传成功后才可以使用外链分享。";
+"- VIP Privilege -"="- VIP特权 -";
+
+"Expire at %@"="%@过期";
+"Learn uploading"="了解上传";
+"The period of VIP service has expired, please renew for uploading new personal notes and modification of personal notes"="您的 VIP 已到期，为保证数据正常使用，请尽快续费！";
+"You left %d days trial period, new personal notes and modification of personal notes can't be uploaded after %d days"="您还有%d天试用时间，%d天后新建或修改的笔记将无法上传到云端，请尽快升级 VIP！";
+"Access your treasure on any device, at anytime"="随时随地在手机、平板、电脑上使用";
+"Share with friends by a link, Show yourself to the world"="你的笔记可以以链接的形式分享给微信好友，发送到微博，或者分享到朋友圈。";
+"No share, No gain"="分享笔记给他人";
+"Save in cloud, Safer than in hard disk, Longer than in brain\n\nOne account, Any new device, All data\n\nAbandon your computer, Grab your phone, Have a wonderful trip"="精心收集的文章、一闪而过的想法灵感，几年的工作经验总结，全部备份在云端。大脑会遗忘，设备会宕机，但你的数据永远安全。\n\n更换手机或电脑，不用费尽心思迁移数据，登录为知笔记账号，即可在新设备上获取你的云端笔记。\n\n海边度假，蜜月旅行，摆脱电脑，轻装出行。在需要时打开手机，攻略随手可得。";
+"The %@ [%@] is too large (%@) to upload to server, upgrade VIP to upload it."="%@ [%@] 太大(%@)，不能上传到服务器，升级VIP来上传。";
+"The free trial period has expired, please upgrade to VIP for uploading new personal notes and modification of personal notes, which make sure your data can be used normally"="您的账户已过试用时间，新建或修改的笔记无法上传到云端，为了保证数据正常使用，请升级 VIP！";
+"%@, free user maximum upload note size is %@"="%@, 免费用户最大上传大小是%@";
+
+/*7.4.0 search*/
+"Text Size for Reading"="阅读笔记字号大小";
+"Check your internet connection"="请检查网络连接";
+"Learn Advanced Search"="了解高级搜索";
+"Just support title search for search offline."="离线状态下，仅支持按标题搜索。在线可支持全文搜索。";
+"Color Theme"="颜色主题";
+"Gray"="灰白";
+"Classic Blue"="经典蓝";
+"Dark"="黑色";
+"Text size for reading setting is global setting, namely: set the font size, the new notes in WizNote will respond."="设置里的字号大小是全局设置，即：设置字号后，为知笔记软件内新建的笔记都会响应";
+"Check your internet connection, Just support title search for search offline."="请检查网络连接，离线状态下，仅支持按标题搜索。在线可支持全文搜索。";
+"Upgrade VIP, experience content search"="升级 VIP，体验快速精准的全文搜索";
+"Free users only support title search"="免费用户仅支持按标题搜索";
+"Free users only support title search. Upgrade VIP, experience content search."="免费用户仅支持按标题搜索。升级 VIP，体验快速精准的全文搜索。";
+"Found %d notes"="找到 %d 篇笔记";
+
+/*7.5.0*/
+"My Share List"="我的分享";
+"Upgrade VIP, view sharing history."="升级VIP，查看分享历史";
+"Upgrade VIP, view the historical version of the note."="升级VIP，查看笔记历史版本";
+"View The Historical Version"="查看历史版本";
+
+/*7.6.0 sync*/
+"Before switch on, you need to know:"="启用前，您需要知道以下几点：";
+"● Don't support returning old sync mode\n● When used, other client must be updated to the latest version, or can't log in"="● 开启新的同步后，无法退回旧同步方式\n● 开启后，其他客户端必须更新到最新版本，否则不能登录";
+"Do you want to use?"="是否要开启此选项？";
+"The new sync uses incremental sync, upload and download notes speed is improved significantly"="新的同步采用增量同步，上传和下载笔记速度会明显提升";
+"Use New Sync Mode"="开启新的同步方式";
+"Search In Note"="笔记内搜索";
+"No match results"="无匹配结果";
+
+
+/*TZImagePickerViewController*/
+"OK" = "确定";
+"Back" = "返回";
+"Done" = "完成";
+"Cancel" = "取消";
+"Setting" = "设置";
+"Photos" = "照片";
+"Processing..." = "正在处理...";
+
+
+
+/**/
+"Language Setting"="语言设置";
+"Points can help raise the level, the higher level, the more traffic per month."="积分可以帮助提升等级，等级越高，每月流量越多哦～";
+
+"Sync attachment title only"="仅下载附件标题";
+"Sync attachment within three days"="下载最近三天附件数据";
+"Sync attachment within a month"="下载最近一月附件数据";
+"Sync attachment within a week"="下载最近一周附件数据";
+"Sync all attachment"="下载全部附件数据";
+
+"Download attachments to make it easier for you to read when there is no network! However, it will occupy more storage space, and make the entire download process longer"="下载附件，方便您在无网络时阅读查看！但是，下载附件不仅会占据更多的存储空间，也会让整个下载过程时间变长。";
+"Accuracy"="匹配精确度";
+"%@ attachments is waiting for offline."="%@个附件正在等待被下载。";
+
+
+/**/
+"Font Color"="字体颜色";
+"Highlight Color"="突出显示";
+"Only VIP users can share notes to others by link, please update to VIP firstly."="只有 VIP 用户才可以使用外链分享哦，请先升级 VIP～";
+"You do not have permission to operate this note"="您没有操作这篇笔记的权限";
+"There is a note in the selected item that you do not have permission to operate. Please re-select it."="所选项目中存在您没有权限操作的笔记，请重新选择。";
+"Password length can not be less than 6."="密码长度不能少于6位";
+"Adding..."="正在添加...";
+"More"="更多";
+"[Top]"="[置顶]";
+"Top"="置顶";
+"Always On Top"="置顶";
+"Remove On Top"="取消置顶";
+"The current group is forbidden to read offline, you can't view it."="当前群组为禁止离线阅读群组，离线状态下不能查看。";
+"The personal group [%@] has expired and can not be uploaded. Please contact the group creator to upgrade to the VIP or upgrade to the team service!"="您所在的个人群组 [%@] 已到期，无法上传笔记，请联系群组创建者升级 VIP 或 升级到团队服务！";
+
+
+"Unfold"="展开";
+"Fold"="收起";
+"Display top notes"="显示置顶笔记";
+"Count"="字数";
+
+/*7.7.0*/
+"The task list can't be edited in iOS, you should edit in Windows."="iOS 端不支持编辑任务列表，请到 Windows 操作。";
+
+/*7.7.1*/
+"Universe"="星空";
+"Thanks for participating in WizNote Double 11\nYou have a limited edition universe theme\nUse it?"="感谢参与为知笔记双 11 活动\n您已获得限量版星空主题\n是否使用此主题？";
+"__use_univise_theme__"="使用";
+"__use_univise_theme_later__"="暂不使用";
+
+/*7.7.3*/
+"Save to {p}"="保存到{p}";
+"Work Email"="工作邮箱";
+
+/**/
+"Forget All"="全部忽略";
+
+/*lib resource for huawei*/
+"Take Photo Note"="拍照笔记";
+"Text Note"="文字笔记";
+"Notebook name"="笔记本名称";
+"New Notebook"="新建笔记本";
+"Create Notebook"="新建笔记本";
+
+"Recent Notes"="近期笔记";
+"Notebooks"="笔记本";
+
