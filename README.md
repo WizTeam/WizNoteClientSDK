@@ -27,6 +27,10 @@
 3. 参考例子中的WizNoteFramework.h 和WizNoteFramework.m文件，在framework里面增加相关方法，并进行导出。
 4. 参考例子中的方式，设置并启动笔记功能。
 
-### 其它功能
+### 图片修改
+1. 找到wiznote.bundle文件，直接修改里面的图片，然后重新编译即可。
 
-preparing...
+### 文字修改
+1. 找到wiznote.bundle文件，找到对应语言的Localizable.strings，直接修改，然后重新编译即可。
+
+
