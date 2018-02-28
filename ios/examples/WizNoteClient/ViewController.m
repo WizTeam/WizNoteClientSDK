@@ -34,17 +34,20 @@
 
 - (void) launchWizNote {
     NSDictionary* options = @{
+                              @"appName": @"WeLink Note",
                               @"appStyle" : @"style1",
                               @"disableSubFolder" : @(YES),
                               @"disableTeam": @(YES),
-                              @"disableTag": @(YES),
+                              //@"disableTag": @(YES),
                               @"disableReminder": @(YES),
                               @"disableAttachment": @(YES),
                               @"disableComment": @(YES),
                               @"disableShare": @(YES),
-                              @"disableOnTop": @(YES),
+                              //@"disableOnTop": @(YES),
                               @"disableEncrypt": @(YES),
                               @"disableShortcut": @(YES),
+                              @"disableGuide": @(YES),
+                              @"disableTrackChanges": @(YES),
                               };
     WizNoteSetup(options);
     WizNoteLaunch(self, options);
