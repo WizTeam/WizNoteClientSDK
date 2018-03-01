@@ -35,6 +35,9 @@
 - (void) launchWizNote {
     NSDictionary* options = @{
                               @"appName": @"WeLink Note",
+                              @"apiServer": @"http://sandbox.wiz.cn",
+                              @"authType": @"huawei",
+                              @"disableHttps": @(YES),
                               @"appStyle" : @"style1",
                               @"disableSubFolder" : @(YES),
                               @"disableTeam": @(YES),
@@ -49,8 +52,15 @@
                               @"disableGuide": @(YES),
                               @"disableTrackChanges": @(YES),
                               };
+    //
     WizNoteSetup(options);
-    WizNoteLaunch(self, options);
+    //
+    //
+    NSDictionary* userOptions = @{
+                                  @"authCode": @"ef65f67c1eae1e636a76c951b0f2d2a817qwkef00g6",
+                                  @"enterpriseUserId": @"anzhen-test2@wiz.cn",
+                                  };
+    WizNoteLaunch(self, userOptions);
 }
 
 @end
