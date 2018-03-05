@@ -10,16 +10,27 @@
 #import "WizNoteFramework.h"
 
 @interface ViewController ()
-
+@property (nonnull, strong) NSArray* wiznoteStyles;
+@property (nonnull, copy) NSString* currentStyle;
 @end
 
 @implementation ViewController
+@synthesize wiznoteStyles;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    //
+    self.wiznoteStyles = @[@"style1", @"style2"];
+    self.currentStyle = self.wiznoteStyles.firstObject;
+    //
+    UISegmentedControl* styles = [[UISegmentedControl alloc] initWithItems:self.wiznoteStyles];
+    styles.selectedSegmentIndex = 0;
+    styles.frame = CGRectMake(80, 200, 200, 40);
+    [self.view addSubview:styles];
+    [styles addTarget:self action:@selector(styleChanged:) forControlEvents:UIControlEventValueChanged];
     
-    UIButton* btn = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 160, 44)];
+    UIButton* btn = [[UIButton alloc] initWithFrame:CGRectMake(100, 260, 160, 44)];
     btn.backgroundColor = [UIColor redColor];
     [btn setTitle:@"Launch WizNote" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(launchWizNote) forControlEvents:UIControlEventTouchUpInside];
@@ -38,7 +49,7 @@
                               @"apiServer": @"http://sandbox.wiz.cn",
                               @"authType": @"huawei",
                               @"disableHttps": @(YES),
-                              @"appStyle" : @"style1",
+                              @"appStyle" : self.currentStyle,
                               @"disableSubFolder" : @(YES),
                               @"disableTeam": @(YES),
                               //@"disableTag": @(YES),
@@ -63,5 +74,9 @@
     WizNoteLaunch(self, userOptions);
 }
 
+- (void) styleChanged:(UISegmentedControl *)obj
+{
+    self.currentStyle = self.wiznoteStyles[obj.selectedSegmentIndex];
+}
 @end
 
