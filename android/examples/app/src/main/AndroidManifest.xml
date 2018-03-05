@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="cn.wiz.example">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        tools:replace="android:name"
+        android:name=".TestApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        android:fullBackupContent="true">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--主页-->
+        <activity
+            android:name="cn.wiz.note.AccountHomeActivity"
+            android:theme="@style/Theme.Wiz.Home"
+            android:configChanges="keyboardHidden|orientation|screenSize" >
+        </activity>
+        <!--查看笔记-->
+        <activity
+            android:name="cn.wiz.note.ViewNoteActivity"
+            android:theme="@style/Theme.Wiz.ViewNote"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <!--查看笔记信息-->
+        <activity
+            android:name="cn.wiz.note.ViewNoteInfoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <!--创建笔记-->
+        <activity
+            android:name="cn.wiz.note.CreateDocumentActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize"
+            android:label="@string/edit_note"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"
+            android:theme="@style/Theme.Wiz.Edit" />
+        <!--编辑笔记-->
+        <activity
+            android:name="cn.wiz.note.EditDocumentActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize"
+            android:label="@string/edit_note"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"
+            android:theme="@style/Theme.Wiz.Edit" />
+        <!--查看历史版本-->
+        <activity
+            android:name="cn.wiz.note.WebViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <!--回收站-->
+        <activity
+            android:name="cn.wiz.note.RecycleNoteActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <!--选择相册-->
+        <activity
+            android:name="cn.wiz.note.ChooseAlbumActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <!--选择照片-->
+        <activity
+            android:name="cn.wiz.note.MultiplePickGalleryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <!--文件夹笔记列表-->
+        <activity
+            android:name="cn.wiz.note.NoteListActivity"
+            android:theme="@style/Theme.Wiz.Toolbar"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <!--选择笔记目录-->
+        <activity
+            android:name="cn.wiz.note.SelectAllLocationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+    </application>
+
+</manifest>
