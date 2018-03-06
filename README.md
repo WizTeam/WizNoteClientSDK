@@ -33,4 +33,13 @@
 ### 文字修改
 1. 找到wiznote.bundle文件，找到对应语言的Localizable.strings，直接修改，然后重新编译即可。
 
+## Android 客户端
 
+参看 android/examples
+
+### 需要做如下更改
+
+1. 将 aar 文件拷贝到 libs 目录
+2. 修改 build.gradle 文件
+3. 修改 AndroidManifest.xml 文件
+4. 指定 Application 并继承自 MultiDexApplication
