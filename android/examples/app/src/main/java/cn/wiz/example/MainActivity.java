@@ -1,14 +1,13 @@
 package cn.wiz.example;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import cn.wiz.note.AccountHomeActivity;
 import cn.wiz.note.sdk.WizNoteSDK;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,8 +26,9 @@ public class MainActivity extends AppCompatActivity {
     public void initSDK() {
         try {
             String apiServer = "http://sandbox.wiz.cn";
-            String authCode = "ef65f67c1eae1e636a76c951b0f2d2a88hnyrgsfntl";
+            String authCode = "ef65f67c1eae1e636a76c951b0f2d2a8tkawik94zuf";
             String authType = "huawei";
+            String authBody = "123";
             String enterpriseUserId = "anzhen-test2@wiz.cn";
             WizNoteSDK.InitListener listener = new WizNoteSDK.InitListener() {
                 @Override
@@ -39,8 +39,7 @@ public class MainActivity extends AppCompatActivity {
                     launchBtn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent intent = new Intent(MainActivity.this, AccountHomeActivity.class);
-                            startActivity(intent);
+                            WizNoteSDK.startNoteHomePage(MainActivity.this);
                         }
                     });
                 }
@@ -50,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, s, Toast.LENGTH_LONG).show();
                 }
             };
-            WizNoteSDK.initNoteSDK(getApplication(), apiServer, authCode, authType, enterpriseUserId, listener);
+            WizNoteSDK.initNoteSDK(getApplication(), apiServer, authCode, authType, authBody, enterpriseUserId, listener);
         } catch (Exception e) {
             e.printStackTrace();
         }
