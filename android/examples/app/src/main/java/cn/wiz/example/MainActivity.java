@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             WizNoteSDK.InitListener listener = new WizNoteSDK.InitListener() {
                 @Override
                 public void onSuccess() {
-                    Button launchBtn = findViewById(R.id.sdk_status);
+                    Button launchBtn = (Button) findViewById(R.id.sdk_status);
                     launchBtn.setEnabled(true);
                     launchBtn.setText("打开笔记");
                     launchBtn.setOnClickListener(new View.OnClickListener() {
