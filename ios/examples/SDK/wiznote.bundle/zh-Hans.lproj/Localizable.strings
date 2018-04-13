@@ -1269,10 +1269,12 @@ Offline
 /*lib resource for huawei*/
 "Take Photo Note"="拍照笔记";
 "Text Note"="文字笔记";
-"Notebook name"="笔记本名称";
+"Notebook name"="新建笔记本";
 "New Notebook"="新建笔记本";
 "Create Notebook"="新建笔记本";
 
-"Recent Notes"="近期笔记";
+"Recent Notes"="笔记";
 "Notebooks"="笔记本";
 
+"Please enter title"="输入标题";
+"Photo"="拍照";
