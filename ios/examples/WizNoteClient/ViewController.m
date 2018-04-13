@@ -45,11 +45,11 @@
 
 - (void) launchWizNote {
     NSDictionary* options = @{
-                              @"appName": @"WeLink Note",
+                              @"appName": @"我的笔记",
                               @"apiServer": @"http://sandbox.wiz.cn",
                               @"authType": @"huawei",
                               @"disableHttps": @(YES),
-                              @"appStyle" : self.currentStyle,
+                              @"appStyle" : @"style1",
                               @"disableSubFolder" : @(YES),
                               @"disableTeam": @(YES),
                               //@"disableTag": @(YES),
@@ -62,16 +62,20 @@
                               @"disableShortcut": @(YES),
                               @"disableGuide": @(YES),
                               @"disableTrackChanges": @(YES),
+                              //
                               };
     //
     WizNoteSetup(options);
     //
     //
-    NSDictionary* userOptions = @{
-                                  @"authCode": @"ef65f67c1eae1e636a76c951b0f2d2a817qwkef00g6",
-                                  @"enterpriseUserId": @"anzhen-test2@wiz.cn",
-                                  };
-    WizNoteLaunch(self, userOptions);
+    NSDictionary* launchOptions = @{
+                                    @"enterpriseUserId": @"anzhen-test2@wiz.cn",
+                                    @"authType": @"huawei",
+                                    @"authCode": @"ef65f67c1eae1e636a76c951b0f2d2a83ro260vmox5",
+                                    @"authBody": @"abc",
+                                    };
+    
+    WizNoteLaunch(self, launchOptions);
 }
 
 - (void) styleChanged:(UISegmentedControl *)obj

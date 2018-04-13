@@ -19,11 +19,11 @@
 		<key>WIZ_DISABLE_TEXT_COLOR</key>
 		<string>9fa5af</string>
 		<key>WIZ_NAVIGATIONBAR_COLOR</key>
-		<string>448aff</string>
+		<string>343745</string>
 		<key>WIZ_NAVIGATIONBAR_TINT_COLOR</key>
 		<string>ffffff</string>
 		<key>WIZ_SEPARATOR_COLOR</key>
-		<string>448aff33</string>
+		<string>cccccc</string>
 		<key>WIZ_GRAY_TEXT_COLOR</key>
 		<string>8f96a3</string>
 		<key>WIZ_TIPS_BACKGROUND_COLOR</key>

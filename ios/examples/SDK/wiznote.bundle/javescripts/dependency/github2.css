@@ -171,11 +171,16 @@
 
 .markdown-body pre li {
     margin: 0;
+    padding-left: 8px;
 }
 
 .markdown-body ul, .markdown-body ol {
     padding-left: 34px;
     padding-left: 2.13rem;
+}
+.markdown-body td ul, .markdown-body td ol {
+    padding-left: 16px;
+    padding-left: 1rem;
 }
 .markdown-body ul p, .markdown-body ol p{
     margin: 0;
@@ -244,7 +249,7 @@
 
 .markdown-body table tr {
     border-top: 1px solid #cccccc;
-    background-color: white;
+    /*background-color: white;*/
     margin: 0;
     padding: 0;
 }
