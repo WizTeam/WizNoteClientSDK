@@ -71,7 +71,7 @@
     NSDictionary* launchOptions = @{
                                     @"enterpriseUserId": @"anzhen-test2@wiz.cn",
                                     @"authType": @"huawei",
-                                    @"authCode": @"ef65f67c1eae1e636a76c951b0f2d2a83ro260vmox5",
+                                    @"authCode": @"ef65f67c1eae1e636a76c951b0f2d2a84ykc249vyll",
                                     @"authBody": @"abc",
                                     };
     

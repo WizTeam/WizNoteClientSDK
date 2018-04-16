@@ -21,6 +21,7 @@
 		3040E6882045572E009CDE04 /* wiznote.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3040E6312045361E009CDE04 /* wiznote.bundle */; };
 		3040E68A20455748009CDE04 /* WizNoteFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = 3040E68920455748009CDE04 /* WizNoteFramework.m */; };
 		3040E68C204557B9009CDE04 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3040E6352045373C009CDE04 /* libc++.tbd */; };
+		306EB26320845DAE00CFFA92 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 306EB26220845DAE00CFFA92 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		3040E67C20455716009CDE04 /* WizNoteFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WizNoteFramework.h; sourceTree = "<group>"; };
 		3040E67D20455716009CDE04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3040E68920455748009CDE04 /* WizNoteFramework.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WizNoteFramework.m; sourceTree = "<group>"; };
+		306EB26220845DAE00CFFA92 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		30E059832046909F00DBDF46 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		30E05984204690A100DBDF46 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +100,7 @@
 		3040E60C2045354B009CDE04 = {
 			isa = PBXGroup;
 			children = (
+				306EB26220845DAE00CFFA92 /* InfoPlist.strings */,
 				3040E62E2045355E009CDE04 /* SDK */,
 				3040E6172045354B009CDE04 /* WizNoteClient */,
 				3040E67B20455716009CDE04 /* WizNoteFramework */,
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3040E6252045354B009CDE04 /* LaunchScreen.storyboard in Resources */,
+				306EB26320845DAE00CFFA92 /* InfoPlist.strings in Resources */,
 				3040E6222045354B009CDE04 /* Assets.xcassets in Resources */,
 				3040E6202045354B009CDE04 /* Main.storyboard in Resources */,
 			);

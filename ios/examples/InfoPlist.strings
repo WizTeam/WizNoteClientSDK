@@ -1,0 +1,19 @@
+/* 
+  InfoPlist.strings
+  WizNoteClient
+
+  Created by Wei Shijun on 2018/4/16.
+  Copyright © 2018 Wei Shijun. All rights reserved.
+*/
+
+CFBundleDisplayName = "WizNote";
+//
+"Text Note" = "Text Note";
+"List Note" = "List Note";
+"Camera Note" = "Camera Note";
+//
+NSCameraUsageDescription = "In order to save media information to WizNote.";
+NSPhotoLibraryUsageDescription = "In order to save media information to WizNote.";
+NSContactsUsageDescription = "We need your authorization to get contacts list so as to send emails";
+NSMicrophoneUsageDescription = "We need your authorization before you can use the microphone to record";
+NSPhotoLibraryAddUsageDescription = "We need your authorization to save photo";
