@@ -1280,3 +1280,6 @@ Offline
 "Photo"="拍照";
 "New Note"="新建笔记";
 
+"Succeeded to move notes."="移动成功";
+"Succeeded to delete notes."="删除成功";
+"Succeeded to move notes to top."="置顶成功";
