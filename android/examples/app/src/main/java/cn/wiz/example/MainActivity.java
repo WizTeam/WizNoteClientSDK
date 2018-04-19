@@ -26,11 +26,15 @@ public class MainActivity extends AppCompatActivity {
     public void initSDK() {
         try {
             String apiServer = "http://sandbox.wiz.cn";
-            String authCode = "ef65f67c1eae1e636a76c951b0f2d2a83ro260vmox5";
+            String authCode = "ef65f67c1eae1e636a76c951b0f2d2a8uk6am7t3al9";
             String authType = "huawei";
             String authBody = "123";
             String enterpriseUserId = "anzhen-test2@wiz.cn";
             WizNoteSDK.InitListener listener = new WizNoteSDK.InitListener() {
+                @Override
+                public void onStart() {
+                }
+
                 @Override
                 public void onSuccess() {
                     Button launchBtn = (Button) findViewById(R.id.sdk_status);

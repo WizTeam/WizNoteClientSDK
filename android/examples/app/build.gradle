@@ -19,10 +19,24 @@ android {
         /**2*/
         multiDexEnabled true
     }
+    signingConfigs {
+        release {
+            storeFile file("cert/sdk.jks")
+            storePassword "wizsdk"
+            keyAlias "wiz"
+            keyPassword "wizsdk"
+        }
+    }
     buildTypes {
         release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
 }
