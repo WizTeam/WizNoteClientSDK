@@ -6,7 +6,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+
 import cn.wiz.note.sdk.WizNoteSDK;
+import cn.wiz.sdk.util2.HttpURLConnectionUtil;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -58,5 +65,6 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
 
 }
