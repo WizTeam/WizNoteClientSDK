@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     public void initSDK() {
         try {
             String apiServer = "http://sandbox.wiz.cn";
-            String authCode = "ef65f67c1eae1e636a76c951b0f2d2a8wmvfpxdr8wc";
+            String authCode = "ef65f67c1eae1e636a76c951b0f2d2a88879evxhwzs";
             String authType = "huawei";
             String authBody = "123";
             String enterpriseUserId = "anzhen-test2@wiz.cn";
