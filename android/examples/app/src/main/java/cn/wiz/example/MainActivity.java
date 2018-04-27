@@ -2,6 +2,7 @@ package cn.wiz.example;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatDelegate;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
