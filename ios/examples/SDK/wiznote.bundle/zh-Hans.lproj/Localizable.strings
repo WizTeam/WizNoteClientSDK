@@ -3,7 +3,7 @@
 "/Collection/Work/"="/收集/工作/";
 "/Favorit Weibo/"="/我的微博/";
 "/My Journals/"="/我的日记/";
-"/My Notes/"="/我的笔记/";
+"/My Notes/"="/默认笔记/";
 "/My Tasks/"="/我的任务/";
 "My Sticky Notes"="我的桌面便签";
 "About {p}"="关于{p}";
@@ -114,7 +114,7 @@
 "My Emails"="我的邮件";
 "My Events"="我的事件";
 "My Journals"="我的日记";
-"My Notes"="我的笔记";
+"My Notes"="默认笔记";
 "Personal MyWiz"="个人 MyWiz 邮箱";
 "MyWiz of Group"="群组 MyWiz 邮箱";
 "Network is error!"="Network is error!";
@@ -185,7 +185,7 @@
 "Sync completed"="同步完成";
 "Tag title"="标签标题";
 "Tags"="标签";
-"Text"="文字";
+"Text"="文本";
 "The Folder \"%@\" already exists."="文件夹 \"%@\" 已存在。";
 "The Tag \"%@\" already exists."="标签 \"%@\" 已存在。";
 "The passwords do not match."="你输入的两次密码不匹配";
@@ -1126,7 +1126,7 @@ Offline
 
 
 /*7.2.0*/
-"Deselect All"="取消全选";
+"Deselect All"="全不选";
 "Select All"="全选";
 "Selected %d"="已选 %d";
 "Moving..."="正在移动...";
@@ -1273,13 +1273,23 @@ Offline
 "New Notebook"="新建笔记本";
 "Create Notebook"="新建笔记本";
 
-"Recent Notes"="笔记";
+"Recent Notes"="近期";
 "Notebooks"="笔记本";
 
 "Please enter title"="输入标题";
 "Photo"="拍照";
 "New Note"="新建笔记";
+"Please enter a name"="请输入名称";
 
 "Succeeded to move notes."="移动成功";
 "Succeeded to delete notes."="删除成功";
 "Succeeded to move notes to top."="置顶成功";
+"Succeeded to remove notes on top."="取消笔记置顶成功";
+"Search Notes"="搜索笔记";
+"Are you sure you want to delete current note?"="确定删除当前笔记？";
+"WeLink Note"="云笔记";
+//
+"Are you sure to move selected notes into folder %@"="确定移动选中笔记到 %@ ?";
+"Are you sure you want to remove the selected notes on top?"="确定将选中的笔记取消置顶吗？";
+"Are you sure you want to make the selected notes always on top?"="确定将选中的笔记置顶吗？";
+"Are you sure to add tag %@ for selected notes?"="确定为选中笔记增加标签 %@ ?";

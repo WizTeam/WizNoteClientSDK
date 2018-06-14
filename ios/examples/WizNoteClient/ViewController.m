@@ -47,6 +47,7 @@
     NSDictionary* options = @{
                               @"appName": @"我的笔记",
                               @"apiServer": @"http://sandbox.wiz.cn",
+                              @"lang": @"en-us",    //en, zh-cn, zh-hans, etc
                               @"authType": @"huawei",
                               @"disableHttps": @(YES),
                               @"appStyle" : @"style1",
@@ -75,7 +76,11 @@
                                     @"authBody": @"abc",
                                     };
     
-    WizNoteLaunch(self, launchOptions);
+    id actionCallback = ^void(int actionType, NSString* data) {
+        NSLog(@"customAction: %@", @(actionType));
+    };
+    
+    WizNoteLaunch(self, launchOptions, actionCallback);
 }
 
 - (void) styleChanged:(UISegmentedControl *)obj

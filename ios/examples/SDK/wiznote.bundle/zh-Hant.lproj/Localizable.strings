@@ -189,7 +189,7 @@
 "Sync completed"="同步完成";
 "Tag title"="標籤標題";
 "Tags"="標籤";
-"Text"="文字";
+"Text"="文本";
 "The Folder \"%@\" already exists."="文件夾\"%@\"已存在。";
 "The Tag \"%@\" already exists."="標籤 \"%@\" 已存在。";
 "The passwords do not match."="你輸入的兩次密碼不匹配";
@@ -1141,7 +1141,7 @@
 
 
 /*7.2.0*/
-"Deselect All"="取消全選";
+"Deselect All"="全不選";
 "Select All"="全選";
 "Selected %d"="已選%d";
 "Moving..."="正在移動...";
@@ -1300,5 +1300,6 @@
 "New Notebook"="新建筆記本";
 "Create Notebook"="新建筆記本";
 
-"Recent Notes"="近期筆記";
+"Recent Notes"="近期";
 "Notebooks"="筆記本";
+"Search Notes"="搜索筆記";
