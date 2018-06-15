@@ -18,4 +18,3 @@ FOUNDATION_EXPORT const unsigned char WizNoteFrameworkVersionString[];
 
 FOUNDATION_EXPORT BOOL WizNoteSetup(NSDictionary* options);
 FOUNDATION_EXPORT BOOL WizNoteLaunch(UIViewController* parentViewController, NSDictionary* options, id customActionBlock);
-

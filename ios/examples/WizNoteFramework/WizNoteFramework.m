@@ -22,3 +22,4 @@ FOUNDATION_EXPORT BOOL WizNoteLaunch(UIViewController* parentViewController, NSD
     [WizNote launchWizNote:parentViewController options:options customActionBlock:customActionBlock];
     return YES;
 }
+

@@ -77,7 +77,6 @@
                                     @"thirdpartyCode": @"ef65f67c1eae1e636a76c951b0f2d2a8uqijkfyc30l"
                                     };
     
-    
     id actionCallback = ^void(int actionType, NSString* data) {
         NSLog(@"customAction: %@", @(actionType));
     };
