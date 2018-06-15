@@ -45,10 +45,10 @@
 
 - (void) launchWizNote {
     NSDictionary* options = @{
-                              @"appName": @"我的笔记",
+                              @"appName": @"WeLink Note",
                               @"apiServer": @"http://sandbox.wiz.cn",
-                              @"lang": @"en-us",    //en, zh-cn, zh-hans, etc
                               @"authType": @"huawei",
+                              @"lang": @"zh-cn",    //en, zh-cn, zh-hans, etc
                               @"disableHttps": @(YES),
                               @"appStyle" : @"style1",
                               @"disableSubFolder" : @(YES),
@@ -64,6 +64,7 @@
                               @"disableGuide": @(YES),
                               @"disableTrackChanges": @(YES),
                               //
+                              @"thirdpartyType": @"huawei"
                               };
     //
     WizNoteSetup(options);
@@ -71,9 +72,9 @@
     //
     NSDictionary* launchOptions = @{
                                     @"enterpriseUserId": @"anzhen-test2@wiz.cn",
-                                    @"authType": @"huawei",
-                                    @"authCode": @"ef65f67c1eae1e636a76c951b0f2d2a84ykc249vyll",
-                                    @"authBody": @"abc",
+                                    @"thirdpartyBody": @"k1=v1;k2=v2;k3=v3;k4=v4",
+                                    @"thirdpartyType": @"huawei",
+                                    @"thirdpartyCode": @"ef65f67c1eae1e636a76c951b0f2d2a8uqijkfyc30l"
                                     };
     
     id actionCallback = ^void(int actionType, NSString* data) {
