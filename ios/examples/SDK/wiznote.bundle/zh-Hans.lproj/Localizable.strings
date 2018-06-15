@@ -3,7 +3,7 @@
 "/Collection/Work/"="/收集/工作/";
 "/Favorit Weibo/"="/我的微博/";
 "/My Journals/"="/我的日记/";
-"/My Notes/"="/我的笔记/";
+"/My Notes/"="/默认笔记/";
 "/My Tasks/"="/我的任务/";
 "My Sticky Notes"="我的桌面便签";
 "About {p}"="关于{p}";
@@ -25,7 +25,7 @@
 "Before a week"="一周之前";
 "Before today"="今天之前";
 "Camera"="相机";
-"Can not find the index.html afer unziped!"="Can not find the index.html afer unziped!";
+"Can not find the index.html afer unziped!"="解压后无法找到 index.html 文件";
 "Unable to Purchase. Please open In App Purchases in [Settings] > [General] > [Restrictions]"="无法在商店购物。请在手机 [设置] > [通用] > [访问限制] 中开启 [App 内购买项目] ";
 "Cancel"="取消";
 "To:"="收件人:";
@@ -114,7 +114,7 @@
 "My Emails"="我的邮件";
 "My Events"="我的事件";
 "My Journals"="我的日记";
-"My Notes"="我的笔记";
+"My Notes"="默认笔记";
 "Personal MyWiz"="个人 MyWiz 邮箱";
 "MyWiz of Group"="群组 MyWiz 邮箱";
 "Network is error!"="Network is error!";
@@ -185,7 +185,7 @@
 "Sync completed"="同步完成";
 "Tag title"="标签标题";
 "Tags"="标签";
-"Text"="文字";
+"Text"="文本";
 "The Folder \"%@\" already exists."="文件夹 \"%@\" 已存在。";
 "The Tag \"%@\" already exists."="标签 \"%@\" 已存在。";
 "The passwords do not match."="你输入的两次密码不匹配";
@@ -263,7 +263,7 @@
 
 /*
  2017-7-29 6.0.10
-*/
+ */
 "Push Notifications"="推送消息";
 "Notifications"="接收新消息通知";
 "Enabled"="已开启";
@@ -401,14 +401,14 @@
 "The group has been dismissed or you have quit from this group, the message can't be read."="笔记所在的群组已经被删除或您已退出此群组，您无法查看此消息！";
 
 /*
-2014-11-06 6.2.3
-*/
+ 2014-11-06 6.2.3
+ */
 "From"="来源";
 
 
 /*
  2014-11-12 6.2.4
-*/
+ */
 "Inserting images..."="正在插入图片...";
 "You can only select %d photos at a time."="每次最多只能选择 %d 张哦";
 "Only %d photos please!"="只能选择%d图片!";
@@ -433,13 +433,13 @@
 
 /*
  2014-12-12 6.2.5
-*/
+ */
 "Can't view attachment"="无法显示附件";
 "Can't save check list: %@"="无法保存清单: %@";
 
 /*
-2014-12-16 6.2.6
-*/
+ 2014-12-16 6.2.6
+ */
 "Note Locked"="笔记被锁定";
 "Current note is being edited by %@. Please wait."="%@正在编辑当前笔记，请等待";
 "Untitled"="未命名";
@@ -474,7 +474,7 @@
 
 /*
  2015-2-4 6.2.7 share
-*/
+ */
 "The link has been copied to clipboard."="已经复制链接到剪贴板。";
 "The link and password has been copied to clipboard."="已经复制链接和密码到剪贴板。";
 "The inner link has been copied to clipboard."="已经复制笔记内链到剪贴板。";
@@ -512,8 +512,8 @@
 "Upgrade to VIP"="升级VIP";
 "Can't share note by link, please verify your email."="无法通过链接分享笔记，请首先验证您的邮箱。";
 /*
-2015－2－9 年终统计
-*/
+ 2015－2－9 年终统计
+ */
 "You've created <b>%d</b> notes in the past year."="过去的一年，你创建了 <b>%d</b> 条笔记";
 "<b>%d</b> original notes, <b>%d</b>web notes."="原创了 <b>%d</b> 条笔记，剪藏了 <b>%d</b> 个网页";
 "Noting is simple,\n<b>Reviewing</b> is not easy."="收藏记录简单\n<b>回顾</b>整理不易";
@@ -521,8 +521,8 @@
 "Enter {p}"="进入 {p}";
 
 /*
-2015-3-19 反馈信息
-*/
+ 2015-3-19 反馈信息
+ */
 "Help & Feedback"="帮助和反馈";
 "User guide"="使用手册";
 "Send feedback"="发送反馈";
@@ -552,7 +552,7 @@
 "Can't rename the system folder: \"%@\""="不能重命名系统文件夹: \"%@\"";
 
 /*搜索结果*/
-"No results found"="寻而未果";
+"No results found"="没有搜索到笔记";
 "%@, maximum upload note size is %@"="%@, 最大上传大小是%@";
 
 /**/
@@ -618,15 +618,15 @@
 "Can't copy note to group."="不能复制笔记到群组。";
 
 /*
-pick Photos
-*/
+ pick Photos
+ */
 "Pick Photo"="选取照片";
 "Pick Photos"="选取照片";
 
 
 /*
  attachments
-*/
+ */
 
 
 /*
@@ -707,16 +707,16 @@ pick Photos
 "Save image"="保存图片";
 
 /*
-Rate
-*/
+ Rate
+ */
 "__rate_app_description"="表现不错，继续加油！\n我们也需要你的鼓励，给个好评支持下！";
 "__rate_app_cancel"="默默走开";
 "__rate_app_now"="给为知好评";
 "__rate_app_feedback"="吐槽为知";
 
 /*
-Offline
-*/
+ Offline
+ */
 "Sync on WiFi only"="仅在 WiFi 连接时下载";
 "The notes will be downloaded when connected via WiFi, then you can view them without network."="默认在WiFi 连接时将笔记下载到本地，方便无网络时查看";
 
@@ -1126,7 +1126,7 @@ Offline
 
 
 /*7.2.0*/
-"Deselect All"="取消全选";
+"Deselect All"="全不选";
 "Select All"="全选";
 "Selected %d"="已选 %d";
 "Moving..."="正在移动...";
@@ -1269,17 +1269,28 @@ Offline
 /*lib resource for huawei*/
 "Take Photo Note"="拍照笔记";
 "Text Note"="文字笔记";
-"Notebook name"="新建笔记本";
+"Notebook name"="笔记本名称";
 "New Notebook"="新建笔记本";
 "Create Notebook"="新建笔记本";
 
-"Recent Notes"="笔记";
+"Recent Notes"="近期";
 "Notebooks"="笔记本";
 
 "Please enter title"="输入标题";
 "Photo"="拍照";
 "New Note"="新建笔记";
+"Please enter a name"="请输入名称";
 
 "Succeeded to move notes."="移动成功";
 "Succeeded to delete notes."="删除成功";
 "Succeeded to move notes to top."="置顶成功";
+"Succeeded to remove notes on top."="取消置顶成功";
+"Search Notes"="搜索笔记";
+"Are you sure you want to delete current note?"="确定删除当前笔记？";
+"WeLink Note"="云笔记";
+//
+"Are you sure to move selected notes into folder %@"="确定移动选中笔记到 %@ ?";
+"Are you sure you want to remove the selected notes on top?"="确定将选中的笔记取消置顶吗？";
+"Are you sure you want to make the selected notes always on top?"="确定将选中的笔记置顶吗？";
+"Are you sure to add tag %@ for selected notes?"="确定为选中笔记增加标签 %@ ?";
+"The notebook is empty"="这个笔记本是空的";

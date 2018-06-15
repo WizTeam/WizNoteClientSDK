@@ -17,5 +17,5 @@ FOUNDATION_EXPORT const unsigned char WizNoteFrameworkVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <WizNoteFramework/PublicHeader.h>
 
 FOUNDATION_EXPORT BOOL WizNoteSetup(NSDictionary* options);
-FOUNDATION_EXPORT BOOL WizNoteLaunch(UIViewController* parentViewController, NSDictionary* options);
+FOUNDATION_EXPORT BOOL WizNoteLaunch(UIViewController* parentViewController, NSDictionary* options, id customActionBlock);
 
