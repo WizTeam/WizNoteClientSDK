@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import cn.wiz.note.sdk.WizNoteSDK;
+import cn.wiz.sdk.util2.HttpURLConnectionUtil;
 
 /**
  * 1.去掉第三方 aar,只需要引入 HWNOTE-(debug/release).aar,
