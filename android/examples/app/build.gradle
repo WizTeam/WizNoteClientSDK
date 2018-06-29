@@ -60,7 +60,7 @@ repositories {
  * 3
  */
 dependencies {
-    compile files('libs/HWNOTE-release.aar')
+    compile files('libs/HWNOTE-debug.aar')
 
     compile 'com.android.support:support-v4:25.3.1'
     compile 'com.android.support:appcompat-v7:25.3.1'

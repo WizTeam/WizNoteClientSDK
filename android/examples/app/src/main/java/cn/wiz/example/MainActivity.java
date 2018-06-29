@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import org.devio.takephoto.uitl.TConstant;
+
 import cn.wiz.note.sdk.WizNoteSDK;
 import cn.wiz.sdk.util2.HttpURLConnectionUtil;
 
@@ -65,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
             String authType = "huawei";
             String authBody = "123";
             String enterpriseUserId = "anzhen-test2@wiz.cn";
+            TConstant.setHuaweiAppContext(getApplicationContext());
             WizNoteSDK.initNoteSDK(getApplication(), apiServer, authCode, authType, authBody,
                     enterpriseUserId, listener, eventCallback);
         } catch (Exception e) {
