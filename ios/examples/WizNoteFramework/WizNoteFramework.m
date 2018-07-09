@@ -17,9 +17,9 @@ FOUNDATION_EXPORT BOOL WizNoteSetup(NSDictionary* options)
     return YES;
 }
 
-FOUNDATION_EXPORT BOOL WizNoteLaunch(UIViewController* parentViewController, NSDictionary* options, id customActionBlock)
+FOUNDATION_EXPORT BOOL WizNoteLaunch(UIViewController* parentViewController, NSDictionary* options, id customActionBlock, id updateCookiesBlock)
 {
-    [WizNote launchWizNote:parentViewController options:options customActionBlock:customActionBlock];
+    [WizNote launchWizNote:parentViewController options:options customActionBlock:customActionBlock updateCookiesBlock:updateCookiesBlock];
     return YES;
 }
 

@@ -81,7 +81,19 @@
         NSLog(@"customAction: %@", @(actionType));
     };
     
-    WizNoteLaunch(self, launchOptions, actionCallback);
+    //
+    typedef void (^UpdateCookiesResultBlock)(NSString* cookies, NSError* err);
+    typedef void (^UpdateCookiesBlock)(UpdateCookiesResultBlock resultBlock);
+    //
+    UpdateCookiesBlock updateCookiesBlock = ^void(UpdateCookiesResultBlock resultBlock) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            //
+            resultBlock(@"new cookies", nil);
+            //
+        });
+    };
+    
+    WizNoteLaunch(self, launchOptions, actionCallback, updateCookiesBlock);
 }
 
 - (void) styleChanged:(UISegmentedControl *)obj

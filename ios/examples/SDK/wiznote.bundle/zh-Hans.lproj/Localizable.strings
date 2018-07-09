@@ -297,7 +297,7 @@
 "Messages is exclusive features for team users."="消息中心是团队用户独享功能";
 "Refer to team members"="@ta";
 "If you share a note to group and want someone to view it in time, you can @him/her in title of note. He/she will receive the notification."="你共享了一篇笔记，想让某个同事及时查看？可以在标题里@ta哦。你发的通知就会显示在他的消息中心。";
-"You can make a comment for colleague's work log or experience summary of your boss, they will receive the notification."="同事写的工作日志、老大的经验总结、PM 的计划，你都可以通过评论他们的笔记表达你的感受。你的评论会显示在他们的消息中心l啦～～";
+"You can make a comment for colleague's work log or experience summary of your boss, they will receive the notification."="同事写的工作日志、老大的经验总结、PM 的计划，你都可以通过评论他们的笔记表达你的感受。你的评论会显示在他们的消息中心啦～～";
 "Colleagues complemented the more comprehensive content of your note, you will receive the notification here."="你写的设计规范，同事看后把内容补充的更全面了，消息就会显示在这里哦~~";
 "Click and learn more about teamwork."="团队协作其他功能，点击了解详情";
 "Collaborative Editing"="协同编辑";
@@ -1294,4 +1294,3 @@
 "Are you sure you want to make the selected notes always on top?"="确定将选中的笔记置顶吗？";
 "Are you sure to add tag %@ for selected notes?"="确定为选中笔记增加标签 %@ ?";
 "The notebook is empty"="这个笔记本是空的";
-
