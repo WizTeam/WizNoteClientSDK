@@ -154,6 +154,8 @@
 		<string>int</string>
 		<key>DT_DATA_MODIFIED</key>
 		<string>char(19)</string>
+		<key>DOCUMENT_DT_VIEWED</key>
+		<string>char(19)</string>
 	</dict>
 	<key>WIZ_DOCUMENT_PARAM</key>
 	<dict>

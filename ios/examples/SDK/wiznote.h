@@ -10,5 +10,5 @@
 
 @interface WizNote : NSObject
 + (void) setup:(NSDictionary*)options;
-+ (void) launchWizNote:(UIViewController *)parentViewController options:(NSDictionary *)options customActionBlock:(id)customActionBlock;
++ (void) launchWizNote:(UIViewController *)parentViewController options:(NSDictionary *)options customActionBlock:(id)customActionBlock updateCookiesBlock:(id)updateCookiesBlock;
 @end
