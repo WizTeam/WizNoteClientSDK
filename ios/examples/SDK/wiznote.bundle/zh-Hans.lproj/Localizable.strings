@@ -1294,3 +1294,4 @@
 "Are you sure you want to make the selected notes always on top?"="确定将选中的笔记置顶吗？";
 "Are you sure to add tag %@ for selected notes?"="确定为选中笔记增加标签 %@ ?";
 "The notebook is empty"="这个笔记本是空的";
+"There are no notes"="暂无笔记";
