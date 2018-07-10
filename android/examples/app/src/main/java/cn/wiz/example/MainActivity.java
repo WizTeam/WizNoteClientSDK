@@ -73,6 +73,12 @@ public class MainActivity extends AppCompatActivity {
             Log.e("welink_event", i + "");
         }
     };
+    WizNoteSDK.AuthBodyCallback authBodyCallback = new WizNoteSDK.AuthBodyCallback() {
+        @Override
+        public String getValidAuthBody() {
+            return "aa=hh;bb=xx";
+        }
+    };
     public void initSDK() {
         try {
             String apiServer = "http://sandbox.wiz.cn";
@@ -96,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
     private Activity mActivity = this;
     public void login(final String userId, String password, final String serverAddress) {
         //
-        WizSDK.init(this, null);
+        WizSDK.init(this, null, "body", eventCallback, authBodyCallback);
         boolean shouldEncryptPassword = OEMPreferences.isEncryptPassword();
         if (shouldEncryptPassword) {
             password = WizMisc.MD5Util.makeMD5Password(password);
