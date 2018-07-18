@@ -123,7 +123,7 @@
 "Next page"="Next page";
 "No Connection"="无连接";
 "No Title"="笔记";
-"The internet is unavailable, please check it!"="当前网络异常，请检查你的网络设置!";
+"The internet is unavailable, please check it!"="网络链接失败，请检查网络";
 "Recipients can not be empty!"="收件人不能为空！";
 "The format of email is illegal!"="有不合法的邮件地址！";
 "No title"="No title";
@@ -663,7 +663,7 @@
 "New markdown note"="Markdown笔记";
 
 "Can't create new note in this group."="不能在当前群组创建笔记。";
-"The note is encrypted, can be copied."="笔记被加密，不能复制。";
+"The note is encrypted, can not be copied."="笔记被加密，不能复制。";
 
 "Copy Note"="复制笔记";
 "View Note Information"="查看笔记信息";

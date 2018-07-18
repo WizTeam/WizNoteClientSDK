@@ -668,7 +668,7 @@
 "New markdown note"="Markdown筆記";
 
 "Can't create new note in this group."="不能在當前群組創建筆記。";
-"The note is encrypted, can be copied."="筆記被加密，不能複製。";
+"The note is encrypted, can not be copied."="筆記被加密，不能複製。";
 
 "Copy Note"="複製筆記";
 "View Note Information"="查看筆記信息";

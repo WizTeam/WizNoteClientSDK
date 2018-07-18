@@ -951,7 +951,7 @@
 "If you share a note to group and want someone to view it in time, you can @him/her in title of note. He/she will receive the notification."="__default__";
 "Not initialized"="__default__";
 "Team service of [%@] has expired, temporarily unable to share by link, please renew on time."="__default__";
-"The note is encrypted, can be copied."="__default__";
+"The note is encrypted, can not be copied."="__default__";
 "Stop track changes"="__default__";
 "The network has changed to cellular, downloading offline notes progress stopped."="__default__";
 "Card View"="__default__";
