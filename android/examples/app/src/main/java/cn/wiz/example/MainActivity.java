@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                         public String getValidAuthBody() {
                             return "hehe";
                         }
-                    });
+                    }, null);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
     private Activity mActivity = this;
     public void login(final String userId, String password, final String serverAddress) {
         //
-        WizSDK.init(this, null, "body", eventCallback, authBodyCallback);
+        WizSDK.init(this, null, "body", eventCallback, authBodyCallback, null);
         boolean shouldEncryptPassword = OEMPreferences.isEncryptPassword();
         if (shouldEncryptPassword) {
             password = WizMisc.MD5Util.makeMD5Password(password);
