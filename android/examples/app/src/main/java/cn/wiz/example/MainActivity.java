@@ -1,6 +1,7 @@
 package cn.wiz.example;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -39,6 +40,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 //                initSDK();
                 login("kjq_test@wiz.cn", "111111", null);
+            }
+        });
+        findViewById(R.id.test_webview).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, TestWebViewActivity.class));
             }
         });
     }

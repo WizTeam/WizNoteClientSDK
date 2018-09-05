@@ -20,4 +20,12 @@
         android:enabled="false"
         android:text="SDK未初始化,点击图标初始化SDK"/>
 
+    <Button
+        android:id="@+id/test_webview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sdk_status"
+        android:layout_centerHorizontal="true"
+        android:text="测试WebView"/>
+
 </RelativeLayout>
