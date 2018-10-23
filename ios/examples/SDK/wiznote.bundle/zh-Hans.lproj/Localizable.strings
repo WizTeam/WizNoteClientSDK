@@ -1075,7 +1075,7 @@
 "If you do not select at a specific time, the receivers will receive the message immediately."="如果不选择在指定时间提醒，对方会马上收到消息。";
 "Remind at specific date"="在指定日期提醒";
 
-"Email account unverified, you can visit https://note.wiz.cn to send verification in the \"Account Settings\" ."="帐号邮箱未验证，可登录 https://note.wiz.cn，在「账号设置」中发送验证邮件。";
+"Email account unverified, whether to send a verification ?"="帐号邮箱未验证，是否发送验证邮件？";
 "Please bind and verify email in \"Account Settings\" in order to use e-mail features."="请先到「帐号设置」中绑定邮箱，并验证后，才可使用发邮件功能。";
 
 "Trash"="回收站";
