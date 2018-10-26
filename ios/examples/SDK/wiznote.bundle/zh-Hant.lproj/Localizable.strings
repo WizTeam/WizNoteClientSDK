@@ -1089,7 +1089,7 @@
 "If you do not select at a specific time, the receivers will receive the message immediately."="如果不選擇在指定時間提醒，對方會馬上收到消息。";
 "Remind at specific date"="在指定日期提醒";
 
-"Email account unverified, whether to send a verification ?"="帳號郵箱未驗證，是否發送驗證郵件？";
+"Email account unverified, you can visit https://note.wiz.cn to send verification in the \"Account Settings\" ."="帳號郵箱未驗證，可登錄https://note.wiz.cn，在“賬號設置”中發送驗證郵件。";
 "Please bind and verify email in \"Account Settings\" in order to use e-mail features."="請先到「帳號設置」中綁定郵箱，並驗證後，才可使用發郵件功能。";
 
 "Trash"="回收站";

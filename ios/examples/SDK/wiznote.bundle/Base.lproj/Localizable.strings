@@ -650,7 +650,7 @@
 "Only {p} account can create team"="__default__";
 "No Connection"="__default__";
 "Download attachments to make it easier for you to read when there is no network! However, it will occupy more storage space, and make the entire download process longer"="__default__";
-"Email account unverified, whether to send a verification ?"="__default__";
+"Email account unverified, you can visit https://note.wiz.cn to send verification in the \"Account Settings\" ."="__default__";
 "Clearing Offline Notes Data..."="__default__";
 "Can't sign in, Unknown error!"="__default__";
 "Account has already exists, please sign in."="__default__";
