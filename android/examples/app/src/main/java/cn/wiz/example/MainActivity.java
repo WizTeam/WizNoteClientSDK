@@ -172,15 +172,12 @@ public class MainActivity extends AppCompatActivity {
     private String authCode = "123";
     private String authType = "huawei";
     private String enterpriseUserId = "aaaa";
-    public void logInEnterpriseStatic() {
-        initCallbacks(this);
-        WizNoteSDK.initNoteSDK(getApplication(), apiServer, authCode, authType, authBody, enterpriseUserId, initListener, eventCallback, authBodyCallback, uiCallback);
-    }
+
 
 
     public void logInEnterprise() {
         WizNoteSDK.initNoteSDK(getApplication(), apiServer, authCode, authType,
-                authBody,enterpriseUserId, new WizNoteSDK.InitListener() {
+                authBody, enterpriseUserId, new WizNoteSDK.InitListener() {
                     @Override
                     public void onStart() {
                     }
@@ -262,6 +259,13 @@ public class MainActivity extends AppCompatActivity {
 
                             }
                         };
+                    }
+                }, new WizSDK.HWLogicCallback() {
+                    @Override
+                    public void showShare(Context context, String shareUrl, String title, String description) {
+                        Log.e("wiz_hw", "share: url=" + shareUrl);
+                        Log.e("wiz_hw", "share: title=" + title);
+                        Log.e("wiz_hw", "share: description=" + description);
                     }
                 });
     }
