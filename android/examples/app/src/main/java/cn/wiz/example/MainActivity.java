@@ -267,6 +267,11 @@ public class MainActivity extends AppCompatActivity {
                         Log.e("wiz_hw", "share: title=" + title);
                         Log.e("wiz_hw", "share: description=" + description);
                     }
+
+                    @Override
+                    public void reportLog(String tag, String msg) {
+                        Log.e(tag, msg);
+                    }
                 });
     }
 
