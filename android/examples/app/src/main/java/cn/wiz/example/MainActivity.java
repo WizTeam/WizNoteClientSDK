@@ -35,6 +35,12 @@ import cn.wiz.sdk.util2.HttpURLConnectionUtil;
  * 2. WizNoteSDK.InitListener.onSuccess 中启动笔记 WizNoteSDK.startNoteHomePage 传入 ApplicationContext，不要传入 Activity
  * 参数传递参考 loginEnterpriseStatic 或者 loginEnterprise
  */
+////////////////更新 2018-12-29
+
+/**
+ *  1.初始化传入的参数都
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -44,8 +50,45 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.launch).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                logInEnterpriseStatic();
-                logInEnterprise();
+                logInEnterprise(new LogicCallback() {
+
+                    @Override
+                    public WizSDK.OuterStartType getStartType() {
+                        return WizSDK.OuterStartType.List;
+                    }
+
+                    @Override
+                    public String getOuterAppId() {
+                        return null;
+                    }
+
+                    @Override
+                    public String getOuterObjectId() {
+                        return null;
+                    }
+                });
+            }
+        });
+        findViewById(R.id.edit).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                logInEnterprise(new LogicCallback() {
+
+                    @Override
+                    public WizSDK.OuterStartType getStartType() {
+                        return WizSDK.OuterStartType.Edit;
+                    }
+
+                    @Override
+                    public String getOuterAppId() {
+                        return "outerAppId";
+                    }
+
+                    @Override
+                    public String getOuterObjectId() {
+                        return "outerObjectId";
+                    }
+                });
             }
         });
         findViewById(R.id.test_webview).setOnClickListener(new View.OnClickListener() {
@@ -56,135 +99,67 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private static abstract class LogicCallback implements WizSDK.HWLogicCallback {
+        @Override
+        public String getAuthType() {
+            String authType = "huawei";
+            return authType;
+        }
+
+        @Override
+        public String getAuthCode() {
+            String authCode = "123";
+            return authCode;
+        }
+
+        @Override
+        public String getAuthBody() {
+            String authBody = "w3Token=a8f145485b9c9bd230e0b4d21251d51d213afe8328f0527d0b72ee637ac972e1bfa84cc14d14932abf94591186361e7cd13a7ac0726a928cfd074c8d54cc4d1473395d151bc4d875bbc13c4302c30ed8a543c286cebcd2cc49d9fec2a1b8664b";
+            return authBody;
+        }
+
+        @Override
+        public String getEnterpriseUserId() {
+            String enterpriseUserId = "aaaa";
+            return enterpriseUserId;
+        }
+
+        @Override
+        public String getApiServer() {
+            String apiServer = "http://v3.wiz.cn";
+            return apiServer;
+        }
+
+        @Override
+        public void showShare(Context context, String shareUrl, String title, String description) {
+            Log.e("wiz_hw", "share: url=" + shareUrl);
+            Log.e("wiz_hw", "share: title=" + title);
+            Log.e("wiz_hw", "share: description=" + description);
+        }
+
+        @Override
+        public void reportLog(String tag, String msg) {
+            Log.e(tag, msg);
+        }
+    }
+
     /**
      * 静态变量置空，每次使用前初始化
      */
     @Override
     protected void onResume() {
         super.onResume();
-        eventCallback = null;
-        authBodyCallback = null;
-        uiCallback = null;
-        listViewHelper = null;
-        initListener = null;
     }
 
-    private static WizNoteSDK.WeLinkEventCallback eventCallback;
-    private static WizNoteSDK.AuthBodyCallback authBodyCallback;
-    private static WizNoteSDK.HuaweiUICallback uiCallback;
-    private static WizSDK.HwListViewHelper listViewHelper;
-    private static WizNoteSDK.InitListener initListener;
-    private static String authBody = "w3Token=a8f145485b9c9bd230e0b4d21251d51d213afe8328f0527d0b72ee637ac972e1bfa84cc14d14932abf94591186361e7cd13a7ac0726a928cfd074c8d54cc4d1473395d151bc4d875bbc13c4302c30ed8a543c286cebcd2cc49d9fec2a1b8664b";
-    private static void initCallbacks(final Activity startActivity) {
-        eventCallback = new WizNoteSDK.WeLinkEventCallback() {
-            @Override
-            public void onEvent(int i, String s) {
-
-            }
-        };
-        authBodyCallback = new WizNoteSDK.AuthBodyCallback() {
-            @Override
-            public String getValidAuthBody() {
-                return authBody;
-            }
-        };
-        uiCallback = new WizNoteSDK.HuaweiUICallback() {
-            @Override
-            public void showWarning(Context context, CharSequence charSequence) {
-
-            }
-
-            @Override
-            public void showError(Context context, CharSequence charSequence) {
-
-            }
-
-            @Override
-            public void showLoading(Activity activity, CharSequence charSequence, @Nullable WizSDK.LoadingId loadingId) {
-
-            }
-
-            @Override
-            public void dismissLoading(@Nullable WizSDK.LoadingId loadingId) {
-
-            }
-
-            @Override
-            public WizSDK.HwListViewHelper getHwListView() {
-                return listViewHelper;
-            }
-        };
-        listViewHelper = new WizSDK.HwListViewHelper() {
-            @Override
-            public ListView getListView(Activity activity) {
-                return new ListView(activity);
-            }
-
-            @Override
-            public void setPullRefreshEnable(boolean b) {
-
-            }
-
-            @Override
-            public void setPullLoadEnable(boolean b) {
-
-            }
-
-            @Override
-            public void autoRefresh() {
-
-            }
-
-            @Override
-            public void stopRefresh() {
-
-            }
-
-            @Override
-            public void stopLoadMore() {
-
-            }
-
-            @Override
-            public void setListViewListener(IHwListViewListener iHwListViewListener) {
-
-            }
-        };
-        initListener = new WizNoteSDK.InitListener() {
-            @Override
-            public void onStart() {
-
-            }
-
-            @Override
-            public void onSuccess() {
-                WizNoteSDK.startNoteHomePage(startActivity.getApplicationContext());
-            }
-
-            @Override
-            public void onError(String s) {
-
-            }
-        };
-    }
-
-    private String apiServer = "http://v3.wiz.cn";
-    private String authCode = "123";
-    private String authType = "huawei";
-    private String enterpriseUserId = "aaaa";
-
-
-
-    public void logInEnterprise() {
-        WizNoteSDK.initNoteSDK(getApplication(), apiServer, authCode, authType,
-                authBody, enterpriseUserId, new WizNoteSDK.InitListener() {
+    public void logInEnterprise(WizSDK.HWLogicCallback logicCallback) {
+        WizNoteSDK.initNoteSDK(getApplication(), new WizNoteSDK.InitListener() {
                     @Override
                     public void onStart() {
                     }
 
                     @Override
                     public void onSuccess() {
-                        WizNoteSDK.startNoteHomePage(getApplicationContext());
+
                     }
 
                     @Override
@@ -194,11 +169,6 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onEvent(int eventNum, String eventData) {
 
-                    }
-                }, new WizNoteSDK.AuthBodyCallback() {
-                    @Override
-                    public String getValidAuthBody() {
-                        return authBody;
                     }
                 }, new WizNoteSDK.HuaweiUICallback() {
                     @Override
@@ -260,19 +230,7 @@ public class MainActivity extends AppCompatActivity {
                             }
                         };
                     }
-                }, new WizSDK.HWLogicCallback() {
-                    @Override
-                    public void showShare(Context context, String shareUrl, String title, String description) {
-                        Log.e("wiz_hw", "share: url=" + shareUrl);
-                        Log.e("wiz_hw", "share: title=" + title);
-                        Log.e("wiz_hw", "share: description=" + description);
-                    }
-
-                    @Override
-                    public void reportLog(String tag, String msg) {
-                        Log.e(tag, msg);
-                    }
-                });
+                }, logicCallback);
     }
 
 }
