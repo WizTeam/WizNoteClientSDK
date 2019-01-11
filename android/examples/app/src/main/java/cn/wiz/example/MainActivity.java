@@ -25,6 +25,7 @@ import cn.wiz.sdk.util.WizMisc;
 import cn.wiz.sdk.util2.ActivityHelper;
 import cn.wiz.sdk.util2.HttpURLConnectionUtil;
 
+////////////////更新
 /**
  * 1.去掉第三方 aar,只需要引入 HWNOTE-(debug/release).aar,
  * 2.引入了so文件,build文件设置参考事例项目build.gradle 中 flavors
@@ -35,10 +36,11 @@ import cn.wiz.sdk.util2.HttpURLConnectionUtil;
  * 2. WizNoteSDK.InitListener.onSuccess 中启动笔记 WizNoteSDK.startNoteHomePage 传入 ApplicationContext，不要传入 Activity
  * 参数传递参考 loginEnterpriseStatic 或者 loginEnterprise
  */
-////////////////更新 2018-12-29
-
+////////////////更新 2019-1-11
 /**
- *  1.初始化传入的参数都
+ *  1.启动笔记的参数，通过 logiccallback 接口中的方法返回
+ *  2.具体启动笔记的哪个页面通过 LogicCallback.getStartParams 方法的返回值确定，
+ *  3.参见 demo
  */
 
 public class MainActivity extends AppCompatActivity {
@@ -50,45 +52,13 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.launch).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                logInEnterprise(new LogicCallback() {
-
-                    @Override
-                    public WizSDK.OuterStartType getStartType() {
-                        return WizSDK.OuterStartType.List;
-                    }
-
-                    @Override
-                    public String getOuterAppId() {
-                        return null;
-                    }
-
-                    @Override
-                    public String getOuterObjectId() {
-                        return null;
-                    }
-                });
+                startWeNoteList();
             }
         });
         findViewById(R.id.edit).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                logInEnterprise(new LogicCallback() {
-
-                    @Override
-                    public WizSDK.OuterStartType getStartType() {
-                        return WizSDK.OuterStartType.Edit;
-                    }
-
-                    @Override
-                    public String getOuterAppId() {
-                        return "outerAppId";
-                    }
-
-                    @Override
-                    public String getOuterObjectId() {
-                        return "outerObjectId";
-                    }
-                });
+                startWeNoteEdit("hwAppId", "hwObjectId");
             }
         });
         findViewById(R.id.test_webview).setOnClickListener(new View.OnClickListener() {
@@ -99,35 +69,58 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void startWeNoteList() {
+        WizSDK.HWLogicCallback listCallback = new LogicCallback() {
+
+            @Override
+            public Intent getStarParams() {
+                Intent intent = new Intent();
+                intent.putExtra("startType", "list");
+                return intent;
+            }
+        };
+        logInEnterprise(listCallback);
+    }
+
+    private void startWeNoteEdit(final String appId, final String objectId) {
+        WizSDK.HWLogicCallback editCallback = new LogicCallback() {
+
+            @Override
+            public Intent getStarParams() {
+                Intent intent = new Intent();
+                intent.putExtra("startType", "edit");
+                intent.putExtra("outerAppId", appId);
+                intent.putExtra("outerObjectId", objectId);
+                return intent;
+            }
+        };
+        logInEnterprise(editCallback);
+    }
+
     private static abstract class LogicCallback implements WizSDK.HWLogicCallback {
         @Override
         public String getAuthType() {
-            String authType = "huawei";
-            return authType;
+            return "huawei";
         }
 
         @Override
         public String getAuthCode() {
-            String authCode = "123";
-            return authCode;
+            return "123";
         }
 
         @Override
         public String getAuthBody() {
-            String authBody = "w3Token=a8f145485b9c9bd230e0b4d21251d51d213afe8328f0527d0b72ee637ac972e1bfa84cc14d14932abf94591186361e7cd13a7ac0726a928cfd074c8d54cc4d1473395d151bc4d875bbc13c4302c30ed8a543c286cebcd2cc49d9fec2a1b8664b";
-            return authBody;
+            return "w3Token=a8f145485b9c9bd230e0b4d21251d51d213afe8328f0527d0b72ee637ac972e1bfa84cc14d14932abf94591186361e7cd13a7ac0726a928cfd074c8d54cc4d1473395d151bc4d875bbc13c4302c30ed8a543c286cebcd2cc49d9fec2a1b8664b";
         }
 
         @Override
         public String getEnterpriseUserId() {
-            String enterpriseUserId = "aaaa";
-            return enterpriseUserId;
+            return "aaaa";
         }
 
         @Override
         public String getApiServer() {
-            String apiServer = "http://v3.wiz.cn";
-            return apiServer;
+            return "http://v3.wiz.cn";
         }
 
         @Override
