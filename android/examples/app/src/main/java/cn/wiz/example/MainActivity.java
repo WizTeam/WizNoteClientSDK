@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.webkit.URLUtil;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import org.json.JSONObject;
@@ -58,7 +59,9 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.edit).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startWeNoteEdit("hwAppId", "hwObjectId");
+                String appId = ((EditText) findViewById(R.id.appId)).getText().toString();
+                String objectId = ((EditText) findViewById(R.id.objectId)).getText().toString();
+                startWeNoteEdit(appId, objectId);
             }
         });
         findViewById(R.id.test_webview).setOnClickListener(new View.OnClickListener() {
