@@ -4,39 +4,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center_horizontal"
-    tools:context="cn.wiz.example.MainActivity">
+    tools:context="cn.wiz.note.FirstActivity">
 
     <Button
-        android:id="@+id/launch"
+        android:id="@+id/home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="启动笔记主界面"/>
+        android:text="打开主页"/>
 
-    <EditText
-        android:id="@+id/appId"
+    <Button
+        android:id="@+id/list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打开会议笔记本"/>
+
+    <Button
+        android:id="@+id/getNotebookList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="获取笔记本笔记列表"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="会议列表：点击选择"/>
+
+    <TextView
+        android:id="@+id/meeting1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="会议1"/>
+    <TextView
+        android:id="@+id/meeting2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="会议2"/>
+    <TextView
+        android:id="@+id/meeting3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="会议3"/>
+
+
+    <TextView
+        android:id="@+id/select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/meeting_notes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="appId"
-        android:text="hwAppId"/>
+        android:orientation="vertical"
+        >
 
-    <EditText
-        android:id="@+id/objectId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="objectId"
-        android:text="hwObjectId"/>
-
-    <Button
-        android:id="@+id/edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="传入外部ID启动编辑页面"/>
-
-    <Button
-        android:id="@+id/test_webview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="测试WebView"/>
+    </LinearLayout>
 
 </LinearLayout>

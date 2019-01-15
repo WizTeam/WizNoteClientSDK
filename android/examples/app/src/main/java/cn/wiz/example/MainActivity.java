@@ -1,232 +1,214 @@
 package cn.wiz.example;
 
-import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import android.app.Application;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
-import android.webkit.URLUtil;
-import android.widget.EditText;
-import android.widget.ListView;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
-import cn.wiz.note.sdk.WizNoteSDK;
-import cn.wiz.sdk.api.WizASXmlRpcServer;
-import cn.wiz.sdk.api.WizApiUrl;
-import cn.wiz.sdk.api.WizAsyncAction;
 import cn.wiz.sdk.api.WizSDK;
-import cn.wiz.sdk.settings.OEMPreferences;
-import cn.wiz.sdk.settings.WizSystemSettings;
-import cn.wiz.sdk.util.WizMisc;
-import cn.wiz.sdk.util2.ActivityHelper;
-import cn.wiz.sdk.util2.HttpURLConnectionUtil;
 
-////////////////更新
-/**
- * 1.去掉第三方 aar,只需要引入 HWNOTE-(debug/release).aar,
- * 2.引入了so文件,build文件设置参考事例项目build.gradle 中 flavors
- */
-////////////////更新
-/**
- * 1. HWListViewHelper.getListView 接口，创建 ListView 实例用到的 Context 由 SDK 传入
- * 2. WizNoteSDK.InitListener.onSuccess 中启动笔记 WizNoteSDK.startNoteHomePage 传入 ApplicationContext，不要传入 Activity
- * 参数传递参考 loginEnterpriseStatic 或者 loginEnterprise
- */
-////////////////更新 2019-1-11
-/**
- *  1.启动笔记的参数，通过 logiccallback 接口中的方法返回
- *  2.具体启动笔记的哪个页面通过 LogicCallback.getStartParams 方法的返回值确定，
- *  3.参见 demo
- */
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * 2019-01-15
+ *
+ * 支持的操作 6 种操作：
+ * 1. 启动笔记主界面 {@link cn.wiz.note.sdk.WizNoteSDK#startNoteHome(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback)}
+ * 2. 启动笔记本页面 {@link cn.wiz.note.sdk.WizNoteSDK#startNoteList(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String)}
+ * 3. 查看笔记 {@link cn.wiz.note.sdk.WizNoteSDK#startViewNote(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String)}
+ * 4. 根据外部记录和笔记本在对应笔记本中创建笔记 {@link cn.wiz.note.sdk.WizNoteSDK#startCreateNote(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, String, String)}
+ * 5. 获取笔记本中的笔记列表 {@link cn.wiz.note.sdk.WizNoteSDK#getNoteListByNotebook(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, int, int)}
+ * 6. 获取外部记录对应的笔记列表 {@link cn.wiz.note.sdk.WizNoteSDK#getNoteListByObject(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, String)}
+ *
+ * 参数：
+ * eventCallback uiCallback logicCallback 为公用参数。不同操作需要实现不同 initCallback 获取返回结果
+ *
+ * initCallback {@link cn.wiz.sdk.api.WizSDK.HWInitCallback} 调用不同方法传递不同 initCallback 获取返回结果
+ * eventCallback {@link cn.wiz.sdk.api.WizSDK.HWEventCallback} 埋点回调
+ * uiCallback {@link cn.wiz.sdk.api.WizSDK.HWUICallback} 界面回调，显示 Toast Loading etc.
+ * logicCallback {@link cn.wiz.sdk.api.WizSDK.HWLogicCallback} 逻辑回调，分享，上报 等。为了简化调用方法的
+ * 参数个数。固定的必须传递的参数也通过此回到获取：
+ * {@link WizSDK.HWLogicCallback#getAuthBody()}
+ * {@link WizSDK.HWLogicCallback#getAuthCode()}
+ * {@link WizSDK.HWLogicCallback#getAuthType()}
+ * {@link WizSDK.HWLogicCallback#getEnterpriseUserId()}
+ *
+ * AppID 和 ObjectID 解释
+ * AppID 为外部应用或者模块的ID，ObjectID 为外部应用或者模块内数据记录的ID
+ * 同时传递 AppID 和 ObjectID 避免重复
+ * 如 模块 A 为会议 AppID 为 meeting，模块 A 中有记录 会议1 会议2，对应 ObjectID 为 1， 2
+ * 如 模块 B 为办公 AppID 为 office，模块 B 中有记录 办公1 办公2，对应 ObjectID 为 1， 2
+ *
+ * notebookName 为笔记的文件夹名称
+ *
+ * 返回笔记列表为 JSONArray 字符串。
+ * [
+ *   {
+ * 		"docGuid": "74d42e81-9f0b-4b37-ab58-c4252fbd0a80",
+ * 	    "title": "嗯 新建",
+ * 	    "category": "/My Meeting/",
+ * 	    "abstractText": "白白净净哈哈哈 vv",
+ * 	    "created": 1547539531000,
+ * 	    "dataModified": 1547540247000,
+ * 		"infoModified": 1547540249000,
+ * 	    ....
+ *   }
+ *   ...
+ * ]
+ *
+ * 可以参考此 Demo.基座实现几个公用参数。基座对外提供方法，其他模块调用者只需要实现 {@link cn.wiz.sdk.api.WizSDK.HWInitCallback} 即可
+ */
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        findViewById(R.id.launch).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.home).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startWeNoteList();
+                startNoteHome(initCallbackWithoutResult);
             }
         });
-        findViewById(R.id.edit).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.list).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                String appId = ((EditText) findViewById(R.id.appId)).getText().toString();
-                String objectId = ((EditText) findViewById(R.id.objectId)).getText().toString();
-                startWeNoteEdit(appId, objectId);
+            public void onClick(View v) {
+                startNotebook(initCallbackWithoutResult, mNotebookMeeting);
             }
         });
-        findViewById(R.id.test_webview).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.getNotebookList).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, TestWebViewActivity.class));
-            }
-        });
-    }
-
-    private void startWeNoteList() {
-        WizSDK.HWLogicCallback listCallback = new LogicCallback() {
-
-            @Override
-            public Intent getStarParams() {
-                Intent intent = new Intent();
-                intent.putExtra("startType", "list");
-                return intent;
-            }
-        };
-        logInEnterprise(listCallback);
-    }
-
-    private void startWeNoteEdit(final String appId, final String objectId) {
-        WizSDK.HWLogicCallback editCallback = new LogicCallback() {
-
-            @Override
-            public Intent getStarParams() {
-                Intent intent = new Intent();
-                intent.putExtra("startType", "edit");
-                intent.putExtra("outerAppId", appId);
-                intent.putExtra("outerObjectId", objectId);
-                return intent;
-            }
-        };
-        logInEnterprise(editCallback);
-    }
-
-    private static abstract class LogicCallback implements WizSDK.HWLogicCallback {
-        @Override
-        public String getAuthType() {
-            return "huawei";
-        }
-
-        @Override
-        public String getAuthCode() {
-            return "123";
-        }
-
-        @Override
-        public String getAuthBody() {
-            return "w3Token=a8f145485b9c9bd230e0b4d21251d51d213afe8328f0527d0b72ee637ac972e1bfa84cc14d14932abf94591186361e7cd13a7ac0726a928cfd074c8d54cc4d1473395d151bc4d875bbc13c4302c30ed8a543c286cebcd2cc49d9fec2a1b8664b";
-        }
-
-        @Override
-        public String getEnterpriseUserId() {
-            return "aaaa";
-        }
-
-        @Override
-        public String getApiServer() {
-            return "http://v3.wiz.cn";
-        }
-
-        @Override
-        public void showShare(Context context, String shareUrl, String title, String description) {
-            Log.e("wiz_hw", "share: url=" + shareUrl);
-            Log.e("wiz_hw", "share: title=" + title);
-            Log.e("wiz_hw", "share: description=" + description);
-        }
-
-        @Override
-        public void reportLog(String tag, String msg) {
-            Log.e(tag, msg);
-        }
-    }
-
-    /**
-     * 静态变量置空，每次使用前初始化
-     */
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
-    public void logInEnterprise(WizSDK.HWLogicCallback logicCallback) {
-        WizNoteSDK.initNoteSDK(getApplication(), new WizNoteSDK.InitListener() {
+            public void onClick(View v) {
+                getNotebookList(new WizSDK.HWInitCallback() {
                     @Override
                     public void onStart() {
+
                     }
 
                     @Override
-                    public void onSuccess() {
-
+                    public void onSuccess(String result) {
+                        try {
+                            ((TextView) findViewById(R.id.select)).setText("笔记本笔记列表，点击查看:");
+                            JSONArray documents = new JSONArray(result);
+                            LinearLayout noteLayout = (LinearLayout) findViewById(R.id.meeting_notes);
+                            noteLayout.removeAllViews();
+                            for (int i=0; i<documents.length(); i++) {
+                                final JSONObject document = documents.getJSONObject(i);
+                                TextView textView = new TextView(MainActivity.this);
+                                textView.setText(document.getString("title"));
+                                noteLayout.addView(textView);
+                                final String docGuid = document.getString("docGuid");
+                                textView.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        startViewNote(initCallbackWithoutResult, docGuid);
+                                    }
+                                });
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                     }
 
                     @Override
                     public void onError(String reason) {
-                    }
-                }, new WizNoteSDK.WeLinkEventCallback() {
-                    @Override
-                    public void onEvent(int eventNum, String eventData) {
 
                     }
-                }, new WizNoteSDK.HuaweiUICallback() {
-                    @Override
-                    public void showWarning(Context ctx, CharSequence msg) {
-
-                    }
-
-                    @Override
-                    public void showError(Context ctx, CharSequence msg) {
-
-                    }
-
-                    @Override
-                    public void showLoading(Activity activity, CharSequence msg, @Nullable WizSDK.LoadingId id) {
-
-                    }
-
-                    @Override
-                    public void dismissLoading(@Nullable WizSDK.LoadingId id) {
-
-                    }
-
-                    @Override
-                    public WizSDK.HwListViewHelper getHwListView() {
-                        return new WizSDK.HwListViewHelper() {
-                            @Override
-                            public ListView getListView(Activity activity) {
-                                return new ListView(activity);
-                            }
-
-                            @Override
-                            public void setPullRefreshEnable(boolean enable) {
-
-                            }
-
-                            @Override
-                            public void setPullLoadEnable(boolean enable) {
-
-                            }
-
-                            @Override
-                            public void autoRefresh() {
-
-                            }
-
-                            @Override
-                            public void stopRefresh() {
-
-                            }
-
-                            @Override
-                            public void stopLoadMore() {
-
-                            }
-
-                            @Override
-                            public void setListViewListener(IHwListViewListener listener) {
-
-                            }
-                        };
-                    }
-                }, logicCallback);
+                }, mNotebookMeeting, 0, 10);
+            }
+        });
+        findViewById(R.id.meeting1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setMeeting(((TextView) v).getText().toString(), mAppId, "meeting1");
+            }
+        });
+        findViewById(R.id.meeting2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setMeeting(((TextView) v).getText().toString(), mAppId, "meeting2");
+            }
+        });
+        findViewById(R.id.meeting3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setMeeting(((TextView) v).getText().toString(), mAppId, "meeting3");
+            }
+        });
     }
 
+    private void setMeeting(final String name, final String appId, final String objectId) {
+        ((TextView) findViewById(R.id.select)).setText(name + "笔记列表:");
+        //
+        getObjectList(new WizSDK.HWInitCallback() {
+            @Override
+            public void onStart() {
+
+            }
+
+            @Override
+            public void onSuccess(String result) {
+                try {
+                    JSONArray documents = new JSONArray(result);
+                    LinearLayout noteLayout = (LinearLayout) findViewById(R.id.meeting_notes);
+                    noteLayout.removeAllViews();
+                    for (int i=0; i<documents.length(); i++) {
+                        final JSONObject document = documents.getJSONObject(i);
+                        TextView textView = new TextView(MainActivity.this);
+                        textView.setText(document.getString("title"));
+                        noteLayout.addView(textView);
+                        final String docGuid = document.getString("docGuid");
+                        textView.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                startViewNote(initCallbackWithoutResult, docGuid);
+                            }
+                        });
+                    }
+                    Button createButton = new Button(MainActivity.this);
+                    createButton.setText("为" + name + "新建笔记");
+                    createButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            startCreateNote(initCallbackWithoutResult, mNotebookMeeting, appId, objectId);
+                        }
+                    });
+                    noteLayout.addView(createButton);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onError(String reason) {
+
+            }
+        }, appId, objectId);
+    }
+
+    private String mAppId = "meeting";
+    private String mNotebookMeeting = "My Meeting";
+
+    private WizSDK.HWInitCallback initCallbackWithoutResult = new WizSDK.HWInitCallback() {
+        @Override
+        public void onStart() {
+            Log.e("bug", "onStart");
+        }
+
+        @Override
+        public void onSuccess(String s) {
+            Log.e("bug", "onSuccess without result data");
+        }
+
+        @Override
+        public void onError(String s) {
+            Log.e("bug", "onError: " + s);
+        }
+    };
 }
