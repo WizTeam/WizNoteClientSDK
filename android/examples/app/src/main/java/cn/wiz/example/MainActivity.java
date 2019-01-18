@@ -25,6 +25,7 @@ import cn.wiz.sdk.api.WizSDK;
  * 4. 根据外部记录和笔记本在对应笔记本中创建笔记 {@link cn.wiz.note.sdk.WizNoteSDK#startCreateNote(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, String, String)}
  * 5. 获取笔记本中的笔记列表 {@link cn.wiz.note.sdk.WizNoteSDK#getNoteListByNotebook(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, int, int)}
  * 6. 获取外部记录对应的笔记列表 {@link cn.wiz.note.sdk.WizNoteSDK#getNoteListByObject(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, String)}
+ * 7. 直接在对应笔记本内创建一篇笔记，不和外部记录关联, notebookName 为 null 时在默认笔记本创建 {@link cn.wiz.note.sdk.WizNoteSDK#startCreateNote(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String)}
  *
  * 参数：
  * eventCallback uiCallback logicCallback 为公用参数。不同操作需要实现不同 initCallback 获取返回结果
@@ -74,6 +75,12 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 startNoteHome(initCallbackWithoutResult);
+            }
+        });
+        findViewById(R.id.create).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startCreateNote(initCallbackWithoutResult, mNotebookMeeting);
             }
         });
         findViewById(R.id.list).setOnClickListener(new View.OnClickListener() {

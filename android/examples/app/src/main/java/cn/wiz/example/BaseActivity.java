@@ -34,6 +34,10 @@ public class BaseActivity extends AppCompatActivity {
         WizNoteSDK.startCreateNote(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, notebookName, appId, objectId);
     }
 
+    public void startCreateNote(WizSDK.HWInitCallback initCallback, String notebookName) {
+        WizNoteSDK.startCreateNote(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, notebookName);
+    }
+
     public void getNotebookList(WizSDK.HWInitCallback initCallback, String notebookName, int start, int count) {
         WizNoteSDK.getNoteListByNotebook(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, notebookName, start, count);
     }
