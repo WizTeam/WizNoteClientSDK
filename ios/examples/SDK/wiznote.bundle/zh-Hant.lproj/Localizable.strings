@@ -15,7 +15,8 @@
 "All Folders"="所有文件夾";
 "All Messages"="全部消息";
 "All Tags"="所有標籤";
-"Are you sure you want to discard the changes?"="是否放棄保存，直接退出？";
+"Are you sure you want to discard the changes?"="放棄保存，直接退出？";
+"Discard"="放棄";
 "Attribute"="屬性";
 "Audio Note"="錄音筆記";
 "Author"="作者";
@@ -1158,10 +1159,10 @@
 
 /*7.3.0*/
 "Font Size"="字號大小";
-"Small"="小";
-"Middle(Default)"="中（默認）";
-"Large"="大";
-"Extra Large"="特大";
+"Small"="最小";
+"Middle(Default)"="標準（默認）";
+"Large"="放大";
+"Extra Large"="最大";
 "You can adjust the font size only for notes created in WizNote."="只有在知筆記裡創建的筆記才可以調整字體大小。";
 "Sorry, because of some restrictions, you can not use this function now. You can contact support@wiz.cn for help."="抱歉，由於相關限制，你暫時無法使用分享筆記鏈接功能。如有疑問，請聯繫support@wiz.cn。";
 "The free trial period has expired, please upgrade to VIP for uploading new personal notes and modification of personal notes, which make sure your data can be accessed on any device."="你的賬戶試用期已結，新建或修改的個人筆記將無法上傳到雲端，為了保證數據隨時隨地正常使用，請升級VIP。";
