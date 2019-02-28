@@ -7,10 +7,22 @@
     tools:context="cn.wiz.example.MainActivity">
 
     <Button
+        android:id="@+id/language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EN"/>
+
+    <Button
         android:id="@+id/home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="打开主页"/>
+
+    <Button
+        android:id="@+id/notebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="根据 AppId 打开笔记本页面"/>
 
     <Button
         android:id="@+id/create"
@@ -19,16 +31,10 @@
         android:text="在笔记本内创建，不与外部记录关联"/>
 
     <Button
-        android:id="@+id/list"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="打开会议笔记本"/>
-
-    <Button
         android:id="@+id/getNotebookList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="获取笔记本笔记列表"/>
+        android:text="获取 AppId 对应的笔记列表，在 InitCallback.onSuccess 中返回结果"/>
 
     <TextView
         android:layout_width="wrap_content"

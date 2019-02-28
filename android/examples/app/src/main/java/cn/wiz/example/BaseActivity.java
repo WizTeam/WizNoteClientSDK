@@ -1,11 +1,15 @@
 package cn.wiz.example;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ListView;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import cn.wiz.note.sdk.WizNoteSDK;
 import cn.wiz.sdk.api.WizSDK;
@@ -15,30 +19,55 @@ import cn.wiz.sdk.util2.ToastUtil;
  * eventCallback uiCallback logicCallback 为公用回调
  * initCallback 不同方法需要提供不同实现
  */
+@SuppressLint("Registered")
 public class BaseActivity extends AppCompatActivity {
 
 
+    /**
+     * 打开主页
+     */
     public void startNoteHome(WizSDK.HWInitCallback initCallback) {
         WizNoteSDK.startNoteHome(getApplication(), initCallback, eventCallback, uiCallback, logicCallback);
     }
 
-    public void startNotebook(WizSDK.HWInitCallback initCallback, String notebookName) {
-        WizNoteSDK.startNoteList(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, notebookName);
-    }
-
+    /**
+     * 查看笔记
+     */
     public void startViewNote(WizSDK.HWInitCallback initCallback, String docGuid) {
         WizNoteSDK.startViewNote(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, docGuid);
     }
 
-    public void startCreateNote(WizSDK.HWInitCallback initCallback, String notebookName, String appId, String objectId, String title) {
-        WizNoteSDK.startCreateNote(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, notebookName, appId, objectId, title);
+    /**
+     * 创建笔记
+     */
+    public void startCreateNote(WizSDK.HWInitCallback initCallback, String i18nNotebookName, String appId, String objectId, String title) {
+        WizNoteSDK.startCreateNote(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, i18nNotebookName, appId, objectId, title);
     }
 
-    @Deprecated
-    public void startCreateNote(WizSDK.HWInitCallback initCallback, String notebookName, String appId, String objectId) {
-        WizNoteSDK.startCreateNote(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, notebookName, appId, objectId);
+    /**
+     * 根据 AppId 获取笔记列表
+     */
+    public void getNoteListByAppId(WizSDK.HWInitCallback initCallback, String appId, String i18nNotebookName, int start, int count) {
+        WizNoteSDK.getNoteListByAppId(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, appId, i18nNotebookName, start, count);
     }
 
+    /**
+     * 根据 AppId 和 ObjectId 获取笔记列表
+     */
+    public void getNoteListByObject(WizSDK.HWInitCallback initCallback, String appId, String objectId) {
+        WizNoteSDK.getNoteListByObject(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, appId, objectId);
+    }
+
+    /**
+     * 根据 AppId 打开笔记本
+     */
+    public void startNoteListByAppId(WizSDK.HWInitCallback initCallback, String appId, String i18nNotebookName) {
+        WizNoteSDK.startNoteListByAppId(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, appId, i18nNotebookName);
+    }
+
+    /**
+     * 在笔记本中创建一篇笔记，不和外部记录关联，笔记本传 null， 在默认笔记本中创建笔记
+     */
     @Deprecated
     public void startCreateNote(WizSDK.HWInitCallback initCallback, String notebookName) {
         WizNoteSDK.startCreateNote(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, notebookName);
@@ -47,10 +76,6 @@ public class BaseActivity extends AppCompatActivity {
 
     public void getNotebookList(WizSDK.HWInitCallback initCallback, String notebookName, int start, int count) {
         WizNoteSDK.getNoteListByNotebook(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, notebookName, start, count);
-    }
-
-    public void getObjectList(WizSDK.HWInitCallback initCallback, String appId, String objectId) {
-        WizNoteSDK.getNoteListByObject(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, appId, objectId);
     }
 
     private WizSDK.HWEventCallback eventCallback = new WizSDK.HWEventCallback() {
@@ -158,6 +183,25 @@ public class BaseActivity extends AppCompatActivity {
         public void reportLog(String tag, String msg) {
             Log.e(tag, msg);
         }
+
+        @Override
+        public String getLanguage() {
+            return Language;
+        }
     };
+
+    protected String Language = "CN";
+
+    protected String getI18nNotebookName() {
+        try {
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("CN", "我的会议");
+            jsonObject.put("EN", "My Meetings");
+            return jsonObject.toString();
+        } catch (JSONException e) {
+            e.printStackTrace();
+            throw new RuntimeException("error");
+        }
+    }
 
 }

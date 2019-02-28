@@ -20,24 +20,26 @@ import cn.wiz.sdk.api.WizSDK;
  *
  * 支持的操作 6 种操作：
  * 1. 启动笔记主界面 {@link cn.wiz.note.sdk.WizNoteSDK#startNoteHome(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback)}
- * 2. 启动笔记本页面 {@link cn.wiz.note.sdk.WizNoteSDK#startNoteList(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String)}
+ * 2. 根据 AppId 启动笔记本页面 {@link cn.wiz.note.sdk.WizNoteSDK#startNoteListByAppId(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, String)}
  * 3. 查看笔记 {@link cn.wiz.note.sdk.WizNoteSDK#startViewNote(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String)}
- * 4. 创建笔记，notebookName 不为 null 时，在对应笔记本中创建笔记，否则在默认笔记本创建笔记，appId 和 objectId 不为 null 时，给创建的笔记添加参数，title 不为 null 时，标题为 title {@link cn.wiz.note.sdk.WizNoteSDK#startCreateNote(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, String, String, String)}
- * 5. 获取笔记本中的笔记列表 {@link cn.wiz.note.sdk.WizNoteSDK#getNoteListByNotebook(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, int, int)}
- * 6. 获取外部记录对应的笔记列表 {@link cn.wiz.note.sdk.WizNoteSDK#getNoteListByObject(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, String)}
+ * 4. 创建笔记 {@link cn.wiz.note.sdk.WizNoteSDK#startCreateNote(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, String, String, String)}
+ * 5. 根据 AppId 获取笔记列表 {@link cn.wiz.note.sdk.WizNoteSDK#getNoteListByAppId(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, String, int, int)}
+ * {@link cn.wiz.sdk.api.WizSDK.HWInitCallback#onSuccess(String)} 回调返回结果
+ * 6. 根据 AppId 和 ObjectId 获取笔记本列表 {@link cn.wiz.note.sdk.WizNoteSDK#getNoteListByObject(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, String)}
+ * {@link cn.wiz.sdk.api.WizSDK.HWInitCallback#onSuccess(String)} 回调返回结果
  *
  * 参数：
  * eventCallback uiCallback logicCallback 为公用参数。不同操作需要实现不同 initCallback 获取返回结果
  *
- * initCallback {@link cn.wiz.sdk.api.WizSDK.HWInitCallback} 调用不同方法传递不同 initCallback 获取返回结果
+ * initCallback {@link cn.wiz.sdk.api.WizSDK.HWInitCallback} 调用不同方法传递不同 initCallback
  * eventCallback {@link cn.wiz.sdk.api.WizSDK.HWEventCallback} 埋点回调
  * uiCallback {@link cn.wiz.sdk.api.WizSDK.HWUICallback} 界面回调，显示 Toast Loading etc.
- * logicCallback {@link cn.wiz.sdk.api.WizSDK.HWLogicCallback} 逻辑回调，分享，上报 等。为了简化调用方法的
- * 参数个数。固定的必须传递的参数也通过此回到获取：
+ * logicCallback {@link cn.wiz.sdk.api.WizSDK.HWLogicCallback} 逻辑回调，分享，上报 等。为了简化调用方法的参数个数。固定的必须传递的参数也通过此回到获取：
  * {@link WizSDK.HWLogicCallback#getAuthBody()}
  * {@link WizSDK.HWLogicCallback#getAuthCode()}
  * {@link WizSDK.HWLogicCallback#getAuthType()}
  * {@link WizSDK.HWLogicCallback#getEnterpriseUserId()}
+ * {@link WizSDK.HWLogicCallback#getLanguage()}
  *
  * AppID 和 ObjectID 解释
  * AppID 为外部应用或者模块的ID，ObjectID 为外部应用或者模块内数据记录的ID
@@ -45,7 +47,8 @@ import cn.wiz.sdk.api.WizSDK;
  * 如 模块 A 为会议 AppID 为 meeting，模块 A 中有记录 会议1 会议2，对应 ObjectID 为 1， 2
  * 如 模块 B 为办公 AppID 为 office，模块 B 中有记录 办公1 办公2，对应 ObjectID 为 1， 2
  *
- * notebookName 为笔记的文件夹名称
+ * i18nNotebookName 为国际化的笔记本名称，方便之后添加其他语言，传递 json 字符串:
+ * {"CN": "我的会议", "EN": "My Meetings"} 注意: Key "CN" "EN" 要与 {@link WizSDK.HWLogicCallback#getLanguage()} 对应
  *
  * 返回笔记列表为 JSONArray 字符串。
  * [
@@ -66,32 +69,46 @@ import cn.wiz.sdk.api.WizSDK;
  */
 public class MainActivity extends BaseActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        findViewById(R.id.language).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (Language == "EN") {
+                    Language = "CN";
+                    ((Button) view).setText("EN");
+                } else {
+                    Language = "EN";
+                    ((Button) view).setText("CH");
+                }
+            }
+        });
+
         findViewById(R.id.home).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startNoteHome(initCallbackWithoutResult);
             }
         });
+        findViewById(R.id.notebook).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startNoteListByAppId(initCallbackWithoutResult, mAppId, getI18nNotebookName());
+            }
+        });
         findViewById(R.id.create).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startCreateNote(initCallbackWithoutResult, mNotebookMeeting, null, null, null);
-            }
-        });
-        findViewById(R.id.list).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startNotebook(initCallbackWithoutResult, mNotebookMeeting);
+                startCreateNote(initCallbackWithoutResult, null);
             }
         });
         findViewById(R.id.getNotebookList).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getNotebookList(new WizSDK.HWInitCallback() {
+                getNoteListByAppId(new WizSDK.HWInitCallback() {
                     @Override
                     public void onStart() {
 
@@ -126,7 +143,7 @@ public class MainActivity extends BaseActivity {
                     public void onError(String reason) {
 
                     }
-                }, mNotebookMeeting, 0, 10);
+                }, mAppId, getI18nNotebookName(), 0, 10);
             }
         });
         findViewById(R.id.meeting1).setOnClickListener(new View.OnClickListener() {
@@ -152,7 +169,7 @@ public class MainActivity extends BaseActivity {
     private void setMeeting(final String name, final String appId, final String objectId) {
         ((TextView) findViewById(R.id.select)).setText(name + "笔记列表:");
         //
-        getObjectList(new WizSDK.HWInitCallback() {
+        getNoteListByObject(new WizSDK.HWInitCallback() {
             @Override
             public void onStart() {
 
@@ -182,7 +199,7 @@ public class MainActivity extends BaseActivity {
                     createButton.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            startCreateNote(initCallbackWithoutResult, mNotebookMeeting, appId, objectId, null);
+                            startCreateNote(initCallbackWithoutResult, getI18nNotebookName(), appId, objectId, name);
                         }
                     });
                     noteLayout.addView(createButton);
@@ -199,7 +216,6 @@ public class MainActivity extends BaseActivity {
     }
 
     private String mAppId = "meeting";
-    private String mNotebookMeeting = "My Meeting";
 
     private WizSDK.HWInitCallback initCallbackWithoutResult = new WizSDK.HWInitCallback() {
         @Override
