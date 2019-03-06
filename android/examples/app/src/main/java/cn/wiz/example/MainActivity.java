@@ -23,7 +23,7 @@ import cn.wiz.sdk.api.WizSDK;
  * 2. 根据 AppId 启动笔记本页面 {@link cn.wiz.note.sdk.WizNoteSDK#startNoteListByAppId(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, String)}
  * 3. 查看笔记 {@link cn.wiz.note.sdk.WizNoteSDK#startViewNote(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String)}
  * 4. 创建笔记 {@link cn.wiz.note.sdk.WizNoteSDK#startCreateNote(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, String, String, String)}
- * 5. 根据 AppId 获取笔记列表 {@link cn.wiz.note.sdk.WizNoteSDK#getNoteListByAppId(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, String, int, int)}
+ * 5. 根据 AppId 获取笔记列表 {@link cn.wiz.note.sdk.WizNoteSDK#getNoteListByAppId(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, int, int)}
  * {@link cn.wiz.sdk.api.WizSDK.HWInitCallback#onSuccess(String)} 回调返回结果
  * 6. 根据 AppId 和 ObjectId 获取笔记本列表 {@link cn.wiz.note.sdk.WizNoteSDK#getNoteListByObject(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, String)}
  * {@link cn.wiz.sdk.api.WizSDK.HWInitCallback#onSuccess(String)} 回调返回结果
@@ -82,7 +82,7 @@ public class MainActivity extends BaseActivity {
                     ((Button) view).setText("EN");
                 } else {
                     Language = "EN";
-                    ((Button) view).setText("CH");
+                    ((Button) view).setText("CN");
                 }
             }
         });
@@ -143,7 +143,7 @@ public class MainActivity extends BaseActivity {
                     public void onError(String reason) {
 
                     }
-                }, mAppId, getI18nNotebookName(), 0, 10);
+                }, mAppId, 0, 10);
             }
         });
         findViewById(R.id.meeting1).setOnClickListener(new View.OnClickListener() {

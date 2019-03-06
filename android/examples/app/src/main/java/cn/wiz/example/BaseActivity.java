@@ -47,8 +47,8 @@ public class BaseActivity extends AppCompatActivity {
     /**
      * 根据 AppId 获取笔记列表
      */
-    public void getNoteListByAppId(WizSDK.HWInitCallback initCallback, String appId, String i18nNotebookName, int start, int count) {
-        WizNoteSDK.getNoteListByAppId(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, appId, i18nNotebookName, start, count);
+    public void getNoteListByAppId(WizSDK.HWInitCallback initCallback, String appId, int start, int count) {
+        WizNoteSDK.getNoteListByAppId(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, appId, start, count);
     }
 
     /**
@@ -73,10 +73,6 @@ public class BaseActivity extends AppCompatActivity {
         WizNoteSDK.startCreateNote(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, notebookName);
     }
 
-
-    public void getNotebookList(WizSDK.HWInitCallback initCallback, String notebookName, int start, int count) {
-        WizNoteSDK.getNoteListByNotebook(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, notebookName, start, count);
-    }
 
     private WizSDK.HWEventCallback eventCallback = new WizSDK.HWEventCallback() {
         @Override
