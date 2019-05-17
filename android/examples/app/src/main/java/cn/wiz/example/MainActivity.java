@@ -22,7 +22,7 @@ import cn.wiz.sdk.api.WizSDK;
  * 1. 启动笔记主界面 {@link cn.wiz.note.sdk.WizNoteSDK#startNoteHome(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback)}
  * 2. 根据 AppId 启动笔记本页面 {@link cn.wiz.note.sdk.WizNoteSDK#startNoteListByAppId(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, String)}
  * 3. 查看笔记 {@link cn.wiz.note.sdk.WizNoteSDK#startViewNote(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String)}
- * 4. 创建笔记 {@link cn.wiz.note.sdk.WizNoteSDK#startCreateNote(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, String, String, String)}
+ * 4. 创建笔记 {@link cn.wiz.note.sdk.WizNoteSDK#startCreateNote(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, String, String, String, String)}
  * 5. 根据 AppId 获取笔记列表 {@link cn.wiz.note.sdk.WizNoteSDK#getNoteListByAppId(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, int, int)}
  * {@link cn.wiz.sdk.api.WizSDK.HWInitCallback#onSuccess(String)} 回调返回结果
  * 6. 根据 AppId 和 ObjectId 获取笔记本列表 {@link cn.wiz.note.sdk.WizNoteSDK#getNoteListByObject(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, String)}
@@ -146,6 +146,47 @@ public class MainActivity extends BaseActivity {
                 }, mAppId, 0, 10);
             }
         });
+        findViewById(R.id.getCategoryList).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getNoteListByCategory(new WizSDK.HWInitCallback() {
+                    @Override
+                    public void onStart() {
+
+                    }
+
+                    @Override
+                    public void onSuccess(String result) {
+                        try {
+                            ((TextView) findViewById(R.id.select)).setText("笔记本笔记列表，点击查看:");
+                            JSONArray documents = new JSONArray(result);
+                            LinearLayout noteLayout = (LinearLayout) findViewById(R.id.meeting_notes);
+                            noteLayout.removeAllViews();
+                            for (int i=0; i<documents.length(); i++) {
+                                final JSONObject document = documents.getJSONObject(i);
+                                TextView textView = new TextView(MainActivity.this);
+                                textView.setText(document.getString("title"));
+                                noteLayout.addView(textView);
+                                final String docGuid = document.getString("docGuid");
+                                textView.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        startViewNote(initCallbackWithoutResult, docGuid);
+                                    }
+                                });
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                    @Override
+                    public void onError(String s) {
+
+                    }
+                }, "global_union_category_id");
+            }
+        });
         findViewById(R.id.meeting1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -199,7 +240,7 @@ public class MainActivity extends BaseActivity {
                     createButton.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            startCreateNote(initCallbackWithoutResult, getI18nNotebookName(), appId, objectId, name);
+                            startCreateNote(initCallbackWithoutResult, getI18nNotebookName(), appId, objectId, name, "global_union_category_id");
                         }
                     });
                     noteLayout.addView(createButton);

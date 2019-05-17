@@ -40,8 +40,8 @@ public class BaseActivity extends AppCompatActivity {
     /**
      * 创建笔记
      */
-    public void startCreateNote(WizSDK.HWInitCallback initCallback, String i18nNotebookName, String appId, String objectId, String title) {
-        WizNoteSDK.startCreateNote(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, i18nNotebookName, appId, objectId, title);
+    public void startCreateNote(WizSDK.HWInitCallback initCallback, String i18nNotebookName, String appId, String objectId, String title, String hwCategory) {
+        WizNoteSDK.startCreateNote(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, i18nNotebookName, appId, objectId, title, hwCategory);
     }
 
     /**
@@ -49,6 +49,10 @@ public class BaseActivity extends AppCompatActivity {
      */
     public void getNoteListByAppId(WizSDK.HWInitCallback initCallback, String appId, int start, int count) {
         WizNoteSDK.getNoteListByAppId(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, appId, start, count);
+    }
+
+    public void getNoteListByCategory(WizSDK.HWInitCallback initCallback, String hwCategory) {
+        WizNoteSDK.getNoteListByCategory(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, hwCategory);
     }
 
     /**
@@ -183,6 +187,11 @@ public class BaseActivity extends AppCompatActivity {
         @Override
         public String getLanguage() {
             return Language;
+        }
+
+        @Override
+        public String getNoteTitleSize() {
+            return "{\"titleFontSize\":16,\"subTitleFontSize\":14,\"auxiliaryArtFontSize\":12,\"bigMoreTitleFontSize\":20,\"contentFontSize\":16}";
         }
     };
 
