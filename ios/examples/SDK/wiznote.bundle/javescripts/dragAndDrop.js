@@ -30,7 +30,7 @@ function didload(name, type, index, totalCount){
         var base64Data = e.target.result;
         //
         var message = {'data': base64Data, 'name': name, 'type': type, 'index': index, 'totalCount': totalCount};
-        window.webkit.messageHandlers.getFileData.postMessage(message);
+        window.webkit.messageHandlers.didGetFileData.postMessage(message);
     }
 }
 //

@@ -1303,3 +1303,7 @@
 "Recent Notes"="近期";
 "Notebooks"="筆記本";
 "Search Notes"="搜索筆記";
+//
+"Handwriting"="手寫";
+"Handwriting Note"="手寫筆記";
+"Handwriting is unavailable since the connection is unstable. Please check it and retry."="網絡連接異常，無法打開手寫，請檢查網絡後重試。";

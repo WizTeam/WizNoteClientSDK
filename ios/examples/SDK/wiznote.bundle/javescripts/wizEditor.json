@@ -8,12 +8,7 @@
     autoFocus: false,
     callback: {
     redo: function(info) {
-            var url = "wiznotecmd://redoCallback?undoCount=" + info.undoCount + "&undoIndex=" + info.undoIndex;
-            var iframe = document.createElement("iframe");
-            iframe.setAttribute("src", url);
-            document.documentElement.appendChild(iframe);
-            iframe.parentNode.removeChild(iframe);
-            iframe = null;
+            window.webkit.messageHandlers.didRedoCallback.postMessage({'undoCount': info.undoCount, 'undoIndex': info.undoIndex});
         }
     }
 }

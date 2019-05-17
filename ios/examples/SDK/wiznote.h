@@ -32,10 +32,16 @@
  options: {
             用户信息 ,
             @"outerAppId": appId,
-            @"category": @"{"CN": "我的会议", "EN": "My Meetings"...}"
+            @"notebookName": @"{"CN": "我的会议", "EN": "My Meetings"...}"
         }
 */
-+ (void) launchWizNote:(UIViewController *)parentViewController options:(NSDictionary *)options customActionBlock:(id)customActionBlock updateCookiesBlock:(id)updateCookiesBlock shareNoteCallbackBlock:(id)shareNoteCallbackBlock delegate:(id)object;
++ (void) launchWizNote:(UIViewController *)parentViewController
+               options:(NSDictionary *)options
+     customActionBlock:(id)customActionBlock
+    updateCookiesBlock:(id)updateCookiesBlock
+shareNoteCallbackBlock:(id)shareNoteCallbackBlock
+ getNoteTitleSizeBlock:(id)getNoteTitleSizeBlock
+              delegate:(id)object;
 
 /*
  启动云笔记普通新建界面
@@ -44,7 +50,7 @@
             @"outerAppId": appId,
             @"noteInfo": @{
                 @"title": @"笔记标题",
-                @"category": @"{"CN": "我的会议", "EN": "My Meetings"...}"
+                @"notebookName": @"{"CN": "我的会议", "EN": "My Meetings"...}"
             }
         }
 //// noteInfo 可以为空
@@ -58,13 +64,16 @@
             @"outerObjectId": objectId,
             @"noteInfo": @{
                 @"title": @“笔记标题”,
-                @"category": @"{"CN": "我的会议", "EN": "My Meetings"...}"
+                @"notebookName": @"{"CN": "我的会议", "EN": "My Meetings"...}"
             }
         }
  
  eg:    @"outerAppId":@"huawei",
         @"outerObjectId":@"会议id",
-        @"noteInfo":@{@"title": @“会议纪要”, @"category": @"{"CN": "我的会议", "EN": "My Meetings"...}"}  //title可以不传
+        @"noteInfo":@{@"title":@“会议纪要”,
+                      @"notebookName": @"{"CN": "我的会议", "EN": "My Meetings"...}",
+                      @"category": @"ST"
+                    }  //title可以不传
  */
 + (void) launchWizEditor:(UIViewController *)parentViewController options:(NSDictionary *)options customActionBlock:(id)customActionBlock updateCookiesBlock:(id)updateCookiesBlock delegate:(id)object;
 
@@ -82,8 +91,20 @@
 + (void) getDocumentsListBy:(NSString*)appId objectId:(NSString*)objectId userOptions:(NSDictionary*)options completeBlock:(void(^)(NSArray* documents))block;
 
 /*
+ 获取某一会议分类下的笔记列表
+ category   会议分类，比如ST，AT等  ( required)
+ options    用户信息
+ getDocumentsBlock 获取笔记列表后的返回
+ eg:    id getDocumentsBlock =  ^void(NSArray* documents) {
+ //处理返回的笔记列表
+ };
+ WizNoteGetDocuments(@"huawei", @"会议id", userOptions, getDocumentsBlock);
+ */
++ (void) getDocumentsListByHWNoteCategory:(NSString*)category userOptions:(NSDictionary*)options completeBlock:(void(^)(NSArray* documents))block;
+
+/*
  分页获取某一笔记本下的笔记列表
- category   笔记本国际化字符串 (required)
+ notebookName   笔记本国际化字符串 (required)
  options    用户信息  *****需要传入outerAppId*****
  first  分页开始
  count  分页Size
@@ -91,7 +112,7 @@
  eg:    id getDocumentsBlock =  ^void(NSArray* documents) {
             //处理返回的笔记列表
         };
-        WizNoteGetDocumentsByCategory(@"{"CN": "我的会议", "EN": "My Meetings"...}", launchOptions, 0, 1, getDocumentsBlock2);
+        WizNoteGetDocumentsByNoteBookName(@"{"CN": "我的会议", "EN": "My Meetings"...}", launchOptions, 0, 1, getDocumentsBlock2);
  */
-+ (void) getDocumentsListByCategory:(NSString*)category userOptions:(NSDictionary*)options first:(int64_t)first count:(int64_t)count completeBlock:(void(^)(NSArray* documents))block;
++ (void) getDocumentsListByNoteBookName:(NSString*)notebookName userOptions:(NSDictionary*)options first:(int64_t)first count:(int64_t)count completeBlock:(void(^)(NSArray* documents))block;
 @end
