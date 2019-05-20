@@ -81,6 +81,7 @@ shareNoteCallbackBlock:(id)shareNoteCallbackBlock
  获取某一objecId下的笔记列表
  appId    应用id   ( required)
  objectId    对象id，例如会议id  ( required)
+ category   会议分类，比如ST，AT等 (option)
  options    用户信息
  getDocumentsBlock 获取笔记列表后的返回
  eg:    id getDocumentsBlock =  ^void(NSArray* documents) {
@@ -88,19 +89,7 @@ shareNoteCallbackBlock:(id)shareNoteCallbackBlock
         };
         WizNoteGetDocuments(@"huawei", @"会议id", userOptions, getDocumentsBlock);
  */
-+ (void) getDocumentsListBy:(NSString*)appId objectId:(NSString*)objectId userOptions:(NSDictionary*)options completeBlock:(void(^)(NSArray* documents))block;
-
-/*
- 获取某一会议分类下的笔记列表
- category   会议分类，比如ST，AT等  ( required)
- options    用户信息
- getDocumentsBlock 获取笔记列表后的返回
- eg:    id getDocumentsBlock =  ^void(NSArray* documents) {
- //处理返回的笔记列表
- };
- WizNoteGetDocuments(@"huawei", @"会议id", userOptions, getDocumentsBlock);
- */
-+ (void) getDocumentsListByHWNoteCategory:(NSString*)category userOptions:(NSDictionary*)options completeBlock:(void(^)(NSArray* documents))block;
++ (void) getDocumentsListBy:(NSString*)appId objectId:(NSString*)objectId category:(NSString*)category userOptions:(NSDictionary*)options completeBlock:(void(^)(NSArray* documents))block;
 
 /*
  分页获取某一笔记本下的笔记列表
