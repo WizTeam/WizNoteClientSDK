@@ -12,6 +12,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import cn.wiz.sdk.api.WizAsyncAction;
 import cn.wiz.sdk.api.WizSDK;
 
 
@@ -20,17 +21,17 @@ import cn.wiz.sdk.api.WizSDK;
  *
  * 支持的操作 8 种操作：
  * 1. 启动笔记主界面 {@link cn.wiz.note.sdk.WizNoteSDK#startNoteHome(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback)}
- * 2. 根据 AppId 启动笔记本页面 {@link cn.wiz.note.sdk.WizNoteSDK#startNoteListByAppId(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, String)}
+ * 2. 根据 AppId 启动笔记本页面 {@link cn.wiz.note.sdk.WizNoteSDK#startNoteListByAppId(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, String, String)}
  * 3. 查看笔记 {@link cn.wiz.note.sdk.WizNoteSDK#startViewNote(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String)}
- * 4. 创建笔记 {@link cn.wiz.note.sdk.WizNoteSDK#startCreateNote(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, String, String, String, String)}
- * 5. 根据 AppId 获取笔记列表 {@link cn.wiz.note.sdk.WizNoteSDK#getNoteListByAppId(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, int, int)}
- * {@link cn.wiz.sdk.api.WizSDK.HWInitCallback#onSuccess(String)} 回调返回结果
- * 6. 根据 AppId 和 ObjectId 获取笔记本列表 {@link cn.wiz.note.sdk.WizNoteSDK#getNoteListByObject(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, String)}
- * {@link cn.wiz.sdk.api.WizSDK.HWInitCallback#onSuccess(String)} 回调返回结果
- * 7. 根据 category 获取笔记列表 {@link cn.wiz.note.sdk.WizNoteSDK#getNoteListByCategory(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String)}
- * {@link cn.wiz.sdk.api.WizSDK.HWInitCallback#onSuccess(String)} 回调返回结果
- * 8. 根据 AppId、ObjectId、category 获取笔记列表 {@link cn.wiz.note.sdk.WizNoteSDK#getNoteListByObjectAndCategory(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, String, String)}
- * {@link cn.wiz.sdk.api.WizSDK.HWInitCallback#onSuccess(String)} 回调返回结果
+ * 4. 创建笔记 {@link cn.wiz.note.sdk.WizNoteSDK#startCreateNote(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, String, String, String, String, String)}
+ * 5. 根据 AppId 获取笔记列表 {@link cn.wiz.note.sdk.WizNoteSDK#getNoteListByAppId(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, int, int, boolean)}
+ * 同步返回结果或者异步 {@link cn.wiz.sdk.api.WizSDK.HWInitCallback#onSuccess(String)} 回调返回结果
+ * 6. 根据 AppId 和 ObjectId 获取笔记本列表 {@link cn.wiz.note.sdk.WizNoteSDK#getNoteListByObject(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, String, boolean)}
+ * 同步返回结果或者异步 {@link cn.wiz.sdk.api.WizSDK.HWInitCallback#onSuccess(String)} 回调返回结果
+ * 7. 根据 category 获取笔记列表 {@link cn.wiz.note.sdk.WizNoteSDK#getNoteListByCategory(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, boolean)}
+ * 同步返回结果或者异步 {@link cn.wiz.sdk.api.WizSDK.HWInitCallback#onSuccess(String)} 回调返回结果
+ * 8. 根据 AppId、ObjectId、category 获取笔记列表 {@link cn.wiz.note.sdk.WizNoteSDK#getNoteListByObjectAndCategory(Application, WizSDK.HWInitCallback, WizSDK.HWEventCallback, WizSDK.HWUICallback, WizSDK.HWLogicCallback, String, String, String, boolean)}
+ * 同步返回结果或者异步 {@link cn.wiz.sdk.api.WizSDK.HWInitCallback#onSuccess(String)} 回调返回结果
  *
  * 参数：
  * eventCallback uiCallback logicCallback 为公用参数。不同操作需要实现不同 initCallback 获取返回结果
@@ -100,20 +101,20 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.notebook).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startNoteListByAppId(initCallbackWithoutResult, mAppId, getI18nNotebookName());
+                startNoteListByAppId(initCallbackWithoutResult, mAppId, CN, EN);
             }
         });
         findViewById(R.id.getObjectCategoryList).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getNoteListByObjectAndCategory(new WizSDK.HWInitCallback() {
+                WizAsyncAction.startAsyncAction(null, new WizAsyncAction.WizSimpleAction<Object, String>() {
                     @Override
-                    public void onStart() {
-
+                    public String work(WizAsyncAction.WizAsyncActionThread<Object, String> wizAsyncActionThread, Object o) throws Exception {
+                        return getNoteListByObjectAndCategory(initCallbackWithoutResult, mAppId, "meeting1", "global_union_category_id", false);
                     }
 
                     @Override
-                    public void onSuccess(String result) {
+                    public void onEnd(Object actionData, String result) {
                         try {
                             ((TextView) findViewById(R.id.select)).setText("笔记本笔记列表，点击查看:");
                             JSONArray documents = new JSONArray(result);
@@ -136,94 +137,97 @@ public class MainActivity extends BaseActivity {
                             e.printStackTrace();
                         }
                     }
-
-                    @Override
-                    public void onError(String s) {
-
-                    }
-                }, mAppId, "meeting1", "global_union_category_id");
+                });
             }
         });
         findViewById(R.id.getNotebookList).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getNoteListByAppId(new WizSDK.HWInitCallback() {
-                    @Override
-                    public void onStart() {
+                try {
+                    getNoteListByAppId(new WizSDK.HWInitCallback() {
+                        @Override
+                        public void onStart() {
 
-                    }
-
-                    @Override
-                    public void onSuccess(String result) {
-                        try {
-                            ((TextView) findViewById(R.id.select)).setText("笔记本笔记列表，点击查看:");
-                            JSONArray documents = new JSONArray(result);
-                            LinearLayout noteLayout = (LinearLayout) findViewById(R.id.meeting_notes);
-                            noteLayout.removeAllViews();
-                            for (int i=0; i<documents.length(); i++) {
-                                final JSONObject document = documents.getJSONObject(i);
-                                TextView textView = new TextView(MainActivity.this);
-                                textView.setText(document.getString("title"));
-                                noteLayout.addView(textView);
-                                final String docGuid = document.getString("docGuid");
-                                textView.setOnClickListener(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View v) {
-                                        startViewNote(initCallbackWithoutResult, docGuid);
-                                    }
-                                });
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
                         }
-                    }
 
-                    @Override
-                    public void onError(String reason) {
+                        @Override
+                        public void onSuccess(String result) {
+                            try {
+                                ((TextView) findViewById(R.id.select)).setText("笔记本笔记列表，点击查看:");
+                                JSONArray documents = new JSONArray(result);
+                                LinearLayout noteLayout = (LinearLayout) findViewById(R.id.meeting_notes);
+                                noteLayout.removeAllViews();
+                                for (int i=0; i<documents.length(); i++) {
+                                    final JSONObject document = documents.getJSONObject(i);
+                                    TextView textView = new TextView(MainActivity.this);
+                                    textView.setText(document.getString("title"));
+                                    noteLayout.addView(textView);
+                                    final String docGuid = document.getString("docGuid");
+                                    textView.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            startViewNote(initCallbackWithoutResult, docGuid);
+                                        }
+                                    });
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
 
-                    }
-                }, mAppId, 0, 10);
+                        @Override
+                        public void onError(String reason) {
+
+                        }
+                    }, mAppId, 0, 10, true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
         findViewById(R.id.getCategoryList).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getNoteListByCategory(new WizSDK.HWInitCallback() {
-                    @Override
-                    public void onStart() {
+                try {
+                    getNoteListByCategory(new WizSDK.HWInitCallback() {
+                        @Override
+                        public void onStart() {
 
-                    }
-
-                    @Override
-                    public void onSuccess(String result) {
-                        try {
-                            ((TextView) findViewById(R.id.select)).setText("笔记本笔记列表，点击查看:");
-                            JSONArray documents = new JSONArray(result);
-                            LinearLayout noteLayout = (LinearLayout) findViewById(R.id.meeting_notes);
-                            noteLayout.removeAllViews();
-                            for (int i=0; i<documents.length(); i++) {
-                                final JSONObject document = documents.getJSONObject(i);
-                                TextView textView = new TextView(MainActivity.this);
-                                textView.setText(document.getString("title"));
-                                noteLayout.addView(textView);
-                                final String docGuid = document.getString("docGuid");
-                                textView.setOnClickListener(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View v) {
-                                        startViewNote(initCallbackWithoutResult, docGuid);
-                                    }
-                                });
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
                         }
-                    }
 
-                    @Override
-                    public void onError(String s) {
+                        @Override
+                        public void onSuccess(String result) {
+                            try {
+                                ((TextView) findViewById(R.id.select)).setText("笔记本笔记列表，点击查看:");
+                                JSONArray documents = new JSONArray(result);
+                                LinearLayout noteLayout = (LinearLayout) findViewById(R.id.meeting_notes);
+                                noteLayout.removeAllViews();
+                                for (int i=0; i<documents.length(); i++) {
+                                    final JSONObject document = documents.getJSONObject(i);
+                                    TextView textView = new TextView(MainActivity.this);
+                                    textView.setText(document.getString("title"));
+                                    noteLayout.addView(textView);
+                                    final String docGuid = document.getString("docGuid");
+                                    textView.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            startViewNote(initCallbackWithoutResult, docGuid);
+                                        }
+                                    });
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
 
-                    }
-                }, "global_union_category_id");
+                        @Override
+                        public void onError(String s) {
+
+                        }
+                    }, "global_union_category_id", true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
         findViewById(R.id.meeting1).setOnClickListener(new View.OnClickListener() {
@@ -249,50 +253,54 @@ public class MainActivity extends BaseActivity {
     private void setMeeting(final String name, final String appId, final String objectId) {
         ((TextView) findViewById(R.id.select)).setText(name + "笔记列表:");
         //
-        getNoteListByObject(new WizSDK.HWInitCallback() {
-            @Override
-            public void onStart() {
+        try {
+            getNoteListByObject(new WizSDK.HWInitCallback() {
+                @Override
+                public void onStart() {
 
-            }
+                }
 
-            @Override
-            public void onSuccess(String result) {
-                try {
-                    JSONArray documents = new JSONArray(result);
-                    LinearLayout noteLayout = (LinearLayout) findViewById(R.id.meeting_notes);
-                    noteLayout.removeAllViews();
-                    for (int i=0; i<documents.length(); i++) {
-                        final JSONObject document = documents.getJSONObject(i);
-                        TextView textView = new TextView(MainActivity.this);
-                        textView.setText(document.getString("title"));
-                        noteLayout.addView(textView);
-                        final String docGuid = document.getString("docGuid");
-                        textView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onSuccess(String result) {
+                    try {
+                        JSONArray documents = new JSONArray(result);
+                        LinearLayout noteLayout = (LinearLayout) findViewById(R.id.meeting_notes);
+                        noteLayout.removeAllViews();
+                        for (int i=0; i<documents.length(); i++) {
+                            final JSONObject document = documents.getJSONObject(i);
+                            TextView textView = new TextView(MainActivity.this);
+                            textView.setText(document.getString("title"));
+                            noteLayout.addView(textView);
+                            final String docGuid = document.getString("docGuid");
+                            textView.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    startViewNote(initCallbackWithoutResult, docGuid);
+                                }
+                            });
+                        }
+                        Button createButton = new Button(MainActivity.this);
+                        createButton.setText("为" + name + "新建笔记");
+                        createButton.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                startViewNote(initCallbackWithoutResult, docGuid);
+                                startCreateNote(initCallbackWithoutResult, CN, EN, appId, objectId, name, "global_union_category_id");
                             }
                         });
+                        noteLayout.addView(createButton);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
                     }
-                    Button createButton = new Button(MainActivity.this);
-                    createButton.setText("为" + name + "新建笔记");
-                    createButton.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            startCreateNote(initCallbackWithoutResult, getI18nNotebookName(), appId, objectId, name, "global_union_category_id");
-                        }
-                    });
-                    noteLayout.addView(createButton);
-                } catch (JSONException e) {
-                    e.printStackTrace();
                 }
-            }
 
-            @Override
-            public void onError(String reason) {
+                @Override
+                public void onError(String reason) {
 
-            }
-        }, appId, objectId);
+                }
+            }, appId, objectId, true);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private String mAppId = "meeting";

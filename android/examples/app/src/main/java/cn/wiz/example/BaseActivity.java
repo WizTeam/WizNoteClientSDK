@@ -40,15 +40,15 @@ public class BaseActivity extends AppCompatActivity {
     /**
      * 创建笔记
      */
-    public void startCreateNote(WizSDK.HWInitCallback initCallback, String i18nNotebookName, String appId, String objectId, String title, String hwCategory) {
-        WizNoteSDK.startCreateNote(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, i18nNotebookName, appId, objectId, title, hwCategory);
+    public void startCreateNote(WizSDK.HWInitCallback initCallback, String notebookNamCN, String notebookNameEN, String appId, String objectId, String title, String hwCategory) {
+        WizNoteSDK.startCreateNote(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, notebookNamCN, notebookNameEN, appId, objectId, title, hwCategory);
     }
 
     /**
      * 根据 AppId 获取笔记列表
      */
-    public void getNoteListByAppId(WizSDK.HWInitCallback initCallback, String appId, int start, int count) {
-        WizNoteSDK.getNoteListByAppId(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, appId, start, count);
+    public String getNoteListByAppId(WizSDK.HWInitCallback initCallback, String appId, int start, int count, boolean async) throws Exception {
+        return WizNoteSDK.getNoteListByAppId(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, appId, start, count, async);
     }
 
     /**
@@ -56,26 +56,26 @@ public class BaseActivity extends AppCompatActivity {
      * @param initCallback
      * @param hwCategory
      */
-    public void getNoteListByCategory(WizSDK.HWInitCallback initCallback, String hwCategory) {
-        WizNoteSDK.getNoteListByCategory(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, hwCategory);
+    public String getNoteListByCategory(WizSDK.HWInitCallback initCallback, String hwCategory, boolean async) throws Exception {
+        return WizNoteSDK.getNoteListByCategory(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, hwCategory, async);
     }
 
-    public void getNoteListByObjectAndCategory(WizSDK.HWInitCallback initCallback, String appId, String objectId, String hwCategory) {
-        WizNoteSDK.getNoteListByObjectAndCategory(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, appId, objectId, hwCategory);
+    public String getNoteListByObjectAndCategory(WizSDK.HWInitCallback initCallback, String appId, String objectId, String hwCategory, boolean async) throws Exception {
+        return WizNoteSDK.getNoteListByObjectAndCategory(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, appId, objectId, hwCategory, async);
     }
 
     /**
      * 根据 AppId 和 ObjectId 获取笔记列表
      */
-    public void getNoteListByObject(WizSDK.HWInitCallback initCallback, String appId, String objectId) {
-        WizNoteSDK.getNoteListByObject(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, appId, objectId);
+    public String getNoteListByObject(WizSDK.HWInitCallback initCallback, String appId, String objectId, boolean async) throws Exception {
+        return WizNoteSDK.getNoteListByObject(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, appId, objectId, async);
     }
 
     /**
      * 根据 AppId 打开笔记本
      */
-    public void startNoteListByAppId(WizSDK.HWInitCallback initCallback, String appId, String i18nNotebookName) {
-        WizNoteSDK.startNoteListByAppId(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, appId, i18nNotebookName);
+    public void startNoteListByAppId(WizSDK.HWInitCallback initCallback, String appId, String notebookNameCN, String notebookNameEN) {
+        WizNoteSDK.startNoteListByAppId(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, appId, notebookNameCN, notebookNameEN);
     }
 
     private WizSDK.HWEventCallback eventCallback = new WizSDK.HWEventCallback() {
@@ -197,16 +197,7 @@ public class BaseActivity extends AppCompatActivity {
 
     protected String Language = "CN";
 
-    protected String getI18nNotebookName() {
-        try {
-            JSONObject jsonObject = new JSONObject();
-            jsonObject.put("CN", "我的会议");
-            jsonObject.put("EN", "My Meetings");
-            return jsonObject.toString();
-        } catch (JSONException e) {
-            e.printStackTrace();
-            throw new RuntimeException("error");
-        }
-    }
+    protected String CN = "我的会议";
+    protected String EN = "My Meetings";
 
 }
