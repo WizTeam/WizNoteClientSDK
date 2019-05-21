@@ -51,8 +51,17 @@ public class BaseActivity extends AppCompatActivity {
         WizNoteSDK.getNoteListByAppId(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, appId, start, count);
     }
 
+    /**
+     * 根据 category 获取笔记列表
+     * @param initCallback
+     * @param hwCategory
+     */
     public void getNoteListByCategory(WizSDK.HWInitCallback initCallback, String hwCategory) {
         WizNoteSDK.getNoteListByCategory(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, hwCategory);
+    }
+
+    public void getNoteListByObjectAndCategory(WizSDK.HWInitCallback initCallback, String appId, String objectId, String hwCategory) {
+        WizNoteSDK.getNoteListByObjectAndCategory(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, appId, objectId, hwCategory);
     }
 
     /**
@@ -68,15 +77,6 @@ public class BaseActivity extends AppCompatActivity {
     public void startNoteListByAppId(WizSDK.HWInitCallback initCallback, String appId, String i18nNotebookName) {
         WizNoteSDK.startNoteListByAppId(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, appId, i18nNotebookName);
     }
-
-    /**
-     * 在笔记本中创建一篇笔记，不和外部记录关联，笔记本传 null， 在默认笔记本中创建笔记
-     */
-    @Deprecated
-    public void startCreateNote(WizSDK.HWInitCallback initCallback, String notebookName) {
-        WizNoteSDK.startCreateNote(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, notebookName);
-    }
-
 
     private WizSDK.HWEventCallback eventCallback = new WizSDK.HWEventCallback() {
         @Override

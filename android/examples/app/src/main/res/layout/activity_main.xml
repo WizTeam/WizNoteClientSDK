@@ -25,13 +25,6 @@
         android:text="根据 AppId 打开笔记本页面"/>
 
     <Button
-        android:id="@+id/create"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:text="在笔记本内创建，不与外部记录关联"/>
-
-    <Button
         android:id="@+id/getNotebookList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,6 +35,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="获取 Category 对应的笔记列表，在 InitCallback.onSuccess 中返回结果"/>
+
+    <Button
+        android:id="@+id/getObjectCategoryList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="获取 会议一 Category 对应的笔记列表，在 InitCallback.onSuccess 中返回结果"/>
+
 
     <TextView
         android:layout_width="wrap_content"
