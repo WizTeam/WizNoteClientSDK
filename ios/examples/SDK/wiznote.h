@@ -32,7 +32,8 @@
  options: {
             用户信息 ,
             @"outerAppId": appId,
-            @"notebookName": @"{"CN": "我的会议", "EN": "My Meetings"...}"
+            @"notebookNameCN": @"我的会议",
+            @"notebookNameEN": @"My Meetings",
         }
 */
 + (void) launchWizNote:(UIViewController *)parentViewController
@@ -49,7 +50,8 @@ shareNoteCallbackBlock:(id)shareNoteCallbackBlock
             @"outerAppId": appId,
             @"noteInfo": @{
                 @"title": @"笔记标题",
-                @"notebookName": @"{"CN": "我的会议", "EN": "My Meetings"...}"
+                @"notebookNameCN": @"我的会议",
+                @"notebookNameEN": @"My Meetings",
             }
         }
 //// noteInfo 可以为空
@@ -63,15 +65,18 @@ shareNoteCallbackBlock:(id)shareNoteCallbackBlock
             @"outerObjectId": objectId,
             @"noteInfo": @{
                 @"title": @“笔记标题”,
-                @"notebookName": @"{"CN": "我的会议", "EN": "My Meetings"...}"
+                @"notebookNameCN": @"我的会议",
+                @"notebookNameEN": @"My Meetings",
             }
         }
  
  eg:    @"outerAppId":@"huawei",
         @"outerObjectId":@"会议id",
-        @"noteInfo":@{@"title":@“会议纪要”,
-                      @"notebookName": @"{"CN": "我的会议", "EN": "My Meetings"...}",
-                      @"category": @"ST"
+        @"noteInfo":@{
+                    @"title":@“会议纪要”,
+                    @"notebookNameCN": @"我的会议",
+                    @"notebookNameEN": @"My Meetings",
+                    @"category": @"ST"
                     }  //title可以不传
  */
 + (void) launchWizEditor:(UIViewController *)parentViewController options:(NSDictionary *)options customActionBlock:(id)customActionBlock updateCookiesBlock:(id)updateCookiesBlock delegate:(id)object;
@@ -92,7 +97,7 @@ shareNoteCallbackBlock:(id)shareNoteCallbackBlock
 
 /*
  分页获取某一笔记本下的笔记列表
- notebookName   笔记本国际化字符串 (required)
+ notebookNameDic   笔记本名称 (required)
  options    用户信息  *****需要传入outerAppId*****
  first  分页开始
  count  分页Size
