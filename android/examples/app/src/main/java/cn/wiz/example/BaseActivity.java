@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Base64;
 import android.util.Log;
 import android.widget.ListView;
 
@@ -197,7 +198,7 @@ public class BaseActivity extends AppCompatActivity {
 
     protected String Language = "CN";
 
-    protected String CN = "我的会议";
-    protected String EN = "My Meetings";
+    protected String CN = Base64.encodeToString("我的会议".getBytes(), Base64.NO_WRAP);
+    protected String EN = Base64.encodeToString("My Meetings".getBytes(), Base64.NO_WRAP);
 
 }
