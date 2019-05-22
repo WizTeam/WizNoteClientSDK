@@ -40,7 +40,6 @@
      customActionBlock:(id)customActionBlock
     updateCookiesBlock:(id)updateCookiesBlock
 shareNoteCallbackBlock:(id)shareNoteCallbackBlock
- getNoteTitleSizeBlock:(id)getNoteTitleSizeBlock
               delegate:(id)object;
 
 /*
