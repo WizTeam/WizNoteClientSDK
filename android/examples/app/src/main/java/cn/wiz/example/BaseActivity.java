@@ -191,7 +191,7 @@ public class BaseActivity extends AppCompatActivity {
 
         @Override
         public String getNoteTitleSize() {
-            return "{\"titleFontSize\":16,\"subTitleFontSize\":14,\"auxiliaryArtFontSize\":12,\"bigMoreTitleFontSize\":20,\"contentFontSize\":16}";
+            return "{\"titleFontSize\":64,\"subTitleFontSize\":56,\"auxiliaryArtFontSize\":48,\"bigMoreTitleFontSize\":80,\"contentFontSize\":64}";
         }
     };
 

@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import org.devio.takephoto.uitl.TConstant;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -79,6 +80,7 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        TConstant.setHuaweiAppContext(getApplicationContext());
         findViewById(R.id.language).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -109,8 +111,12 @@ public class MainActivity extends BaseActivity {
             public void onClick(View view) {
                 WizAsyncAction.startAsyncAction(null, new WizAsyncAction.WizSimpleAction<Object, String>() {
                     @Override
-                    public String work(WizAsyncAction.WizAsyncActionThread<Object, String> wizAsyncActionThread, Object o) throws Exception {
-                        return getNoteListByObjectAndCategory(initCallbackWithoutResult, mAppId, "meeting1", "global_union_category_id", false);
+                    public String work(WizAsyncAction.WizAsyncActionThread<Object, String> wizAsyncActionThread, Object o) {
+                        try {
+                            return getNoteListByObjectAndCategory(initCallbackWithoutResult, mAppId, "meeting1", "global_union_category_id", false);
+                        } catch (Exception e) {
+                            return null;
+                        }
                     }
 
                     @Override
