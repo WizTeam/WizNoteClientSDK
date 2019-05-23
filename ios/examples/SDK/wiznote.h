@@ -97,7 +97,6 @@ shareNoteCallbackBlock:(id)shareNoteCallbackBlock
 
 /*
  分页获取某一笔记本下的笔记列表
- notebookNameDic   笔记本名称 (required)
  options    用户信息  *****需要传入outerAppId*****
  first  分页开始
  count  分页Size
@@ -107,5 +106,5 @@ shareNoteCallbackBlock:(id)shareNoteCallbackBlock
         };
         WizNoteGetDocumentsByNoteBookName(@"{"CN": "我的会议", "EN": "My Meetings"...}", launchOptions, 0, 1, getDocumentsBlock2);
  */
-+ (void) getDocumentsListByNoteBookName:(NSString*)notebookName userOptions:(NSDictionary*)options first:(int64_t)first count:(int64_t)count completeBlock:(void(^)(NSArray* documents))block;
++ (void) getDocumentsListByNoteBook:(NSDictionary*)options first:(int64_t)first count:(int64_t)count completeBlock:(void(^)(NSArray* documents))block;
 @end
