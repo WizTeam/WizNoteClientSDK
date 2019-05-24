@@ -32,6 +32,8 @@
  options: {
             用户信息 ,
             @"outerAppId": appId,
+            @"notebookNameCN": @"我的会议",
+            @"notebookNameEN": @"My Meetings",
         }
 */
 + (void) launchWizNote:(UIViewController *)parentViewController
