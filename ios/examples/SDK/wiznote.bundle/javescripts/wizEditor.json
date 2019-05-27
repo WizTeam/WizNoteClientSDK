@@ -9,6 +9,9 @@
     callback: {
     redo: function(info) {
             window.webkit.messageHandlers.didRedoCallback.postMessage({'undoCount': info.undoCount, 'undoIndex': info.undoIndex});
-        }
+        },
+    onClickLink: function(e, href, isReader) {
+        return false;
+    }
     }
 }
