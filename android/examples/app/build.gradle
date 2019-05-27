@@ -61,7 +61,7 @@ repositories {
  */
 dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    debugCompile files('libs/HWNOTE-debug-7.aar')
+    debugCompile files('libs/HWNOTE-debug.aar')
     releaseCompile files('libs/HWNOTE-release.aar')
 
     compile 'com.android.support:support-v4:25.3.1'
