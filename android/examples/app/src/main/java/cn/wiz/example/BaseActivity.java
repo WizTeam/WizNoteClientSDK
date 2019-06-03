@@ -28,28 +28,28 @@ public class BaseActivity extends AppCompatActivity {
      * 打开主页
      */
     public void startNoteHome(WizSDK.HWInitCallback initCallback) {
-        WizNoteSDK.startNoteHome(getApplication(), initCallback, eventCallback, uiCallback, logicCallback);
+        WizNoteSDK.startNoteHome(this, initCallback, eventCallback, uiCallback, logicCallback);
     }
 
     /**
      * 查看笔记
      */
     public void startViewNote(WizSDK.HWInitCallback initCallback, String docGuid) {
-        WizNoteSDK.startViewNote(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, docGuid);
+        WizNoteSDK.startViewNote(this, initCallback, eventCallback, uiCallback, logicCallback, docGuid);
     }
 
     /**
      * 创建笔记
      */
     public void startCreateNote(WizSDK.HWInitCallback initCallback, String notebookNamCN, String notebookNameEN, String appId, String objectId, String title, String hwCategory) {
-        WizNoteSDK.startCreateNote(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, notebookNamCN, notebookNameEN, appId, objectId, title, hwCategory);
+        WizNoteSDK.startCreateNote(this, initCallback, eventCallback, uiCallback, logicCallback, notebookNamCN, notebookNameEN, appId, objectId, title, hwCategory);
     }
 
     /**
      * 根据 AppId 获取笔记列表
      */
     public String getNoteListByAppId(WizSDK.HWInitCallback initCallback, String appId, int start, int count, boolean async) throws Exception {
-        return WizNoteSDK.getNoteListByAppId(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, appId, start, count, async);
+        return WizNoteSDK.getNoteListByAppId(this, initCallback, eventCallback, uiCallback, logicCallback, appId, start, count, async);
     }
 
     /**
@@ -58,25 +58,25 @@ public class BaseActivity extends AppCompatActivity {
      * @param hwCategory
      */
     public String getNoteListByCategory(WizSDK.HWInitCallback initCallback, String hwCategory, boolean async) throws Exception {
-        return WizNoteSDK.getNoteListByCategory(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, hwCategory, async);
+        return WizNoteSDK.getNoteListByCategory(this, initCallback, eventCallback, uiCallback, logicCallback, hwCategory, async);
     }
 
     public String getNoteListByObjectAndCategory(WizSDK.HWInitCallback initCallback, String appId, String objectId, String hwCategory, boolean async) throws Exception {
-        return WizNoteSDK.getNoteListByObjectAndCategory(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, appId, objectId, hwCategory, async);
+        return WizNoteSDK.getNoteListByObjectAndCategory(this, initCallback, eventCallback, uiCallback, logicCallback, appId, objectId, hwCategory, async);
     }
 
     /**
      * 根据 AppId 和 ObjectId 获取笔记列表
      */
     public String getNoteListByObject(WizSDK.HWInitCallback initCallback, String appId, String objectId, boolean async) throws Exception {
-        return WizNoteSDK.getNoteListByObject(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, appId, objectId, async);
+        return WizNoteSDK.getNoteListByObject(this, initCallback, eventCallback, uiCallback, logicCallback, appId, objectId, async);
     }
 
     /**
      * 根据 AppId 打开笔记本
      */
     public void startNoteListByAppId(WizSDK.HWInitCallback initCallback, String appId, String notebookNameCN, String notebookNameEN) {
-        WizNoteSDK.startNoteListByAppId(getApplication(), initCallback, eventCallback, uiCallback, logicCallback, appId, notebookNameCN, notebookNameEN);
+        WizNoteSDK.startNoteListByAppId(this, initCallback, eventCallback, uiCallback, logicCallback, appId, notebookNameCN, notebookNameEN);
     }
 
     private WizSDK.HWEventCallback eventCallback = new WizSDK.HWEventCallback() {
