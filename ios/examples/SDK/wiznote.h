@@ -94,6 +94,7 @@ shareNoteCallbackBlock:(id)shareNoteCallbackBlock
         WizNoteGetDocuments(@"huawei", @"会议id", userOptions, getDocumentsBlock);
  */
 + (void) getDocumentsListBy:(NSString*)appId objectId:(NSString*)objectId category:(NSString*)category userOptions:(NSDictionary*)options completeBlock:(void(^)(NSArray* documents))block;
++ (NSArray*) getDocumentsListBy:(NSString*)appId objectId:(NSString*)objectId category:(NSString*)category userOptions:(NSDictionary*)options;
 
 /*
  分页获取某一笔记本下的笔记列表
