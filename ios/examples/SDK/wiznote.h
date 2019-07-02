@@ -35,13 +35,14 @@
             @"notebookNameCN": @"我的会议",
             @"notebookNameEN": @"My Meetings",
         }
+ completeHandler: 返回对应的viewController
 */
-+ (void) launchWizNote:(UIViewController *)parentViewController
-               options:(NSDictionary *)options
++ (void) launchWizNote:(NSDictionary *)options
      customActionBlock:(id)customActionBlock
     updateCookiesBlock:(id)updateCookiesBlock
 shareNoteCallbackBlock:(id)shareNoteCallbackBlock
-              delegate:(id)object;
+              delegate:(id)object
+       completeHandler:(void(^)(UIViewController* viewController))completeHandler;
 
 /*
  启动云笔记普通新建界面
@@ -108,4 +109,20 @@ shareNoteCallbackBlock:(id)shareNoteCallbackBlock
         WizNoteGetDocumentsByNoteBookName(@"{"CN": "我的会议", "EN": "My Meetings"...}", launchOptions, 0, 1, getDocumentsBlock2);
  */
 + (void) getDocumentsListByNoteBook:(NSDictionary*)options first:(int64_t)first count:(int64_t)count completeBlock:(void(^)(NSArray* documents))block;
+
+/*
+ WeLink中其他模块的文字、图片可以分享到笔记中
+ options    用户信息
+ body       正文html字符串或者纯文字(选填)
+ pictures   <名称、图片path>(选填)
+ title      笔记标题(选填)
+ */
++ (void)shareInWithOptions:(NSDictionary *)options
+                      body:(NSString *)body
+                  pictures:(NSDictionary *)pictures
+                     title:(NSString *)title
+         customActionBlock:(id)customActionBlock
+        updateCookiesBlock:(id)updateCookiesBlock
+                  delegate:(id)object
+           completeHandler:(void(^)(UIViewController* viewController))completeHandler;
 @end

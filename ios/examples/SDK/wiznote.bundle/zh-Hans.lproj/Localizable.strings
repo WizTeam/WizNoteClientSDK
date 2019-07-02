@@ -1300,3 +1300,6 @@
 "HandWriting"="手写";
 "Handwriting Note"="手写笔记";
 "Handwriting is unavailable since the connection is unstable. Please check it and retry."="网络连接异常，无法打开手写，请检查网络后重试。";
+//
+"Save as new note"="存为新笔记";
+"Merge to existing notes"="合并至已有笔记";
