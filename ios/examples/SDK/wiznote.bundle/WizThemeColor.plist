@@ -9,7 +9,7 @@
 		<key>WIZ_DEFAULT_THEME COLOR</key>
 		<string>448aff</string>
 		<key>WIZ_BACKGROUND_COLOR</key>
-		<string>f4f7fa</string>
+		<string>f9f9f9</string>
 		<key>WIZ_NOTE_BACKGROUND_COLOR</key>
 		<string>ffffff</string>
 		<key>WIZ_NOTE_TEXT_COLOR</key>
@@ -19,9 +19,9 @@
 		<key>WIZ_DISABLE_TEXT_COLOR</key>
 		<string>9fa5af</string>
 		<key>WIZ_NAVIGATIONBAR_COLOR</key>
-		<string>343745</string>
+		<string>f9f9f9</string>
 		<key>WIZ_NAVIGATIONBAR_TINT_COLOR</key>
-		<string>ffffff</string>
+		<string>333333</string>
 		<key>WIZ_SEPARATOR_COLOR</key>
 		<string>cccccc</string>
 		<key>WIZ_GRAY_TEXT_COLOR</key>
@@ -35,7 +35,7 @@
 		<key>WIZ_CELL_HIGHLIGHT_COLOR</key>
 		<string>e8f0fb</string>
 		<key>WIZ_TABBAR_BACKGROUND_COLOR</key>
-		<string>eeeeee</string>
+		<string>f0f0f0</string>
 		<key>WIZ_TABBAR_SHADOW_COLOR</key>
 		<string>b2b2b2</string>
 		<key>WIZ_POPUPBAR_BACKGROUND</key>
@@ -49,7 +49,7 @@
 		<key>WIZ_MASK_COLOR</key>
 		<string>0000004b</string>
 		<key>WIZ_STATUS_BAR_TEXT_COLOR</key>
-		<string>ffffff</string>
+		<string>333333</string>
 		<key>WIZ_PAD_SEARCH_TEXTFEILD_BACKGROUND_COLOR</key>
 		<string>ffffff</string>
 	</dict>
@@ -100,7 +100,7 @@
 		<key>WIZ_MASK_COLOR</key>
 		<string>ffffff1a</string>
 		<key>WIZ_STATUS_BAR_TEXT_COLOR</key>
-		<string>ffffff</string>
+		<string>333333</string>
 		<key>WIZ_PAD_SEARCH_TEXTFEILD_BACKGROUND_COLOR</key>
 		<string>ffffff</string>
 	</dict>

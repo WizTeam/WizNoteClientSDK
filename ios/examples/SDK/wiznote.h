@@ -123,6 +123,12 @@ shareNoteCallbackBlock:(id)shareNoteCallbackBlock
                      title:(NSString *)title
          customActionBlock:(id)customActionBlock
         updateCookiesBlock:(id)updateCookiesBlock
+    shareNoteCallbackBlock:(id)shareNoteCallbackBlock
                   delegate:(id)object
            completeHandler:(void(^)(UIViewController* viewController))completeHandler;
+
+/*
+ 退出当前账户，停止当前用户的所有线程
+*/
++ (void) resignCurrentAccount;
 @end

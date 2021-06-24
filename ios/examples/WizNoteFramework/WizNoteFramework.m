@@ -17,9 +17,12 @@ FOUNDATION_EXPORT BOOL WizNoteSetup(NSDictionary* options)
     return YES;
 }
 
-FOUNDATION_EXPORT BOOL WizNoteLaunch(UIViewController* parentViewController, NSDictionary* options, id customActionBlock, id updateCookiesBlock)
+FOUNDATION_EXPORT BOOL WizNoteLaunch(UIViewController* parentViewController, NSDictionary* options, id customActionBlock, id updateCookiesBlock, id shareNoteCallback)
 {
-    [WizNote launchWizNote:parentViewController options:options customActionBlock:customActionBlock updateCookiesBlock:updateCookiesBlock];
+//    [WizNote launchWizNote:options customActionBlock:customActionBlock updateCookiesBlock:updateCookiesBlock shareNoteCallbackBlock:shareNoteCallback delegate:<#(id)#> completeHandler:^(UIViewController *viewController) {
+//        
+//    }]
+//    [WizNote launchWizNote:parentViewController options:options customActionBlock:customActionBlock updateCookiesBlock:updateCookiesBlock];
     return YES;
 }
 

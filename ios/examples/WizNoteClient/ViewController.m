@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "WizNoteFramework.h"
+#import "wiznote.h"
 
 @interface ViewController ()
 @property (nonnull, strong) NSArray* wiznoteStyles;
@@ -46,8 +46,7 @@
 - (void) launchWizNote {
     NSDictionary* options = @{
                               @"appName": @"WeLink Note",
-                              @"apiServer": @"http://sandbox.wiz.cn",
-                              @"authType": @"huawei",
+                              @"apiServer": @"http://v3.wiz.cn",
                               @"lang": @"zh-cn",    //en, zh-cn, zh-hans, etc
                               @"disableHttps": @(YES),
                               @"appStyle" : @"style1",
@@ -67,16 +66,14 @@
                               @"thirdpartyType": @"huawei"
                               };
     //
-    WizNoteSetup(options);
+    [WizNote setup:options];
     //
     //
     NSDictionary* launchOptions = @{
-                                    @"enterpriseUserId": @"anzhen-test2@wiz.cn",
-                                    @"thirdpartyBody": @"k1=v1;k2=v2;k3=v3;k4=v4",
-                                    @"thirdpartyType": @"huawei",
-                                    @"thirdpartyCode": @"ef65f67c1eae1e636a76c951b0f2d2a8uqijkfyc30l"
+                                    @"userId": @"guide103@wiz.cn",
+                                    @"password": @"111111",
                                     };
-    
+
     id actionCallback = ^void(int actionType, NSString* data) {
         NSLog(@"customAction: %@", @(actionType));
     };
@@ -92,8 +89,11 @@
             //
         });
     };
-    
-    WizNoteLaunch(self, launchOptions, actionCallback, updateCookiesBlock);
+    [WizNote launchWizNote:launchOptions customActionBlock:actionCallback updateCookiesBlock:updateCookiesBlock shareNoteCallbackBlock:nil delegate:self completeHandler:^(UIViewController *viewController) {
+        UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:viewController];
+        [self presentViewController:nav animated:YES completion:nil];
+//        [self pushViewController:viewController animated:YES];
+    }];
 }
 
 - (void) styleChanged:(UISegmentedControl *)obj

@@ -14,12 +14,10 @@
 		3040E6252045354B009CDE04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3040E6232045354B009CDE04 /* LaunchScreen.storyboard */; };
 		3040E6282045354C009CDE04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3040E6272045354C009CDE04 /* main.m */; };
 		3040E6362045373C009CDE04 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3040E6352045373C009CDE04 /* libc++.tbd */; };
-		3040E67E20455716009CDE04 /* WizNoteFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 3040E67C20455716009CDE04 /* WizNoteFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3040E68120455716009CDE04 /* WizNoteFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3040E67A20455716009CDE04 /* WizNoteFramework.framework */; };
 		3040E68320455716009CDE04 /* WizNoteFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3040E67A20455716009CDE04 /* WizNoteFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3040E6872045572A009CDE04 /* libwiznote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3040E62F2045361E009CDE04 /* libwiznote.a */; };
 		3040E6882045572E009CDE04 /* wiznote.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3040E6312045361E009CDE04 /* wiznote.bundle */; };
-		3040E68A20455748009CDE04 /* WizNoteFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = 3040E68920455748009CDE04 /* WizNoteFramework.m */; };
 		3040E68C204557B9009CDE04 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3040E6352045373C009CDE04 /* libc++.tbd */; };
 		306EB26320845DAE00CFFA92 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 306EB26220845DAE00CFFA92 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
@@ -67,9 +65,6 @@
 		3040E63920453807009CDE04 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3040E63B20453811009CDE04 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		3040E67A20455716009CDE04 /* WizNoteFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WizNoteFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3040E67C20455716009CDE04 /* WizNoteFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WizNoteFramework.h; sourceTree = "<group>"; };
-		3040E67D20455716009CDE04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3040E68920455748009CDE04 /* WizNoteFramework.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WizNoteFramework.m; sourceTree = "<group>"; };
 		306EB26220845DAE00CFFA92 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		30E059832046909F00DBDF46 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		30E05984204690A100DBDF46 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -103,7 +98,6 @@
 				306EB26220845DAE00CFFA92 /* InfoPlist.strings */,
 				3040E62E2045355E009CDE04 /* SDK */,
 				3040E6172045354B009CDE04 /* WizNoteClient */,
-				3040E67B20455716009CDE04 /* WizNoteFramework */,
 				3040E6162045354B009CDE04 /* Products */,
 				3040E6342045373C009CDE04 /* Frameworks */,
 			);
@@ -155,16 +149,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3040E67B20455716009CDE04 /* WizNoteFramework */ = {
-			isa = PBXGroup;
-			children = (
-				3040E67C20455716009CDE04 /* WizNoteFramework.h */,
-				3040E67D20455716009CDE04 /* Info.plist */,
-				3040E68920455748009CDE04 /* WizNoteFramework.m */,
-			);
-			path = WizNoteFramework;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -172,7 +156,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3040E67E20455716009CDE04 /* WizNoteFramework.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +225,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 3040E60C2045354B009CDE04;
 			productRefGroup = 3040E6162045354B009CDE04 /* Products */;
@@ -291,7 +275,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3040E68A20455748009CDE04 /* WizNoteFramework.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

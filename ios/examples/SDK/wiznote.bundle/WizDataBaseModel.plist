@@ -172,5 +172,14 @@
 		<key>PRIMARAY_KEY</key>
 		<string>DOCUMENT_GUID, PARAM_NAME</string>
 	</dict>
+	<key>WIZ_DOCUMENT_FAVOR</key>
+	<dict>
+		<key>DOCUMENT_GUID</key>
+		<string>char(36)</string>
+		<key>FAVOR_VALUE</key>
+		<string>int</string>
+		<key>SERVER_CHANGED</key>
+		<string>int</string>
+	</dict>
 </dict>
 </plist>
