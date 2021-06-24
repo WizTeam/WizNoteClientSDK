@@ -21,7 +21,7 @@
 		3040E68C204557B9009CDE04 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3040E6352045373C009CDE04 /* libc++.tbd */; };
 		306EB26320845DAE00CFFA92 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 306EB26220845DAE00CFFA92 /* InfoPlist.strings */; };
 		73A7C35A26843A6100BA96BF /* WizNoteFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A7C35826843A6100BA96BF /* WizNoteFramework.m */; };
-		73A7C35B26843A6100BA96BF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73A7C35926843A6100BA96BF /* Info.plist */; };
+		73A7C35C26843C0000BA96BF /* WizNoteFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 73A7C35726843A6100BA96BF /* WizNoteFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +172,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73A7C35C26843C0000BA96BF /* WizNoteFramework.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +263,6 @@
 				3040E6252045354B009CDE04 /* LaunchScreen.storyboard in Resources */,
 				306EB26320845DAE00CFFA92 /* InfoPlist.strings in Resources */,
 				3040E6222045354B009CDE04 /* Assets.xcassets in Resources */,
-				73A7C35B26843A6100BA96BF /* Info.plist in Resources */,
 				3040E6202045354B009CDE04 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
