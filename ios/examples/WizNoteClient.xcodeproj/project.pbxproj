@@ -20,6 +20,8 @@
 		3040E6882045572E009CDE04 /* wiznote.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3040E6312045361E009CDE04 /* wiznote.bundle */; };
 		3040E68C204557B9009CDE04 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3040E6352045373C009CDE04 /* libc++.tbd */; };
 		306EB26320845DAE00CFFA92 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 306EB26220845DAE00CFFA92 /* InfoPlist.strings */; };
+		73A7C35A26843A6100BA96BF /* WizNoteFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A7C35826843A6100BA96BF /* WizNoteFramework.m */; };
+		73A7C35B26843A6100BA96BF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73A7C35926843A6100BA96BF /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,9 @@
 		306EB26220845DAE00CFFA92 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		30E059832046909F00DBDF46 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		30E05984204690A100DBDF46 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		73A7C35726843A6100BA96BF /* WizNoteFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WizNoteFramework.h; sourceTree = "<group>"; };
+		73A7C35826843A6100BA96BF /* WizNoteFramework.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WizNoteFramework.m; sourceTree = "<group>"; };
+		73A7C35926843A6100BA96BF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +103,7 @@
 				306EB26220845DAE00CFFA92 /* InfoPlist.strings */,
 				3040E62E2045355E009CDE04 /* SDK */,
 				3040E6172045354B009CDE04 /* WizNoteClient */,
+				73A7C35626843A6100BA96BF /* WizNoteFramework */,
 				3040E6162045354B009CDE04 /* Products */,
 				3040E6342045373C009CDE04 /* Frameworks */,
 			);
@@ -147,6 +153,16 @@
 				3040E6352045373C009CDE04 /* libc++.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		73A7C35626843A6100BA96BF /* WizNoteFramework */ = {
+			isa = PBXGroup;
+			children = (
+				73A7C35726843A6100BA96BF /* WizNoteFramework.h */,
+				73A7C35826843A6100BA96BF /* WizNoteFramework.m */,
+				73A7C35926843A6100BA96BF /* Info.plist */,
+			);
+			path = WizNoteFramework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +262,7 @@
 				3040E6252045354B009CDE04 /* LaunchScreen.storyboard in Resources */,
 				306EB26320845DAE00CFFA92 /* InfoPlist.strings in Resources */,
 				3040E6222045354B009CDE04 /* Assets.xcassets in Resources */,
+				73A7C35B26843A6100BA96BF /* Info.plist in Resources */,
 				3040E6202045354B009CDE04 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +285,7 @@
 				3040E61D2045354B009CDE04 /* ViewController.m in Sources */,
 				3040E6282045354C009CDE04 /* main.m in Sources */,
 				3040E61A2045354B009CDE04 /* AppDelegate.m in Sources */,
+				73A7C35A26843A6100BA96BF /* WizNoteFramework.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

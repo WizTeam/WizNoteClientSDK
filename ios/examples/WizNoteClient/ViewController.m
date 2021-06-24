@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "WizNoteFramework.h"
 #import "wiznote.h"
 
 @interface ViewController ()
@@ -66,7 +67,7 @@
                               @"thirdpartyType": @"huawei"
                               };
     //
-    [WizNote setup:options];
+    WizNoteSetup(options);
     //
     //
     NSDictionary* launchOptions = @{
@@ -89,10 +90,16 @@
             //
         });
     };
-    [WizNote launchWizNote:launchOptions customActionBlock:actionCallback updateCookiesBlock:updateCookiesBlock shareNoteCallbackBlock:nil delegate:self completeHandler:^(UIViewController *viewController) {
+    //
+    typedef void (^ShareNoteCallbackBlock)(NSString* link, NSString* title, NSString* description);
+    ShareNoteCallbackBlock shareNoteCallbackBlock = ^void(NSString* link, NSString* title, NSString* description) {
+        NSString* message = [NSString stringWithFormat:@"%@\n%@\n%@", title, description, link];
+        NSLog(@"%@", message);
+    };
+    //
+    [WizNote launchWizNote:launchOptions customActionBlock:actionCallback updateCookiesBlock:updateCookiesBlock shareNoteCallbackBlock:shareNoteCallbackBlock delegate:self completeHandler:^(UIViewController *viewController) {
         UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:viewController];
         [self presentViewController:nav animated:YES completion:nil];
-//        [self pushViewController:viewController animated:YES];
     }];
 }
 
